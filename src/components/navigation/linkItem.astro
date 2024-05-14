@@ -10,10 +10,10 @@ const {
 <a 
     href={href}
     aria-current="page" 
-    class={`w--current ${customStyle ? customStyle : "nav-link w-nav-link"}`}>{label}</a>
+    class={`w--current whitespace-nowrap ${customStyle ? customStyle : "nav-link w-nav-link"}`}>{label}</a>
     :
 <a 
     href={href}
-    class={customStyle ? customStyle : "nav-link w-nav-link"}>{label}</a>
+    class={customStyle ? customStyle : "nav-link w-nav-link whitespace-nowrap"}>{label}</a>
 }
 

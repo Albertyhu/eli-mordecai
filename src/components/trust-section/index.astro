@@ -1,0 +1,31 @@
+---
+import BannerTitleSeparator from "../graphics/banner-title-separator.astro"; 
+import TrustReasons from "@/data/trust-reasons.js"; 
+import Panel from "./trust-panel.astro"; 
+import type {TrustReasonType } from "@/util/interface.js"; 
+---
+<div class="help-section">
+    <div class="container w-container">
+        <div class="section-title">
+            <h2 class="section-title-text dark-color-title fadeInFromBottomTag fadeOutIntoBottom">Why should you trust your case with me?</h2>
+            <BannerTitleSeparator customStyle = "mx-auto my-10 fadeInFromBottomTag fadeOutIntoBottom" />
+            <div class ="md:flex md:flex-row md:gap-5">
+                <div
+                    class = "flex flex-col"
+                >
+                    {TrustReasons && TrustReasons.length > 0 && 
+                        TrustReasons.map((reason: TrustReasonType, index: number) =><Panel {...reason} {index} />)
+                    }
+                </div>
+                <div class="history-image-wrap min-w-[264px] h-auto">
+                    <img 
+                        src="/assets/images/blind-justice.webp" 
+                        loading="lazy" 
+                        decoding="async"
+                        alt="blind justice" 
+                        class="object-cover w-full h-full"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

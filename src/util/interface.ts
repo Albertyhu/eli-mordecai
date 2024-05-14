@@ -142,6 +142,12 @@ interface ReactLinkItemProps {
   customStyle?: string;
 }
 
+interface TrustReasonType {
+  label: string;
+  description: string;
+  icon: ImageMetadata | ImageType | ImageBitmap;
+}
+
 export type {
   formattedPostType,
   MobileMenuProps,
@@ -160,4 +166,5 @@ export type {
   ImageType,
   authorType,
   ReactLinkItemProps,
+  TrustReasonType,
 };
