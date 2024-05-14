@@ -1,0 +1,120 @@
+---
+export const prerender = true;
+import BaseLayout from "@/layout/BaseLayout.astro"
+import NavBar from "@/components/navigation/index.astro";
+import BannerTitleSeparator from "@/components/graphics/banner-title-separator.astro"; 
+---
+<BaseLayout 
+pageTitle="Business Law" 
+customDescription="Lawyer site"
+>
+  <div class="practice-area-banner">
+    <div class="banner-title-overlay"></div>
+    <NavBar />
+    <div class="container w-container">
+      <div class="banner-title-wrap">
+        <h1 class="banner-area-title">Business Law</h1>
+        <BannerTitleSeparator customStyle = "mx-auto" />
+      </div>
+    </div>
+  </div>
+  <div class="practice-area-single-section">
+    <div class="container w-container">
+      <div class="practice-content-wrap">
+        <img
+          src="https://assets-global.website-files.com/61fd0d3090785d374bf9afc3/6200b2de4003abcb53e5b79c_blog-large-image-1.jpg"
+          loading="lazy"
+          alt="Business Law"
+          sizes="(max-width: 479px) 87vw, (max-width: 767px) 90vw, (max-width: 991px) 92vw, (max-width: 1439px) 94vw, (max-width: 1919px) 1360px, 1400px"
+          srcset="
+            https://assets-global.website-files.com/61fd0d3090785d374bf9afc3/6200b2de4003abcb53e5b79c_blog-large-image-1-p-500.jpeg  500w,
+            https://assets-global.website-files.com/61fd0d3090785d374bf9afc3/6200b2de4003abcb53e5b79c_blog-large-image-1-p-800.jpeg  800w,
+            https://assets-global.website-files.com/61fd0d3090785d374bf9afc3/6200b2de4003abcb53e5b79c_blog-large-image-1.jpg        1400w
+          "
+        />
+        <div class="practice-single-content">
+          <div class="w-richtext">
+            <h3
+              class = "text-4xl md:text-5xl my-5"
+            >Introduction</h3>
+            <p>
+              Uniquely matrix economically sound value through cooperative
+              technology. Competently parallel task fully researched data and
+              enterprise process improvements. Collaboratively expedite quality
+              manufactured products via client-focused results quickly
+              communicate enabled technology and turnkey leadership skills.
+              Uniquely enable accurate supply chains rather than friction
+              technology.
+            </p>
+            <h3
+              class = "text-4xl md:text-5xl my-5"
+            >About the law<br /></h3>
+            <p>
+              Appropriately empower dynamic<strong> leadership</strong>
+              <strong>skills </strong>after business portals. Globally my
+              cardinate interactive supply chains with distinctive quality
+              vectors global sources services. Uniquely matrix economically
+              sound value through cooperative technology. Competently parallel
+              task fully researched data and enterprise process improvements<em
+                >.</em
+              >
+            </p>
+            <ul class="[&>li]:list-disc list-inside">
+              <li>
+                Dynamically target high-payoff intellectual capital for
+                customized
+              </li>
+              <li>Interactively procrastinate high-payoff content</li>
+              <li>
+                Credibly reinter mediate backend ideas for cross-platform models
+              </li>
+            </ul>
+            <h3
+              class = "text-4xl md:text-5xl my-5"
+            >Make real time a law services</h3>
+            <p>
+              Collaboratively administrate empowered markets via plug-and-play
+              networks. Dynamically procrastinate B2C users after installed base
+              benefits. Dramatically visualize customer directed convergence
+              without revolutionary ROI.
+            </p>
+            <ol class = "[&>li]:list-decimal list-inside">
+              <li>
+                It brings the right people together with all the right
+                information and tools to get work done
+              </li>
+              <li>
+                We provide operational efficiency, data security, and flexible
+                scale
+              </li>
+              <li>
+                Your best work, together in one package that works seamlessly
+                from your computer
+              </li>
+              <li>
+                Delivers the tools you need to save time Improve field
+                performance always
+              </li>
+            </ol>
+            <h4
+              class = "text-3xl md:text-4xl my-5"
+            >Overview:</h4>
+            <p>
+              Bring to the table win-win survival strategies to ensure proactive
+              domination. At the end of the day, going forward, a new normal
+              that has evolved from generation X is on the runway heading
+              towards a streamlined cloud solution. User generated content in
+              real-time will have multiple touchpoints for offshoring
+              interoperable internal or “organic” sources.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divider-section">
+    <div class="container w-container">
+      <div class="divider-line"></div>
+    </div>
+  </div>
+</BaseLayout>

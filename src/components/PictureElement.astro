@@ -1,0 +1,19 @@
+---
+const { mobImg, deskImg, altText } = Astro.props; 
+---
+<picture>
+    <!-- Mobile Image -->
+    <source media="(max-width: 600px)" srcset={typeof mobImg === "string" ? mobImg : mobImg.src }>
+    <!-- Desktop Image -->
+    <source media="(min-width: 601px)" srcset={typeof deskImg === "string" ? deskImg : deskImg.src}>
+    <!-- Fallback Image -->
+    <img 
+        aria-hidden="true" 
+        loading="lazy" 
+        decoding="async" 
+        src={typeof deskImg === "string" ? deskImg : deskImg.src} 
+        alt={altText} 
+        width="1920" 
+        height="1280"
+    />
+</picture>

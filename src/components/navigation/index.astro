@@ -1,0 +1,49 @@
+---
+import { BusinessInfo } from "@/data/business-info";
+import { formatPhone } from "@/hooks/number";
+import LogoComponent from "@/components/logoComponent.astro"
+import MenuLinks from "./menu-links.astro"
+import MobileIcon from "./mobile-icon.astro"; 
+---
+<div 
+    class="header"
+    id="static_nav"
+>
+    <div class="container w-container">
+        <div class="header-logo-wrap">
+            <LogoComponent />
+            <div class="header-button-wrap"><a href="/contact-us" class="button header-button w-button">Book A Consultation</a></div>
+        </div>
+        <div class="header-navbar-wrap">
+            <MobileIcon 
+                customMargin = "mx-auto md:ml-0 md:mr-auto"
+                ID = "staticMobileIcon" 
+                />
+            <MenuLinks 
+                ContactButton ={false} 
+            />
+            <div class="header-contact-wrap">
+                <div class="header-contact-item-wrap">
+                <div class="header-contact-item">
+                    <div class="header-contact-icon-wrap header-link-wrap">
+                        <img src="/assets/icons/header-call-icon.svg" loading="lazy" alt="Header Contact Icon"/>
+                    </div>
+                    <div class="header-contact-link-wrap">
+                        <p class="header-contact-title">Call Us On:</p>
+                        <a href={`tel:${BusinessInfo.phone}`} class="header-contact-link">{formatPhone(BusinessInfo.phone)}</a>
+                    </div>
+                </div>
+                <div class="header-contact-item">
+                    <div class="header-contact-icon-wrap header-link-wrap">
+                        <img src="/assets/icons/header-mail-icon.svg" loading="lazy" alt="Header Contact Icon"/>
+                    </div>
+                    <div class="header-contact-link-wrap">
+                        <p class="header-contact-title">Email Us On:</p>
+                        <a href={`mailto:${BusinessInfo.email}`} class="header-contact-link">{BusinessInfo.email}</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+---
+import DownArrow from "@/assets/icons/down-arrow-white.png"; 
+import GoldDownArrow from "@/assets/icons/down-arrow-gold.png"; 
+import LinkItem from "./linkItem.astro"; 
+import { pages} from "./drop-downs.js"; 
+const { 
+    ContactButton = false,
+  } = Astro.props; 
+const currentPath = Astro.url.pathname;
+---
+<div class="header-nav-area justify-center align-middle hidden lg:flex lg:flex-row">
+    <div 
+        class="w-nav bg-transparent flex align-middle mr-[0] ml-auto" 
+    >
+        <nav role="navigation" class="nav-menu w-nav-menu flex flex-row ![&>*]:z-[1]">
+            <LinkItem 
+                {currentPath}
+                href = "/"
+                label = "Home"
+            />
+            <LinkItem 
+                {currentPath}
+                href = "/about-us"
+                label = "About Us"
+            />
+            <div data-hover="true" data-delay="0" class="nav-link dropdown-navigation w-dropdown">
+                <div class="dropdown-toggle w-dropdown-toggle peer group">
+                    <div
+                        class = "flex flex-cols whitespace-nowrap gap-[10px]"
+                    >
+                        <div
+                            class = {`peer`}
+                        >Pages</div>
+                        <img 
+                            src ="/assets/icons/down-arrow-white.png"
+                            alt="drop down menu"
+                            class = "w-[32px] h-[32px] m-auto group-hover:hidden"
+                        />
+                        <img 
+                            src = "/assets/icons/down-arrow-gold.png"
+                            alt="drop down menu"
+                            class = "hidden w-[32px] h-[32px] m-auto group-hover:block"
+                        />                            
+                    </div>
+                    <nav class="dropdown-list w-dropdown-list group-hover:block">
+                    {pages && pages.length > 0 && 
+                        pages.map(page => 
+                        <LinkItem 
+                            {currentPath}
+                            href = {page.link}
+                            customStyle = "dropdown-link w-dropdown-link"
+                            label = {page.label}
+                        />
+                    )
+                    }
+                    </nav>
+                </div>
+            </div>
+            {ContactButton ? 
+            <a href="/contact-us" class="nav-link w-nav-link">           
+                <button
+                class = "bg-primaryC px-10 text-black hover:bg-transparent hover:text-primaryC border-[2px] border-solid border-primaryC transition-all duration-500"
+                >Contact Us</button>
+            </a>
+            :
+            <LinkItem 
+                {currentPath}
+                href = "/contact-us"
+                label = "Contact Us"
+            />
+            }
+        </nav>
+    </div>
+</div>

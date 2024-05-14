@@ -1,0 +1,53 @@
+---
+import Footer from "@/components/footer/index.astro"
+import SEO from "@/components/SEO.astro"; 
+import MinimizedNav from "@/components/navigation/minimized-nav.astro";
+import MobileMenu from "@/components/navigation/mobile-menu.astro";
+import { ViewTransitions } from 'astro:transitions';
+const {
+    pageTitle, 
+    customDescription, 
+} = Astro.props; 
+---
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <title>{pageTitle}</title>
+      <SEO 
+         title = {pageTitle}
+         description = {customDescription}
+      />
+      <meta content="width=device-width, initial-scale=1" name="viewport"/>
+      <link 
+      href="/style/global.css" 
+      rel="stylesheet" 
+      type="text/css"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+      />
+      <link href="./output.css" rel="stylesheet">
+      <noscript>
+         <link rel="stylesheet" href="/style/global.css">
+      </noscript>
+      <link href="/assets/icons/favicon.webp" rel="shortcut icon" type="image/x-icon"/>
+      <link href="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e3b_attorney-webclip.webp" rel="apple-touch-icon"/>
+      <ViewTransitions /> 
+   </head>
+   <body>
+        <MinimizedNav />
+        <MobileMenu /> 
+        <slot />
+        <Footer />
+        <!-- logic for nav bar -->
+        <script 
+        src="/script/nav-script.js" 
+        type = "text/javascript" 
+        is:inline></script>
+        <script 
+         src ="/script/animated_script.js"
+         type="text/javascript"
+         is:inline
+        ></script>
+   </body>
+</html>

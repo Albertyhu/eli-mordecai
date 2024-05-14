@@ -1,0 +1,36 @@
+---
+const { 
+    defaultImg, 
+    imgStyle,
+    wrapperStyle,  
+    altText = "image", 
+    thumbnail = false, 
+    immediateLoad = false, 
+} = Astro.props; 
+---
+{thumbnail ?
+<div
+    class = {wrapperStyle ? wrapperStyle : "bg-transparent mx-auto w-[50px] h-[50px] rounded-full"}
+>
+       <img aria-hidden="true" 
+        decoding="async" 
+        loading = {immediateLoad ? "eager" : "lazy"}
+        src={defaultImg} 
+        alt={altText} 
+        class = {imgStyle ? imgStyle : "w-full h-full object-fit"}
+        >
+</div>
+:
+<div
+    class = {wrapperStyle ? wrapperStyle : "bg-transparent mx-auto w-[300px] h-[300px] rounded-full"}
+>
+    <img aria-hidden="true" 
+        decoding="async" 
+        loading = {immediateLoad ? "eager" : "lazy"}
+        src={defaultImg} 
+        alt={altText} 
+        class = {imgStyle ? imgStyle : "w-full h-full object-fit"}
+
+    >
+</div>
+}

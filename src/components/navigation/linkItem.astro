@@ -1,0 +1,19 @@
+---
+const {
+    currentPath, 
+    href, 
+    label,
+    customStyle, 
+} = Astro.props; 
+---
+{currentPath.toLowerCase().replace(/\//g,"") === href.toLowerCase().replace(/\//g,"") ? 
+<a 
+    href={href}
+    aria-current="page" 
+    class={`w--current ${customStyle ? customStyle : "nav-link w-nav-link"}`}>{label}</a>
+    :
+<a 
+    href={href}
+    class={customStyle ? customStyle : "nav-link w-nav-link"}>{label}</a>
+}
+

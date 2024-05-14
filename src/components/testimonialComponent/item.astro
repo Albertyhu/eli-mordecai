@@ -1,0 +1,32 @@
+---
+const {
+    profilePicture,
+    name, 
+    jobTitle, 
+    body
+} = Astro.props; 
+---
+<div class="testimonial-item">
+    <div class="testimonial-top-wrap">
+        <div class="testimonial-client-wrap">
+        <div class="testimonial-client-image-wrap">
+            <img 
+            src={profilePicture ? profilePicture : "/assets/icons/quote.svg"} 
+            loading="lazy" 
+            decoding="async"
+            alt="Testimonial Client" 
+            class="testimonial-client-image"/></div>
+        <div class="testimonial-client-name-wrap">
+            {name && <h3 class="client-name">{name}</h3>}
+            {jobTitle && <p class="client-job">{jobTitle}</p>}
+        </div>
+        </div>
+        <div class="testimonial-quote-wrap">
+        <div class="quote-icon-wrap">
+            <img src="/assets/icons/quote.svg" loading="lazy" alt="Testimonial Quote"/></div>
+        </div>
+    </div>
+    <div class="testimonial-content-wrap">
+        <p>{body}</p>
+    </div>
+</div>

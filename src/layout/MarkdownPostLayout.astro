@@ -1,0 +1,95 @@
+---
+import BaseLayout from "@/layout/BaseLayout.astro"
+import NavBar from "@/components/navigation/index.astro"; 
+import FeaturedImage from "@/components/graphics/ResponsiveImage.astro";
+import ProfilePicture from "@/components/blogComponent/profile_picture.astro"; 
+import {getAuthorInfoFromArray} from "@/hooks/blogHooks.ts"; 
+let allAuthors : any = [];
+try{
+   allAuthors = await Astro.glob("../pages/author_profile/*.md") 
+} catch (e){
+   allAuthors = []; 
+}
+
+const { frontmatter } = Astro.props; 
+
+const selectedAuthor = getAuthorInfoFromArray(frontmatter.author, allAuthors)
+
+const category_url = frontmatter.category.replace(" ", "-").toLowerCase();
+import "@/style/blog.css";
+console.log(frontmatter)
+---
+<BaseLayout
+    pageTitle = {frontmatter.title}
+    customDescription = {frontmatter.excerpt}
+>
+      <NavBar />
+      <div class="blog-single-section">
+         <div class="container w-container">
+            {frontmatter.featured_image &&
+                <FeaturedImage 
+                    defaultImg = {frontmatter.featured_image}
+                    phoneImg = {frontmatter.phoneImg}  
+                    mediumTabImg = {frontmatter.mediumTabImg} 
+                    tabletImg = {frontmatter.tabletImg} 
+                    altText = {frontmatter.altText ? frontmatter.altText : frontmatter.title}
+                />
+            }
+            <div class="blog-single-content-wrap">
+               <div class="blog-single-title-wrap">
+                  <div class="blog-meta-wrap blog-single-meta-wrap">
+                     <div class="law-type-wrap">
+                        <a href={`/blog/category/${category_url}/1`} class="blog-law-type">{frontmatter.category}</a>
+                    </div>
+                     <div class="meta-separator">
+                        <p class="meta-separator-line">|</p>
+                     </div>
+                     <div class="date-wrap">
+                        <p class="published-date">{frontmatter.pubDate}</p>
+                     </div>
+                  </div>
+                  <h1
+                  >{frontmatter.title}</h1>
+               </div>
+               <div class="blog-single-rich-text">
+                  <div class="blog-single-main-content w-richtext">
+                    <slot />
+                    <div id = "scriptContainer" data-frontmatter = {frontmatter.body} ></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="blog-author-wrap">
+         <div class="">
+            <div class="">
+               <div class="flex flex-col md:flex-row md:px-10">
+                  <div class="blog-author-image-wrap">
+                     <a href={selectedAuthor?.url} 
+                        class=""
+                        >
+                        <ProfilePicture 
+                           defaultImg = {selectedAuthor.frontmatter.profile_picture}
+                           altText = {frontmatter.author}
+                           immedateLoad = {false}
+                        />
+                     </a>
+                  </div>
+                  <div class="flex flex-col mx-auto md:ml-0 md:justify-around  text-center md:text-left">
+                     <a 
+                        href={selectedAuthor?.url} 
+                        class="author-link"
+                     >{frontmatter.author}</a>
+                     {selectedAuthor?.frontmatter.bio && 
+                        <div class="author-simple-bio px-5 md:p-0">{selectedAuthor?.frontmatter.bio}</div>
+                     }
+                     <a 
+                        href={selectedAuthor?.url}
+                        class="underline hover:text-secondaryC"
+                     >View More Posts</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+</BaseLayout>

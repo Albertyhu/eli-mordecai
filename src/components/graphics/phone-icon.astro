@@ -1,0 +1,13 @@
+---
+import { BusinessInfo } from "@/data/business-info";
+import { formatPhone } from "@/hooks/number"; 
+---
+<div class="header-contact-item contact-info-item">
+    <div class="header-contact-icon-wrap header-link-wrap">
+        <img src="/assets/icons/header-call-icon.svg" loading="lazy" alt="Phone Icon"/>
+    </div>
+    <div class="header-contact-link-wrap">
+        <p class="header-contact-title">Call Us On:</p>
+        <a href={`tel:${BusinessInfo.phone}`} class="">{formatPhone(BusinessInfo.phone)}</a>
+    </div>
+</div>

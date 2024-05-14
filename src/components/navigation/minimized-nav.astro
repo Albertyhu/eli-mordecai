@@ -1,0 +1,28 @@
+---
+import { BusinessInfo } from "@/data/business-info";
+import { formatPhone } from "@/hooks/number";
+import LogoComponent from "@/components/logoComponent.astro"
+import MenuLinks from "./menu-links.astro";
+import "./nav-style.css"
+import MobileIcon from "./mobile-icon.astro"; 
+---
+<div
+    id = "mininized-header"
+    class = "flex flex-col fixed top-0 w-full z-[2] hidden_minimized_nav transition-all duration-500"
+>   
+    <div
+        class = "h-fit bg-primaryC sm:h-[30px] w-full block sm:flex sm:flex-row justify-between text-secondaryC [&>div]:px-5 text-sm [&>div]:my-auto"
+    >
+        <div>Call Us On: <a class = "text-white pl-1 hover:text-secondaryC text-sm hover:underline" href ={`tel:${BusinessInfo.phone}`}>{formatPhone(BusinessInfo.phone)}</a></div>
+        <div>Email Us On: <a class = "text-white pl-1 hover:text-secondaryC text-sm hover:underline" href = {`mailto:${BusinessInfo.email}`}>{BusinessInfo.email}</a></div>
+    </div>
+    <div
+        class = "flex flex-row justify-between lg:justify-between bg-secondaryC [&>*]:px-5 border-b-2 border-b-white py-1"
+    >
+        <LogoComponent />
+        <MenuLinks ContactButton = {true} />
+        <MobileIcon
+            ID = "minimizedMobileIcon"
+        />
+    </div>
+</div>

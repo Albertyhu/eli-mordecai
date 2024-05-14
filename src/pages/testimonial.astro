@@ -1,0 +1,36 @@
+---
+export const prerender = true;
+import BaseLayout from "@/layout/BaseLayout.astro"
+import NavBar from "@/components/navigation/index.astro"; 
+import { sample_testimonials } from "@/data/testimonials"; 
+import TestimonialItem from "@/components/testimonialComponent/item.astro"; 
+import BannerTitleSeparator from "@/components/graphics/banner-title-separator.astro";
+import ConsultationSection from "@/components/call-to-action/version1.astro"; 
+---
+<BaseLayout
+pageTitle = "Testimonials"
+customDescription = "Hear what our clients say about our business."
+>
+   <div class="banner-title-area">
+      <div class="banner-title-overlay"></div>
+      <NavBar />
+      <div class="container w-container">
+         <div class="banner-title-wrap">
+            <h1 class="banner-area-title">Testimonial</h1>
+            <BannerTitleSeparator customStyle = "mx-auto" />
+         </div>
+      </div>
+   </div>
+   <div class="testimonial-section">
+      <div class="container w-container">
+         <div class="testimonial-wrap">
+            <div class="w-layout-grid testimonial-grid">
+               {sample_testimonials && sample_testimonials.length > 0 &&
+                  sample_testimonials.map(item =><TestimonialItem {...item} />)
+               }
+            </div>
+         </div>
+      </div>
+   </div>
+   <ConsultationSection />
+</BaseLayout>

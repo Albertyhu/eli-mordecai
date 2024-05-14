@@ -1,0 +1,71 @@
+---
+import BaseLayout from "@/layout/BaseLayout.astro"
+import NavBar from "@/components/navigation/index.astro"; 
+import FeaturedImage from "@/components/blogComponent/profile_picture.astro"; 
+import BlogPreview from "@/components/blogComponent/preview-panel.astro"; 
+import { filterPostsByAuthor } from "@/hooks/blogHooks.ts"; 
+import type { PostType } from "@/util/interface.js"; 
+var allPosts : Array<PostType> | [] = [];  
+try{
+   allPosts = await Astro.glob("../pages/posts/*.md"); 
+
+} catch (error){
+   allPosts = []; 
+}
+const { frontmatter } = Astro.props; 
+var selectedPosts = filterPostsByAuthor(frontmatter.author, allPosts)
+import "@/style/blog.css";
+---
+<BaseLayout
+    pageTitle = {frontmatter.author}
+    customDescription = {frontmatter.bio}
+>
+<div class="banner-title-area">
+   <div class="banner-title-overlay"></div>
+   <NavBar />
+   <div class="container w-container">
+      <div class="banner-title-wrap">
+         {frontmatter.profile_picture && 
+            <FeaturedImage 
+               defaultImg = {frontmatter.profile_picture}
+               altText = {frontmatter.author}
+            />
+         }
+         <h1 class="banner-area-title">Posts by {frontmatter.author}</h1>
+         <img 
+            src="/assets/icons/banner-title-separator.svg" 
+            loading="lazy" 
+            decoding="async"
+            alt="Banner Title Separator"
+            class="mx-auto"
+            />
+      </div>
+   </div>
+</div>
+<div class="blog-section">
+   <div class="container w-container">
+   <div class="blog-content-wrap">
+      <div class="w-dyn-list">
+            <div role="list" class="w-dyn-items w-row">
+            <!-- Blog List  -->
+            {selectedPosts && selectedPosts.length > 0 ? 
+               <div class = "">
+                  {selectedPosts.map(async (post :PostType) =>{
+                        return <BlogPreview 
+                           {...post.frontmatter} 
+                           url = {post.url}
+                           />
+
+                  })}
+               </div>
+               :
+               <h2
+                  class ="text-center text-2xl my-5"
+               >{frontmatter.author} has not written any posts yet.</h2>     
+            }
+            </div>
+      </div>
+   </div>
+   </div>
+</div>
+</BaseLayout>

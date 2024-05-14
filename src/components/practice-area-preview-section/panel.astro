@@ -1,0 +1,30 @@
+---
+const {
+    type,
+    description, 
+    icon, 
+} = Astro.props; 
+const url = `/practice-areas/${type.toLowerCase().replace(/\s+/g, '_')}`
+---
+<div role="listitem" class="practice-area-collection w-dyn-item w-col w-col-4">
+    <div class="practice-area-item">
+        <div class="practice-listing-content-wrap">
+            <a href={url} class="practice-area-title">{type}</a>
+            <p>{description}</p>
+        </div>
+        <div class="grid [&>div]:mx-auto text-center sm:flex sm:flex-col justify-between sm:align-start">
+            <div class="mx-auto w-[53px] min-[788px]:w-[53px]
+">
+                <img 
+                alt={type}
+                decoding="async"
+                loading="lazy" 
+                src={icon.src}
+                />
+            </div>
+            <div class="practice-link-wrap">
+                <a href={url} class="practice-button w-button">View More</a>
+            </div>
+        </div>
+    </div>
+</div>

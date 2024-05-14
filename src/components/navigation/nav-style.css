@@ -1,0 +1,44 @@
+/* Navbar CSS */
+.hidden_minimized_nav {
+  opacity: 0 !important;
+  transform: translateY(-97px);
+}
+
+.closedMobileMenu {
+  opacity: 0;
+  transform: translateX(-250px);
+}
+
+.openArrow {
+  transform: rotateZ(90deg);
+}
+
+.closeDropdown {
+  height: 0px !important;
+}
+
+.dropdownStyle {
+  scrollbar-color: #a4a4a4;
+  scrollbar-width: thin;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #a4a4a4;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  width: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

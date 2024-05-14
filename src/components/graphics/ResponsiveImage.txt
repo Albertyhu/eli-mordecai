@@ -1,0 +1,21 @@
+---
+const { 
+    defaultImg, 
+    phoneImg, 
+    mediumTabImg, 
+    tabletImg, 
+    altText, 
+} = Astro.props; 
+---
+<img
+    src={defaultImg}
+    loading="lazy"
+    alt={altText}
+    sizes="(max-width: 479px) 87vw, (max-width: 767px) 90vw, (max-width: 991px) 92vw, (max-width: 1439px) 94vw, (max-width: 1919px) 1360px, 1400px"
+    srcset={`
+        ${phoneImg ? phoneImg + " 500w, " :  "" } 500w,
+        ${mediumTabImg ? mediumTabImg + " 800w, " : ""}
+        ${tabletImg ? tabletImg + " 1080w, " : ""} 
+        ${defaultImg} 1200w
+    `}
+/>

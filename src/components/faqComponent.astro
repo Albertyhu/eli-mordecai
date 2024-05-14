@@ -1,0 +1,32 @@
+---
+import BannerTitleSeparator from "./graphics/banner-title-separator.astro";
+import uuid from "react-uuid"; 
+const { 
+    FAQ
+} = Astro.props; 
+import type {faqArray} from "@/util/interface.js"
+---
+<div class="faq-section">
+    <div class="container w-container">
+    <div class="faq-content-wrap">
+        <div class="section-title">
+            <h2 class="section-title-text dark-color-title">Frequently Asked Questions</h2>
+            <BannerTitleSeparator customStyle = "mx-auto" />
+        </div>
+        <div class="faq-content-area">
+            <div class="w-layout-grid faq-grid">
+                {FAQ && FAQ.length > 0 && 
+                    FAQ.map((faq : faqArray, index : number) => 
+                        <div 
+                            class="faq-item"
+                            >
+                            <h3 class="faq-title">{faq.title}</h3>
+                            <p class="faq-content">{faq.content}</p>
+                        </div>
+                    )
+                }
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

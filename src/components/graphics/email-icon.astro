@@ -1,0 +1,12 @@
+---
+import { BusinessInfo } from "@/data/business-info";
+---
+<div class="header-contact-item contact-info-item">
+    <div class="header-contact-icon-wrap header-link-wrap">
+        <img src="/assets/icons/header-mail-icon.svg" loading="lazy" alt="Email Icon"/>
+    </div>
+    <div class="header-contact-link-wrap">
+        <p class="header-contact-title">Email Us On:</p>
+        <a href={`mailto:${BusinessInfo.email}`} class="">{BusinessInfo.email}</a>
+    </div>
+</div>

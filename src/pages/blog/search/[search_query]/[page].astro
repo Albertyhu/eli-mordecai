@@ -1,0 +1,131 @@
+---
+export const prerender = false;
+import BaseLayout from '@/layout/BaseLayout.astro'; 
+import RenderPagination from '@/components/paginatedBlog/renderPostPagination.tsx';
+import NavBar from "@/components/navigation/index.astro"; 
+import BannerTitleSeparator from '@/components/graphics/banner-title-separator.astro';
+import { 
+    getPaginatedArray, 
+} from "@/hooks/blogHooks.ts"; 
+import Searchbar from '@/components/search/index.astro';
+import BlogPreview from '@/components/blogComponent/preview-panel.astro';
+import type { PostType } from '@/util/interface';
+import { SearchQuery } from "@/hooks/search_feature.tsx"; 
+import '@/style/blog.css'
+const {
+    page,
+    search_query, 
+} = Astro.params; 
+
+const PAGE_SIZE = 6; 
+
+var allPosts : Array<PostType> | [] = []; 
+var totalPages : number = 0;
+var searchResults : Array<PostType> | [] = []; 
+try{
+    allPosts = await Astro.glob("../../../posts/*.md")
+} catch(error){
+    allPosts = []
+}
+
+    searchResults = SearchQuery(search_query as string, allPosts); 
+    totalPages = Math.ceil(searchResults.length/PAGE_SIZE);
+const pageNumber = page ? parseInt(page) : null; 
+let inBound = page && typeof pageNumber === "number" && pageNumber <= totalPages; 
+if(!inBound && totalPages != 0) {
+    return Astro.redirect("/error")
+}
+var paginatedArray = pageNumber && searchResults.length > 0 ? getPaginatedArray(searchResults, pageNumber, PAGE_SIZE) : [];
+---
+<BaseLayout 
+    pageTitle = "Blog"
+    customDescription = "Lawyer Website"
+>
+    <div class="banner-title-area">
+        <div class="banner-title-overlay"></div>
+        <NavBar />
+        <div class="container w-container">
+            <div class="banner-title-wrap">
+                <h1 class="banner-area-title">Search query: "{search_query}"</h1>
+                <BannerTitleSeparator customStyle = "mx-auto" />
+            </div>
+        </div>
+    </div>
+    <Searchbar />
+    <div class = "block mx-auto w-fit sm:[&>*]:inline-block justify-between">
+        <a 
+            href="/blog/1"
+            class="mx-auto text-center"
+            >
+            <p
+                class="underline hover:font-bold rounded-lg hover:bg-slate-300 p-1"
+            >Reset search</p>
+        </a>
+    </div>
+    <div class="blog-section">
+        <div class="container w-container">
+        <div class="blog-content-wrap">
+            <div class="w-dyn-list">
+                <div role="list" class="w-dyn-items w-row">
+                <!-- Blog List  -->
+                {totalPages > 1 &&
+                    <RenderPagination 
+                        pageSize = {PAGE_SIZE}
+                        totalCount = {searchResults.length as number}
+                        currentPage = {parseInt(page)}
+                        totalPages = {totalPages}
+                        isMobile = {true}
+                        client:load
+                    />
+                }
+                {paginatedArray && paginatedArray.length > 0 ? 
+                    <div class = "">
+                        {paginatedArray.map(async (post :PostType) =>{
+                            return <BlogPreview 
+                                {...post.frontmatter} 
+                                url = {post.url}
+                                />
+
+                        })}
+                    </div>
+                    :
+                    <h2
+                        class ="text-center text-2xl my-5"
+                    >Your search didn't return any results.</h2>                    
+                }
+                {totalPages > 1 &&
+                    <div class = "w-full h-auto">
+                            <RenderPagination 
+                                pageSize = {PAGE_SIZE}
+                                totalCount = {searchResults.length as number}
+                                currentPage = {parseInt(page)}
+                                totalPages = {totalPages}
+                                isMobile = {false}
+                                client:load
+                            />
+                    </div>
+                }
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="client-section large-space-section">
+        <div class="container w-container">
+        <div class="section-center-title">
+            <div class="center-title-wrap">
+                <img src="https://assets-global.website-files.com/61fa5f4b4224e925032ca047/61fb8b7a92d8c38a29ac1a28_center-separator.svg" loading="lazy" alt="Title Large Separator"/>
+                <h2 class="section-center-title-text dark-color-title">Meet the Partners</h2>
+                <img src="https://assets-global.website-files.com/61fa5f4b4224e925032ca047/61fb8b7a92d8c38a29ac1a28_center-separator.svg" loading="lazy" alt="Title Large Separator"/>
+            </div>
+        </div>
+        <div class="w-layout-grid client-image-grid [&>div]:mx-auto">
+            <div id="w-node-d8340d9a-4334-c61c-ef20-dcec2d84015f-034100c3" class="client-image-item"><img src="https://assets-global.website-files.com/61fa5f4b4224e925032ca047/61fb9c7d506a9f3525f5c4ab_client-logo-1.svg" loading="lazy" alt="Client Logo"/></div>
+            <div id="w-node-d8340d9a-4334-c61c-ef20-dcec2d840161-034100c3" class="client-image-item"><img src="https://assets-global.website-files.com/61fa5f4b4224e925032ca047/61fb9c7d0fc70dce3699f4ab_client-logo-2.svg" loading="lazy" alt="Client Logo"/></div>
+            <div id="w-node-d8340d9a-4334-c61c-ef20-dcec2d840163-034100c3" class="client-image-item"><img src="https://assets-global.website-files.com/61fa5f4b4224e925032ca047/61fb9c7e6ba739a82705e9fa_client-logo-3.svg" loading="lazy" alt="Client Logo"/></div>
+            <div id="w-node-d8340d9a-4334-c61c-ef20-dcec2d840165-034100c3" class="client-image-item"><img src="https://assets-global.website-files.com/61fa5f4b4224e925032ca047/61fb9c7deb1c5944fd2a2b74_client-logo-4.svg" loading="lazy" alt="Client Logo"/></div>
+            <div id="w-node-d8340d9a-4334-c61c-ef20-dcec2d840167-034100c3" class="client-image-item"><img src="https://assets-global.website-files.com/61fa5f4b4224e925032ca047/61fb9c7dd8aaa3d823c16db7_client-logo-5.svg" loading="lazy" alt="Client Logo"/></div>
+        </div>
+        </div>
+    </div>
+</BaseLayout>

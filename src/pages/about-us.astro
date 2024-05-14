@@ -1,0 +1,286 @@
+---
+export const prerender = true;
+import BaseLayout from "@/layout/BaseLayout.astro"
+import NavBar from "@/components/navigation/index.astro"; 
+---
+<BaseLayout
+   pageTitle = "About Us"
+   customDescription = "Lawyer site"
+>
+      <div class="banner-title-area">
+         <div class="banner-title-overlay"></div>
+         <NavBar />
+         <div class="container w-container">
+            <div class="banner-title-wrap">
+               <h1 class="banner-area-title">About Us</h1>
+               <img 
+                src="/assets/icons/banner-title-separator.svg" 
+                loading="lazy" 
+                decoding="async"
+                alt="Banner Title Separator"
+                class="mx-auto"
+                />
+            </div>
+         </div>
+      </div>
+      <div class="about-intro-section">
+         <div class="container w-container">
+            <div class="about-intro-wrap">
+               <div class="w-layout-grid about-intro-grid">
+                  <div class="about-intro-image-wrap">
+                     <div class="about-image-area"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e7f_about-intro-image.jpg" loading="lazy" sizes="(max-width: 716px) 87vw, 623px" srcset="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e7f_about-intro-image-p-500.jpeg 500w, https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e7f_about-intro-image.jpg 623w" alt="About Intro Image" class="about-intro-image"/></div>
+                  </div>
+                  <div class="about-intro-content-wrap">
+                     <div class="section-title-left">
+                        <h2 class="section-left-title-text">I’m Peter parker,<br/>Expert legal advicer</h2>
+                        <img src="/assets/icons/small-separator-gold.svg" loading="lazy" alt="Title Separator"/>
+                        <p class="section-left-content">Our lawyers are regularly invited to speak at seminars and educate other attorneys and industry representatives about important and constantly evolving legal issues &amp; proud to help the injured throughout the nation, including workers.<br/></p>
+                     </div>
+                     <div class="about-social-wrap"><a href="https://www.facebook.com/" target="_blank" class="about-social-link-block w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e46_social-icon-facebook.svg" loading="lazy" alt="Social Icon"/></a><a href="https://twitter.com/" target="_blank" class="about-social-link-block w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e98_social-icon-twitter.svg" loading="lazy" alt="Social Icon"/></a><a href="https://www.instagram.com/" target="_blank" class="about-social-link-block w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e49_social-icon-instagram.svg" loading="lazy" alt="Social Icon"/></a><a href="https://www.pinterest.com/" target="_blank" class="about-social-link-block w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e48_social-icon-pinterest.svg" loading="lazy" alt="Social Icon"/></a></div>
+                     <div class="about-button-wrap"><a href="/contact-us" class="button-white w-button">Get An Appointment</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="our-story-section">
+         <div class="container w-container">
+            <div class="section-title">
+               <h2 class="section-title-text">Our Story</h2>
+               <img 
+                src="/assets/icons/banner-title-separator.svg" 
+                loading="lazy" 
+                alt="Title Separator"
+                decoding="async" 
+                class = "mx-auto"
+                />
+            </div>
+            <h3 class="our-story-intro">The law evolves, as do clients&#x27; expectations of the firm they choose to <br/>represent them. Recognizing the often held perception of legal <br/>services being expensive and exclusive, Law rules continues <br/>to tread a very different track. </h3>
+            <div class="w-layout-grid our-story-grid">
+               <div class="our-story-image-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e81_story-image-1.jpg" loading="lazy" alt="Our Story Image"/></div>
+               <div class="our-story-image-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e82_story-image-2.jpg" loading="lazy" alt="Our Story Image"/></div>
+               <div class="our-story-image-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e80_story-image-3.jpg" loading="lazy" alt="Our Story Image"/></div>
+            </div>
+         </div>
+      </div>
+      <div class="specialized-section">
+         <div class="specialized-wrap">
+            <div class="w-layout-grid specialized-grid">
+               <div class="specialized-image-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e83_expert-image.jpg" loading="lazy" sizes="100vw" srcset="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e83_expert-image-p-500.jpeg 500w, https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e83_expert-image-p-800.jpeg 800w, https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e83_expert-image.jpg 960w" alt="Specialized Image"/></div>
+               <div class="specialized-content-wrap">
+                  <div class="progress-title-wrap">
+                     <div class="section-title-left">
+                        <h2 class="section-left-title-text dark-color-title">Protecting you with <br/>our legal support</h2>
+                        <img src="/assets/icons/banner-title-separator-black.svg" loading="lazy" alt="Title Separator"/>
+                        <p class="section-left-content dark-color-content">When faced with a family law or personal injury matter, you want an advocate in your corner who is going to protect you and your best interests with no question to negotiations, mediations and adjudications, finally leading to trial or arbitration.<br/><br/></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="our-values-section">
+         <div class="container w-container">
+            <div class="our-values-wrap">
+               <div class="w-layout-grid our-values-grid">
+                  <div class="our-values-title-wrap">
+                     <div class="our-values-title-content">
+                        <div class="section-title-left">
+                           <h2 class="section-left-title-text">What We Offering our clients with their needs<br/></h2>
+                           <img src="/assets/icons/small-separator-gold.svg" loading="lazy" alt="Title Separator"/>
+                           <p class="section-left-content">Litigation can be laden with emotion and uncertainty. Our attorneys are committed to providing you with the support, attention, and consideration that you deserve.<br/></p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="our-values-content-wrap">
+                     <div class="our-values-item">
+                        <div class="values-icon-wrap"><img src="/assets/images/values-icon-scales.svg" loading="lazy" alt="Values Icon"/></div>
+                        <div class="our-values-content-area">
+                           <h3 class="our-values-title">Direct Way Of Justice</h3>
+                           <p>Our Banking and Finance team has very broad experience structuring and negotiating complex financing deals, including in many cross-border transactions.</p>
+                        </div>
+                     </div>
+                     <div class="our-values-item">
+                        <div class="values-icon-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e8a_values-icon-2.svg" loading="lazy" alt="Values Icon"/></div>
+                        <div class="our-values-content-area">
+                           <h3 class="our-values-title">Protecting Your Business</h3>
+                           <p>We are on the panel of many international and local banks, and also represent borrowers which include listed companies, large government-linked conglomerates private high net worth.</p>
+                        </div>
+                     </div>
+                     <div class="our-values-item">
+                        <div class="values-icon-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e8b_values-icon-3.svg" loading="lazy" alt="Values Icon"/></div>
+                        <div class="our-values-content-area">
+                           <h3 class="our-values-title">Relationship Based On Trust</h3>
+                           <p>We punch far above our weight when it comes to Singapore’s equity capital markets, handling everything from IPOs to secondary fundraisings and listed company advisory work.</p>
+                        </div>
+                     </div>
+                     <div class="our-values-item">
+                        <div class="values-icon-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e8c_values-icon-4.svg" loading="lazy" alt="Values Icon"/></div>
+                        <div class="our-values-content-area">
+                           <h3 class="our-values-title">Fight For Justice</h3>
+                           <p>The strong relationships we build with every listed client enables us to effectively support their future requirements. We are also active on international debt listings on the Singapore Exchange.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="team-section">
+         <div class="container w-container">
+            <div class="section-title">
+               <h2 class="section-title-text dark-color-title">Our Experienced Attorney Are Ready<br/> To answer any questions</h2>
+               <img 
+                src="/assets/icons/banner-title-separator.svg" 
+                loading="lazy" 
+                alt="Title Separator"
+                decoding="async" 
+                class = "mx-auto"
+                />
+            </div>
+            <div class="team-wrap">
+               <div class="w-layout-grid team-grid">
+                  <div class="team-item">
+                     <div class="team-image-social-wrap">
+                        <div class="team-image-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e77_team-image-1.jpg" loading="lazy" alt="Team Member Image"/></div>
+                        <div class="team-social-wrap">
+                           <div class="team-social-links"><a href="https://www.facebook.com/" target="_blank" class="team-social-link w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e74_social-icon-facebook.svg" loading="lazy" alt="Team Social Icon"/></a><a href="https://twitter.com/" target="_blank" class="team-social-link w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e97_social-icon-twitter.svg" loading="lazy" alt="Team Social Icon"/></a><a href="https://www.instagram.com/" target="_blank" class="team-social-link w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e78_social-icon-instagram.svg" loading="lazy" alt="Team Social Icon"/></a><a href="https://www.pinterest.com/" target="_blank" class="team-social-link w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e75_social-icon-pinterest.svg" loading="lazy" alt="Team Social Icon"/></a></div>
+                           <div class="team-divider-line"></div>
+                        </div>
+                     </div>
+                     <div class="team-member-detail-wrap">
+                        <h3 class="team-member-name">John Turner</h3>
+                        <p class="team-member-job">Civil Attorney</p>
+                     </div>
+                  </div>
+                  <div class="team-item">
+                     <div class="team-image-social-wrap">
+                        <div class="team-image-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e79_team-image-2.jpg" loading="lazy" alt="Team Member Image"/></div>
+                        <div class="team-social-wrap">
+                           <div class="team-social-links"><a href="https://www.facebook.com/" target="_blank" class="team-social-link w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e74_social-icon-facebook.svg" loading="lazy" alt="Team Social Icon"/></a><a href="https://twitter.com/" target="_blank" class="team-social-link w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e97_social-icon-twitter.svg" loading="lazy" alt="Team Social Icon"/></a><a href="https://www.instagram.com/" target="_blank" class="team-social-link w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e78_social-icon-instagram.svg" loading="lazy" alt="Team Social Icon"/></a><a href="https://www.pinterest.com/" target="_blank" class="team-social-link w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e75_social-icon-pinterest.svg" loading="lazy" alt="Team Social Icon"/></a></div>
+                           <div class="team-divider-line"></div>
+                        </div>
+                     </div>
+                     <div class="team-member-detail-wrap">
+                        <h3 class="team-member-name">Martha Black</h3>
+                        <p class="team-member-job">Associate Attorney</p>
+                     </div>
+                  </div>
+                  <div class="team-item">
+                     <div class="team-image-social-wrap">
+                        <div class="team-image-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e7a_team-image-3.jpg" loading="lazy" alt="Team Member Image"/></div>
+                        <div class="team-social-wrap">
+                           <div class="team-social-links"><a href="https://www.facebook.com/" target="_blank" class="team-social-link w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e74_social-icon-facebook.svg" loading="lazy" alt="Team Social Icon"/></a><a href="https://twitter.com/" target="_blank" class="team-social-link w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e97_social-icon-twitter.svg" loading="lazy" alt="Team Social Icon"/></a><a href="https://www.instagram.com/" target="_blank" class="team-social-link w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e78_social-icon-instagram.svg" loading="lazy" alt="Team Social Icon"/></a><a href="https://www.pinterest.com/" target="_blank" class="team-social-link w-inline-block"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e75_social-icon-pinterest.svg" loading="lazy" alt="Team Social Icon"/></a></div>
+                           <div class="team-divider-line"></div>
+                        </div>
+                     </div>
+                     <div class="team-member-detail-wrap">
+                        <h3 class="team-member-name">Brian Gomez</h3>
+                        <p class="team-member-job">Titular Attorney</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="client-reviews-section">
+         <div class="container w-container">
+            <div class="client-review-wrap">
+               <div class="section-title">
+                  <h2 class="section-title-text">Client Opinions &amp; Reviews</h2>
+                  <img 
+                  src="/assets/icons/banner-title-separator.svg" 
+                  loading="lazy" 
+                  alt="Title Separator"
+                  decoding="async" 
+                  class = "mx-auto"
+                  />
+               </div>
+               <div class="client-review-area">
+                  <div class="w-layout-grid client-review-grid">
+                     <div class="client-review-item">
+                        <div class="review-content-wrap">
+                           <img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e5f_testimonial-quote.svg" loading="lazy" alt="Testimonial Quote"/>
+                           <p class="review-content">Could you please thank Paul personally for me, the stars are for his forehead. The perfect way of handling the case based on the situation.</p>
+                        </div>
+                        <div class="reviewer-wrap">
+                           <div class="reviewer-image-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e63_testimonial-client-2.jpg" loading="lazy" alt="Review Image" class="reviewer-image"/></div>
+                           <div class="reviewer-detail">
+                              <h3 class="reviewer-name">Natasha</h3>
+                              <p class="reviewer-job">Private Employee</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="client-review-item">
+                        <div class="reviewer-wrap toggle-review-wrap">
+                           <div class="reviewer-image-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e60_testimonial-client-1.jpg" loading="lazy" alt="Review Image" class="reviewer-image"/></div>
+                           <div class="reviewer-detail">
+                              <h3 class="reviewer-name">Hannah Butler</h3>
+                              <p class="reviewer-job">Business Sector</p>
+                           </div>
+                        </div>
+                        <div class="review-content-wrap toggle-review-content-wrap">
+                           <img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e5f_testimonial-quote.svg" loading="lazy" alt="Testimonial Quote"/>
+                           <p class="review-content">Attorney law firm really helped me with all my family law and custody issues at the right time. Words are not enough to thank the firm.</p>
+                        </div>
+                     </div>
+                     <div class="client-review-item">
+                        <div class="review-content-wrap">
+                           <img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e5f_testimonial-quote.svg" loading="lazy" alt="Testimonial Quote"/>
+                           <p class="review-content">Thank you for the way in which your team handling the matter on a perfect way. They give me a big relief in this case with more confident.</p>
+                        </div>
+                        <div class="reviewer-wrap">
+                           <div class="reviewer-image-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e64_testimonial-client-6.jpg" loading="lazy" alt="Review Image" class="reviewer-image"/></div>
+                           <div class="reviewer-detail">
+                              <h3 class="reviewer-name">Phillip Arnold</h3>
+                              <p class="reviewer-job">Bus Driver</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="client-review-item">
+                        <div class="reviewer-wrap toggle-review-wrap">
+                           <div class="reviewer-image-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e62_testimonial-client-4.jpg" loading="lazy" alt="Review Image" class="reviewer-image"/></div>
+                           <div class="reviewer-detail">
+                              <h3 class="reviewer-name">Joshua Warren</h3>
+                              <p class="reviewer-job">Private Engineer</p>
+                           </div>
+                        </div>
+                        <div class="review-content-wrap toggle-review-content-wrap">
+                           <img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e5f_testimonial-quote.svg" loading="lazy" alt="Testimonial Quote"/>
+                           <p class="review-content">I frequently check the Best Lawyers list to select an attorney in areas too familiar with at the end they came and lead to achive the justice.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="client-section large-space-section">
+         <div class="container w-container">
+            <div class="section-center-title">
+               <div class="center-title-wrap">
+                  <img 
+                    src="/assets/icons/banner-title-separator.svg" 
+                    loading="lazy" 
+                    alt="Title Large Separator"
+                    decoding="async"
+                    />
+                  <h2 class="section-center-title-text dark-color-title">Meet the Partners</h2>
+                  <img 
+                    src="/assets/icons/banner-title-separator.svg" 
+                    loading="lazy" 
+                    alt="Title Large Separator"
+                    decoding="async"
+                    />
+               </div>
+            </div>
+            <div class="w-layout-grid client-image-grid">
+               <div id="w-node-db25b823-caf8-3c2f-e683-c710de2d3879-9a1b9e18" class="client-image-item"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e5a_client-logo-1.svg" loading="lazy" alt="Client Logo"/></div>
+               <div id="w-node-db25b823-caf8-3c2f-e683-c710de2d387b-9a1b9e18" class="client-image-item"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e5b_client-logo-2.svg" loading="lazy" alt="Client Logo"/></div>
+               <div id="w-node-db25b823-caf8-3c2f-e683-c710de2d387d-9a1b9e18" class="client-image-item"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e5c_client-logo-3.svg" loading="lazy" alt="Client Logo"/></div>
+               <div id="w-node-db25b823-caf8-3c2f-e683-c710de2d387f-9a1b9e18" class="client-image-item"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e59_client-logo-4.svg" loading="lazy" alt="Client Logo"/></div>
+               <div id="w-node-db25b823-caf8-3c2f-e683-c710de2d3881-9a1b9e18" class="client-image-item"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e58_client-logo-5.svg" loading="lazy" alt="Client Logo"/></div>
+            </div>
+         </div>
+      </div>
+</BaseLayout>

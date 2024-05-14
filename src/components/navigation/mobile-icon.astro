@@ -1,0 +1,16 @@
+---
+import Icon from "@/assets/icons/hamburger_menu_white.png"; 
+const {
+    customMargin,
+    ID, 
+} = Astro.props; 
+---
+<div 
+    class={`${customMargin ? customMargin : "my-auto"} block lg:hidden justify-center align-middle bg-transparent cursor-pointer`}
+    id={`${ID}`}
+>
+    <img 
+    src = {Icon.src}
+    class = "w-[32px] h-[32px] m-auto object-fit"
+    />
+</div>

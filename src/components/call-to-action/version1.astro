@@ -1,0 +1,65 @@
+---
+import { BusinessInfo } from "@/data/business-info";
+import { formatPhone } from "@/hooks/number";
+---
+   <div class="consultation-section">
+      <div class="container w-container">
+         <div class="consultation-wrap">
+            <div class="w-layout-grid consultation-grid">
+               <div class="consultation-intro-wrap">
+                  <div class="section-title-left">
+                     <h2 class="section-left-title-text">Our professional Expert law team is always ready to serve you </h2>
+                     <img src="/assets/icons/small-separator-gold.svg" loading="lazy" alt="Call For Consultation"/>
+                     <p class="section-left-content">We’re always available for new cases big or small. Send us an email and we’ll get in touch shortly, or phone between 8:00 am and 7:00 pm Monday to Saturday.<br/></p>
+                  </div>
+                  <div class="consultation-button-wrap">
+                     <a href="/contact-us" class="button w-button">Contact Us</a>
+                  </div>
+               </div>
+               <div class="consultation-detail-wrap">
+                  <div class="consultation-detail-area">
+                     <div class="consultation-content-area">
+                        <h3 class="consultation-heading">Get a Free Consultation</h3>
+                        <p class="consultation-content">You can get free consultation and case evaluation from us via the following contact number</p>
+                        <div class="consultation-call-wrap">
+                           <div class = "consultation-call-icon-wrap">
+                              <img src ="/assets/icons/consultation-call-icon.svg" alt = "phone icon" loading = "lazy" decoding = "async" />
+                           </div>
+                           <div class="cosultation-call-link-wrap">
+                              <p class="consultation-call-title">Call Us On:</p>
+                              <a href={`tel:${BusinessInfo.phone}`} class="consultation-phone-number">{formatPhone(BusinessInfo.phone)}</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="appointment-section">
+      <div class="container w-container">
+         <div class="appointment-form-wrap">
+            <div class="w-form">
+               <form id="email-form" name="email-form" data-name="Email Form" method="get" class="appointment-form" data-wf-page-id="61fcc5ec0803af737de5f139" data-wf-element-id="0c9f643d-56bb-a80e-7fd6-1464eea22925">
+                  <div class="appointment-input-form">
+                     <div class="input-wrap half-width"><input class="input-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Full Name*" type="text" id="name"/></div>
+                     <div class="input-wrap half-width"><input class="input-field w-input" maxlength="256" name="email" data-name="Email" placeholder="Email Address*" type="email" id="email" required=""/></div>
+                  </div>
+                  <div class="appointment-input-form">
+                     <div class="input-wrap half-width"><input class="input-field w-input" maxlength="256" name="Phone-Number" data-name="Phone Number" placeholder="Phone Number" type="text" id="Phone-Number"/></div>
+                     <div class="input-wrap half-width"><input class="input-field w-input" maxlength="256" name="Subject" data-name="Subject" placeholder="Subject" type="text" id="Subject"/></div>
+                  </div>
+                  <div class="input-wrap"><input class="input-field text-area w-input" maxlength="256" name="Your-Message" data-name="Your Message" placeholder="Your Message" type="text" id="Your-Message"/></div>
+                  <div class="appointment-button-wrap"><input type="submit" data-wait="Please wait..." class="button-white w-button" value="Get An Appointment"/></div>
+               </form>
+               <div class="success-message w-form-done">
+                  <div>Thank you! Your submission has been received!</div>
+               </div>
+               <div class="error-message w-form-fail">
+                  <div>Oops! Something went wrong while submitting the form.</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
