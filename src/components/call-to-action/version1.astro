@@ -1,6 +1,10 @@
 ---
 import { BusinessInfo } from "@/data/business-info";
 import { formatPhone } from "@/hooks/number";
+const {
+   title,
+   
+} = Astro.props;
 ---
    <div class="consultation-section">
       <div class="container w-container">
@@ -8,7 +12,11 @@ import { formatPhone } from "@/hooks/number";
             <div class="w-layout-grid consultation-grid">
                <div class="consultation-intro-wrap">
                   <div class="section-title-left">
+                     {title ? 
+                     <h2 class="section-left-title-text">{title}</h2>
+                     :
                      <h2 class="section-left-title-text">Our professional Expert law team is always ready to serve you </h2>
+                     }
                      <img src="/assets/icons/small-separator-gold.svg" loading="lazy" alt="Call For Consultation"/>
                      <p class="section-left-content">We’re always available for new cases big or small. Send us an email and we’ll get in touch shortly, or phone between 8:00 am and 7:00 pm Monday to Saturday.<br/></p>
                   </div>

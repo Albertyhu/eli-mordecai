@@ -6,6 +6,7 @@ import Eli from "@/components/eli-headshot.astro";
 import "@/components/interactive_animations/animation.css"; 
 import TenantLaw from "@/assets/icons/practice-areas/tenant.png"
 import PracticeAreaSection from "@/components/practice-area-preview-section/index.astro"; 
+import CTASection from "@/components/call-to-action/version1.astro"; 
 ---
 <BaseLayout
    pageTitle = "Home"
@@ -22,15 +23,15 @@ import PracticeAreaSection from "@/components/practice-area-preview-section/inde
                         src="/assets/icons/small-separator-gold.svg" 
                         loading="eager" 
                         alt="Small Separator"
-                        class = "hidden sm:block"
+                        class = "hidden sm:block fadeInTag fadeOut"
                         />
-                     <h1 class="hero-area-title fadeInFromBottomTag fadeOutIntoBottom !duration-500">Transforming Legal Hurdles into Success Stories</h1>
-                     <p class="hero-area-content fadeInFromBottomTag fadeOutIntoBottom !duration-500">Your Trusted General Practice Attorney</p>
-                     <a href="/contact-us" class="button w-button fadeInFromBottomTag fadeOutIntoBottom !duration-500">Get In Touch</a>
+                     <h1 class="hero-area-title fadeInFromBottomTag fadeOutIntoBottom text-center sm:text-left !delay-500">Transforming Legal Hurdles into Success Stories</h1>
+                     <p class="hero-area-content fadeInFromBottomTag fadeOutIntoBottom text-center sm:text-left !delay-1000">Your Trusted General Practice Attorney</p>
+                     <a href="/contact-us" class="button w-button fadeInFromBottomTag block sm:inline-block !text-center text-left fadeOutIntoBottom !delay-[2000ms]">Get In Touch</a>
                   </div>
-                  <div class="hero-image-area m-auto lg:ml-auto lg:mr-0">
+                  <div class="hero-image-area m-auto lg:ml-auto lg:mr-0 fadeInTag fadeOut">
                      <Eli
-                        wrapperStyle = "bg-transparent fadeInFromBottomTag fadeOutIntoBottom w-[270px] h-[270px] sm:w-[450px] sm:h-[450px] m-auto"
+                        wrapperStyle = "bg-transparent w-[270px] h-[270px] sm:w-[450px] sm:h-[450px] m-auto"
                      />
                   </div>
                </div>
@@ -40,14 +41,16 @@ import PracticeAreaSection from "@/components/practice-area-preview-section/inde
       <div class="simple-intro-section">
          <div class="container w-container">
             <div class="w-layout-grid simple-intro-grid">
-               <div class="simple-intro-image-wrap"><img src="/assets/images/statue-library.jpg" loading="lazy" alt="Simple Intro Image" class="simple-intro-image"/></div>
+               <div class="simple-intro-image-wrap  fadeInFromBottomTag fadeOutIntoBottom">
+                  <img src="/assets/images/statue-library.jpg" loading="lazy" alt="Simple Intro Image" class="simple-intro-image"/>
+               </div>
                <div class="simple-intro-content-wrap">
-                  <div class="section-title-left">
+                  <div class="section-title-left  fadeInFromBottomTag fadeOutIntoBottom">
                      <h2 class="section-left-title-text">Are you seeking reliable legal advice and representation? <span class = "text-primaryC">Look no further.</span></h2>
                      <img src="/assets/icons/small-separator-gold.svg" loading="lazy" alt="Title Separator"/>
                      <p class="section-left-content"> As your trusted general practice attorney in Los Angeles, CA, I am here to help you navigate through a wide range of legal matters, ensuring your rights and interests are protected every step of the way. You’re in good hands. </p>
                   </div>
-                  <div class="intro-lawyer-area">
+                  <div class="intro-lawyer-area fadeInFromBottomTag fadeOutIntoBottom ">
                      <div class="intro-lawyer-wrap">
                         <img 
                         src="/assets/images/authors/eli-mordecai-small.webp" 
@@ -327,37 +330,9 @@ import PracticeAreaSection from "@/components/practice-area-preview-section/inde
             </div>
          </div>
       </div>
-      <div class="consultation-section">
-         <div class="container w-container">
-            <div class="consultation-wrap">
-               <div class="w-layout-grid consultation-grid">
-                  <div class="consultation-intro-wrap">
-                     <div class="section-title-left">
-                        <h2 class="section-left-title-text">Our professional Expert law team is always ready to serve you </h2>
-                        <img src="/assets/icons/small-separator-gold.svg" loading="lazy" alt="Title Separator"/>
-                        <p class="section-left-content">We’re always available for new cases big or small. Send us an email and we’ll get in touch shortly, or phone between 8:00 am and 7:00 pm Monday to Saturday.<br/></p>
-                     </div>
-                     <div class="consultation-button-wrap"><a href="/contact-us" class="button w-button">Contact Us</a></div>
-                  </div>
-                  <div class="consultation-detail-wrap">
-                     <div class="consultation-detail-area">
-                        <div class="consultation-content-area">
-                           <h3 class="consultation-heading">Get a Free Consultation</h3>
-                           <p class="consultation-content">You can get free consultation and case evaluation from us via the following contact number</p>
-                           <div class="consultation-call-wrap">
-                              <div class="consultation-call-icon-wrap"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e7b_consultation-call-icon.svg" loading="lazy" alt="Call For Consultation"/></div>
-                              <div class="cosultation-call-link-wrap">
-                                 <p class="consultation-call-title">Call Us On:</p>
-                                 <a href="tel:911-987654321" class="consultation-phone-number">911-987654321</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+      <CTASection 
+         title = "Your best legal representation is just a phone call away."
+      />
       <div class="appointment-section">
          <div class="container w-container">
             <div class="appointment-form-wrap">
