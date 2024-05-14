@@ -25,9 +25,22 @@ import CTASection from "@/components/call-to-action/version1.astro";
                         alt="Small Separator"
                         class = "hidden sm:block fadeInTag fadeOut"
                         />
-                     <h1 class="hero-area-title fadeInFromBottomTag fadeOutIntoBottom text-center sm:text-left !delay-500">Transforming Legal Hurdles into Success Stories</h1>
-                     <p class="hero-area-content fadeInFromBottomTag fadeOutIntoBottom text-center sm:text-left !delay-1000">Your Trusted General Practice Attorney</p>
-                     <a href="/contact-us" class="button w-button fadeInFromBottomTag block sm:inline-block !text-center text-left fadeOutIntoBottom !delay-[2000ms]">Get In Touch</a>
+                     <!-- <h1 class="hero-area-title fadeInFromBottomTag fadeOutIntoBottom text-center sm:text-left !sm:delay-500">Transforming Legal Hurdles into Success Stories</h1>
+                     <p class="hero-area-content fadeInFromBottomTag fadeOutIntoBottom text-center sm:text-left !delay-500 !sm:delay-[750]">Your Trusted General Practice Attorney</p>
+                     <a 
+                        href="/contact-us" 
+                        class="button w-button fadeInFromBottomTag block sm:inline-block !text-center text-left fadeOutIntoBottom !delay-1000 sm:!delay-[1000ms]"
+                        >Get In Touch</a> -->
+                     <div
+                        class = "childrenFadeInFromBottomTag"
+                     >
+                        <h1 class="hero-area-title fadeOutIntoBottom text-center sm:text-left sm:!delay-[750ms]">Transforming Legal Hurdles into Success Stories</h1>
+                        <p class="hero-area-content fadeOutIntoBottom text-center sm:text-left !delay-500 sm:!delay-[1000ms]">Your Trusted General Practice Attorney</p>
+                        <a 
+                           href="/contact-us" 
+                           class="button w-button fadeOutIntoBottom block sm:inline-block !text-center text-left !delay-1000 sm:!delay-[1250ms]"
+                           >Get In Touch</a>
+                     </div>
                   </div>
                   <div class="hero-image-area m-auto lg:ml-auto lg:mr-0 fadeInTag fadeOut">
                      <Eli
@@ -48,7 +61,7 @@ import CTASection from "@/components/call-to-action/version1.astro";
                   <div class="section-title-left  fadeInFromBottomTag fadeOutIntoBottom">
                      <h2 class="section-left-title-text">Are you seeking reliable legal advice and representation? <span class = "text-primaryC">Look no further.</span></h2>
                      <img src="/assets/icons/small-separator-gold.svg" loading="lazy" alt="Title Separator"/>
-                     <p class="section-left-content"> As your trusted general practice attorney in Los Angeles, CA, I am here to help you navigate through a wide range of legal matters, ensuring your rights and interests are protected every step of the way. You’re in good hands. </p>
+                     <p class="section-left-content"> As your trusted <b class = "text-primaryC">general practice attorney</b> in Los Angeles, CA, I am here to help you navigate through a wide range of legal matters, ensuring your rights and interests are protected every step of the way. You’re in good hands. </p>
                   </div>
                   <div class="intro-lawyer-area fadeInFromBottomTag fadeOutIntoBottom ">
                      <div class="intro-lawyer-wrap">

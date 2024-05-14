@@ -47,10 +47,14 @@
 }
 
 .fadeInFromBottomTag {
-  transition: opacity var(--duration3) ease, transform var(--duration3) ease;
+  transition: opacity var(--duration3) ease, transform var(--duration1) ease;
 }
 
 .fadeOutIntoBottom {
   opacity: 0;
   transform: translateY(100px);
+}
+
+.childrenFadeInFromBottomTag > * {
+  transition: opacity var(--duration3) ease, transform var(--duration1) ease;
 }

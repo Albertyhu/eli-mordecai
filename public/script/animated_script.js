@@ -18,6 +18,11 @@ document.addEventListener("astro:page-load", () => {
         if (entry.target.classList.contains("fadeInFromBottomTag")) {
           entry.target.classList.remove("fadeOutIntoBottom");
         }
+        if (entry.target.classList.contains("childrenFadeInFromBottomTag")) {
+          for (let i = 0; i < entry.target.children.length; i++) {
+            entry.target.children[i].classList.remove("fadeOutIntoBottom");
+          }
+        }
       } else {
         if (entry.target.classList.contains("fadeInFromTop")) {
           entry.target.classList.add("fadeOutFromTopAnim");
@@ -34,11 +39,16 @@ document.addEventListener("astro:page-load", () => {
         if (entry.target.classList.contains("fadeInFromBottomTag")) {
           entry.target.classList.add("fadeOutIntoBottom");
         }
+        if (entry.target.classList.contains("childrenFadeInFromBottomTag")) {
+          for (let i = 0; i < entry.target.children.length; i++) {
+            entry.target.children[i].classList.add("fadeOutIntoBottom");
+          }
+        }
       }
     });
   };
   const options = {
-    threshold: 0.1,
+    threshold: 0.01,
   };
 
   const observer = new IntersectionObserver(callback, options);
@@ -66,5 +76,12 @@ document.addEventListener("astro:page-load", () => {
   );
   for (var i = 0; i < FadeInFromBottom.length; i++) {
     observer.observe(FadeInFromBottom[i]);
+  }
+
+  const ChildrenFadeInFromBottom = document.getElementsByClassName(
+    "childrenFadeInFromBottomTag"
+  );
+  for (var i = 0; i < ChildrenFadeInFromBottom.length; i++) {
+    observer.observe(ChildrenFadeInFromBottom[i]);
   }
 });
