@@ -4,6 +4,8 @@ import BaseLayout from "@/layout/BaseLayout.astro"
 import NavBar from "@/components/navigation/index.astro";
 import BannerTitleSeparator from "@/components/graphics/banner-title-separator.astro"; 
 import ResponsiveImage from "@/components/graphics/ResponsiveImage.astro"
+import ImageDivider from "@/components/image-dividers/courthouse-corner.astro"; 
+import CTASection from "@/components/call-to-action/version1.astro"; 
 const {
     title, 
     customDescription,
@@ -11,19 +13,21 @@ const {
     phoneImg, 
     mediumTabImg, 
     tabletImg,  
+    CTAHeader,
+    CTAleftContent, 
 } = Astro.props; 
 ---
 <BaseLayout 
-pageTitle="Business Law" 
+pageTitle={title} 
 {customDescription}
 >
   <div class="practice-area-banner">
     <div class="banner-title-overlay"></div>
     <NavBar />
     <div class="container w-container">
-      <div class="banner-title-wrap">
-        <h1 class="banner-area-title">Business Law</h1>
-        <BannerTitleSeparator customStyle = "mx-auto" />
+      <div class="banner-title-wrap childrenFadeInFromBottomTag">
+        <h1 class="banner-area-title fadeOutIntoBottom">{title}</h1>
+        <BannerTitleSeparator customStyle = "mx-auto fadeOutIntoBottom delay-500" />
       </div>
     </div>
   </div>
@@ -38,88 +42,21 @@ pageTitle="Business Law"
             altText = {title}
         />
         <div class="practice-single-content">
-          <div class="w-richtext">
-            <h3
-              class = "text-4xl md:text-5xl my-5"
-            >Introduction</h3>
-            <p>
-              Uniquely matrix economically sound value through cooperative
-              technology. Competently parallel task fully researched data and
-              enterprise process improvements. Collaboratively expedite quality
-              manufactured products via client-focused results quickly
-              communicate enabled technology and turnkey leadership skills.
-              Uniquely enable accurate supply chains rather than friction
-              technology.
-            </p>
-            <h3
-              class = "text-4xl md:text-5xl my-5"
-            >About the law<br /></h3>
-            <p>
-              Appropriately empower dynamic<strong> leadership</strong>
-              <strong>skills </strong>after business portals. Globally my
-              cardinate interactive supply chains with distinctive quality
-              vectors global sources services. Uniquely matrix economically
-              sound value through cooperative technology. Competently parallel
-              task fully researched data and enterprise process improvements<em
-                >.</em
-              >
-            </p>
-            <ul class="[&>li]:list-disc list-inside">
-              <li>
-                Dynamically target high-payoff intellectual capital for
-                customized
-              </li>
-              <li>Interactively procrastinate high-payoff content</li>
-              <li>
-                Credibly reinter mediate backend ideas for cross-platform models
-              </li>
-            </ul>
-            <h3
-              class = "text-4xl md:text-5xl my-5"
-            >Make real time a law services</h3>
-            <p>
-              Collaboratively administrate empowered markets via plug-and-play
-              networks. Dynamically procrastinate B2C users after installed base
-              benefits. Dramatically visualize customer directed convergence
-              without revolutionary ROI.
-            </p>
-            <ol class = "[&>li]:list-decimal list-inside">
-              <li>
-                It brings the right people together with all the right
-                information and tools to get work done
-              </li>
-              <li>
-                We provide operational efficiency, data security, and flexible
-                scale
-              </li>
-              <li>
-                Your best work, together in one package that works seamlessly
-                from your computer
-              </li>
-              <li>
-                Delivers the tools you need to save time Improve field
-                performance always
-              </li>
-            </ol>
-            <h4
-              class = "text-3xl md:text-4xl my-5"
-            >Overview:</h4>
-            <p>
-              Bring to the table win-win survival strategies to ensure proactive
-              domination. At the end of the day, going forward, a new normal
-              that has evolved from generation X is on the runway heading
-              towards a streamlined cloud solution. User generated content in
-              real-time will have multiple touchpoints for offshoring
-              interoperable internal or “organic” sources.
-            </p>
+          <div class="w-richtext [&>p]:mb-10">
+              <slot />
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="divider-section">
+  <!-- <div class="divider-section">
     <div class="container w-container">
       <div class="divider-line"></div>
     </div>
-  </div>
+  </div> -->
+  <ImageDivider />
+  <CTASection 
+    title = {CTAHeader}
+    leftContent = {CTAleftContent}
+  />
 </BaseLayout>

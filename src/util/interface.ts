@@ -148,6 +148,11 @@ interface TrustReasonType {
   icon: ImageMetadata | ImageType | ImageBitmap;
 }
 
+interface ListItemType {
+  label?: string;
+  description: string;
+}
+
 export type {
   formattedPostType,
   MobileMenuProps,
@@ -167,4 +172,5 @@ export type {
   authorType,
   ReactLinkItemProps,
   TrustReasonType,
+  ListItemType,
 };

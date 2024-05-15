@@ -3,7 +3,7 @@ import { BusinessInfo } from "@/data/business-info";
 import { formatPhone } from "@/hooks/number";
 const {
    title,
-   
+   leftContent ="We're always available for new cases big or small. Send us an email and we'll get in touch shortly, or phone between 8:00 am and 7:00 pm Monday to Saturday."
 } = Astro.props;
 ---
    <div class="consultation-section">
@@ -18,7 +18,9 @@ const {
                      <h2 class="section-left-title-text">Our professional Expert law team is always ready to serve you </h2>
                      }
                      <img src="/assets/icons/small-separator-gold.svg" loading="lazy" alt="Call For Consultation"/>
-                     <p class="section-left-content">We’re always available for new cases big or small. Send us an email and we’ll get in touch shortly, or phone between 8:00 am and 7:00 pm Monday to Saturday.<br/></p>
+                     <p 
+                     class="section-left-content" 
+                     >{leftContent}<br/></p>
                   </div>
                   <div class="consultation-button-wrap">
                      <a href="/contact-us" class="button w-button">Contact Us</a>

@@ -1,0 +1,43 @@
+---
+import type {ListItemType} from "@/util/interface.ts"
+const {
+    ordered, 
+    list,
+    wrapperStyle 
+} = Astro.props; 
+---
+{ordered ? 
+<ol class={`[&>li]:list-decimal list-inside w-11/12 mx-auto ${wrapperStyle}`}>
+    {list && list.length > 0 &&
+        list.map((item : ListItemType) =>{
+            return item.label ?
+            <li>
+                <h4
+                    class = "inline-block align-top font-bold sm:text-lg md:text-2xl"
+                >{item.label}</h4>
+                <p>{item.description}</p>
+            </li>
+            :
+            <li>{item.description}</li>
+            }
+        )
+    }
+</ol>
+:
+<ul class={`[&>li]:list-disc list-inside w-11/12 mx-auto ${wrapperStyle}`}>
+    {list && list.length > 0 &&
+        list.map((item : ListItemType) =>{
+            return item.label ?
+            <li>
+                <h4
+                    class = "inline-block align-top font-bold sm:text-lg md:text-2xl"
+                >{item.label}</h4>
+                <p>{item.description}</p>
+            </li>
+            :
+            <li>{item.description}</li>
+            }
+        )
+    }
+</ul>
+}
