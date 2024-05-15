@@ -6,7 +6,7 @@ const {
     index 
 } = Astro.props; 
 ---
-<div role="listitem" class="fadeOutIntoBottom fadeInFromBottomTag">
+<div role="listitem" class="fadeOutIntoBottom fadeInFromBottomTag z-[2]">
     <div class={`practice-area-item !min-h-0 md:flex ${index%2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} md:flex-nowrap`}>
         <div
             class = "min-w-[150px] w-[150px] h-[150px] m-auto rounded-full border-solid border-2 border-primaryC flex justify-center items-center"

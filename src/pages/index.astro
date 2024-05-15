@@ -4,7 +4,8 @@ import NavBar from "@/components/navigation/index.astro";
 import BannerTitleSeparator from "@/components/graphics/banner-title-separator.astro";
 import Eli from "@/components/eli-headshot.astro"; 
 import "@/components/interactive_animations/animation.css"; 
-import TenantLaw from "@/assets/icons/practice-areas/tenant.png"
+import TenantLaw from "@/assets/icons/practice-areas/tenant.png";
+import PracticeAreaLayout from "@/components/practice-area-preview-section/layout.astro"
 import PracticeAreaSection from "@/components/practice-area-preview-section/index.astro"; 
 import CTASection from "@/components/call-to-action/version1.astro"; 
 import TrustSection from "@/components/trust-section/index.astro";
@@ -96,7 +97,9 @@ import HistorySection from "@/components/history-section.astro";
             </div>
          </div>
       </div>
-      <PracticeAreaSection />
+      <PracticeAreaLayout>
+         <PracticeAreaSection />
+      </PracticeAreaLayout>
       <TrustSection />
       <!-- <ClientSection /> -->
       <!-- <HistorySection /> -->

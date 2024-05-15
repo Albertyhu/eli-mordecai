@@ -3,12 +3,15 @@ import BannerTitleSeparator from "../graphics/banner-title-separator.astro";
 import TrustReasons from "@/data/trust-reasons.js"; 
 import Panel from "./trust-panel.astro"; 
 import type {TrustReasonType } from "@/util/interface.js"; 
+import HistoryBackgroundImg from "@/assets/images/history-background.webp"; 
 ---
-<div class="help-section">
+<div class={`help-section relative overflow-hidden h-auto bg-no-repeat bg-cover bg-historyBG_mobile md:bg-historyBG before:w-full before:h-full 
+before:absolute before:bg-gradient-to-t before:from-transparent before:to-white before:bottom-0 
+before:z-[0]`}>
     <div class="container w-container">
         <div class="section-title">
-            <h2 class="section-title-text dark-color-title fadeInFromBottomTag fadeOutIntoBottom">Why should you trust your case with me?</h2>
-            <BannerTitleSeparator customStyle = "mx-auto my-10 fadeInFromBottomTag fadeOutIntoBottom" />
+            <h2 class="section-title-text dark-color-title fadeInFromBottomTag fadeOutIntoBottom z-[3] relative">Why should you trust your case with me?</h2>
+            <BannerTitleSeparator customStyle = "mx-auto my-10 fadeInFromBottomTag fadeOutIntoBottom z-[3] relative" />
             <div class ="md:flex md:flex-row md:gap-5">
                 <div
                     class = "flex flex-col"
@@ -17,7 +20,7 @@ import type {TrustReasonType } from "@/util/interface.js";
                         TrustReasons.map((reason: TrustReasonType, index: number) =><Panel {...reason} {index} />)
                     }
                 </div>
-                <div class="history-image-wrap min-w-[264px] h-auto">
+                <div class="history-image-wrap min-w-[264px] h-auto z-[2]">
                     <img 
                         src="/assets/images/blind-justice.webp" 
                         loading="lazy" 

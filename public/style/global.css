@@ -7639,6 +7639,15 @@ blockquote {
   justify-self: stretch;
 }
 
+/*
+customization
+*/
+
+.history-img-gradient {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 25%, white 75%);
+  mask-image: linear-gradient(to bottom, transparent 25%, white 75%);
+}
+
 @media screen and (min-width: 1280px) {
   #w-node-b65b1a3d-ddb9-afd1-e2c9-f7bc0a364088-0a36402f {
     justify-self: start;

@@ -1,0 +1,18 @@
+---
+import PracticeAreaData from "@/data/practice-areas.js"; 
+import Panel from "./panel.astro"; 
+---
+<div class="practice-areas-section">
+    <div class="container w-container">
+    <div class="w-layout-grid practice-areas-title-grid">
+        <div class="section-title-left">
+            <h2 class="section-left-title-text">My Practice Areas</h2>
+            <img src="/assets/icons/small-separator-gold.svg" loading="lazy" alt="Title Separator"/>
+        </div>
+        <div id="w-node-_51ff0ba3-4e2d-3300-5219-e31f454d2f30-9a1b9e10" class="practice-title-content">
+            <p class="section-left-content">Winning a case is a team effort. <span class = "text-primaryC">Never go at it alone.</span> I work with a network of top lawyers in every field I practice in, each of whom has decades of experience and whom I bring in to work alongside me on every case. Thus, I can help deliver the best results possible for each client.  </p>
+        </div>
+    </div>
+    <slot />
+    </div>
+</div>

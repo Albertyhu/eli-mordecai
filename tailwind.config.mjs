@@ -8,6 +8,11 @@ export default {
         primaryF: "Cormorant Garamond",
         secondaryC: "Outfit",
       },
+      backgroundImage: {
+        historyBG: "url('/assets/images/history-background.webp')",
+        historyBG_mobile:
+          "url('/assets/images/history-background-mobile.webp')",
+      },
       colors: {
         primaryC: "#d1b06b",
         secondaryC: "#1F2732",
