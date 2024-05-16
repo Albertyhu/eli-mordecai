@@ -11,10 +11,10 @@ import MobileIcon from "./mobile-icon.astro";
     class = "flex flex-col fixed top-0 w-full z-[5] hidden_minimized_nav transition-all duration-500"
 >   
     <div
-        class = "h-fit bg-primaryC sm:h-[30px] w-full block sm:flex sm:flex-row justify-between text-secondaryC [&>div]:px-5 text-sm [&>div]:my-auto"
+        class = "h-fit bg-primaryC sm:h-[30px] w-full block sm:flex sm:flex-row justify-between text-secondaryC [&>div]:px-5 text-lg [&>div]:my-auto font-primaryF"
     >
-        <div>Call Us On: <a class = "text-white pl-1 hover:text-secondaryC text-sm hover:underline" href ={`tel:${BusinessInfo.phone}`}>{formatPhone(BusinessInfo.phone)}</a></div>
-        <div>Email Us On: <a class = "text-white pl-1 hover:text-secondaryC text-sm hover:underline" href = {`mailto:${BusinessInfo.email}`}>{BusinessInfo.email}</a></div>
+        <div><b>Call us on:</b> <a class = "text-white font-bold pl-1 hover:text-secondaryC text-lg hover:underline" href ={`tel:${BusinessInfo.phone}`}>{formatPhone(BusinessInfo.phone)}</a></div>
+        <div><b>Email us on:</b> <a class = "text-white font-bold pl-1 hover:text-secondaryC text-lg hover:underline" href = {`mailto:${BusinessInfo.email}`}>{BusinessInfo.email}</a></div>
     </div>
     <div
         class = "flex flex-row justify-between lg:justify-between bg-secondaryC [&>*]:px-5 border-b-2 border-b-white py-1"
