@@ -5,10 +5,10 @@ const {
  customImg,
  immediateLoading = false, 
  } = Astro.props; 
- const imgStyle = "w-[225px] min-[500px]:w-[300px]"
+ 
 ---
 {immediateLoading ? 
-<div class={`${customDiv ? customDiv : "header-logo"}`}>
+<div class={`${customDiv ? customDiv : "header-logo w-[225px] min-[500px]:w-[300px]"}`}>
     <a 
         href="/" 
         aria-current="page" 
@@ -16,12 +16,11 @@ const {
         <img 
         src={Logo.src} 
         loading="eager" 
-        class = {imgStyle}
         alt="Attorney Brand Logo"/>
     </a>
 </div>
 :
-<div class={`${customDiv ? customDiv : "header-logo"}`}>
+<div class={`${customDiv ? customDiv : "header-logo w-[225px] min-[500px]:w-[300px]"}`}>
     <a 
         href="/" 
         aria-current="page" 
@@ -29,7 +28,6 @@ const {
         <img 
         src={Logo.src} 
         loading="lazy" 
-        class = {imgStyle}
         alt="Attorney Brand Logo"/>
     </a>
 </div>

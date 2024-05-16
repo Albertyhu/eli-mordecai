@@ -11,7 +11,9 @@ import ContactInfoItems from "./contact-info-items.astro";
 >
     <div class="container w-container">
         <div class="header-logo-wrap">
-            <LogoComponent />
+            <LogoComponent 
+                immediateLoading = {true}
+            />
             <ContactInfoItems wrapperStyle = "my-auto [&>div]:my-auto"/>
         </div>
         <div class="header-navbar-wrap">

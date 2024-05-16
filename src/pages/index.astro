@@ -47,9 +47,15 @@ import BlogSection from "@/components/blogComponent/blogSection.astro";
       </div>
       <div class="simple-intro-section">
          <div class="container w-container">
-            <div class="w-layout-grid simple-intro-grid">
-               <div class="simple-intro-image-wrap  fadeInFromBottomTag fadeOutIntoBottom">
-                  <img src="/assets/images/statue-library.jpg" loading="lazy" alt="Simple Intro Image" class="simple-intro-image"/>
+            <div class="flex flex-col lg:flex-row gap-5">
+               <div class="simple-intro-image-wrap  fadeInFromBottomTag fadeOutIntoBottom md:min-w-[467px] w-full ">
+                  <img 
+                     src="/assets/images/statue-library.jpg" 
+                     loading="lazy" 
+                     decoding="async"
+                     alt="Simple Intro Image" 
+                     class="simple-intro-image w-[300px] sm:w-[467px] object-fill mx-auto lg:ml-0"
+                  />
                </div>
                <div class="simple-intro-content-wrap">
                   <div class="section-title-left  fadeInFromBottomTag fadeOutIntoBottom">
