@@ -1,11 +1,11 @@
 ---
 import LogoComponent from "../logoComponent.astro"
-import { pages } from "./drop-downs.js"; 
+import { practice_areas } from "./practice-areas-links";
 import MobileDropDown from "./mobile-dropdown.tsx"; 
 import LinkItem from "./linkItem.astro";
 import "./nav-style.css";
+import ConsultationBtn from "./consultation-btn.astro";
 const currentPath = Astro.url.pathname;
-const text = "/about-us"
 ---
 <div 
 class="bg-secondaryC w-[250px] h-full overflow-y-scroll fixed z-20 py-10 px-5 border-r-white border-r-2 border-r-solid transform-all duration-500 closedMobileMenu lg:hidden"
@@ -18,6 +18,9 @@ id="MobileMenu"
         class = "flex flex-col !text-white"
     >
         <nav role="navigation" class="flex flex-col">
+            <ConsultationBtn 
+                wrapperStyle = ""
+            />
             <LinkItem 
                 {currentPath}
                 href = "/"
@@ -30,7 +33,7 @@ id="MobileMenu"
             />
             <MobileDropDown 
                 label = "Pages"
-                options = {pages}
+                options = {practice_areas}
                 client:only = "react"
                 currentPath = {currentPath}
                 client:only="react"

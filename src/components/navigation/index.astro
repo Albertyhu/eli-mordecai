@@ -1,9 +1,9 @@
----
-import { BusinessInfo } from "@/data/business-info";
-import { formatPhone } from "@/hooks/number";
+---;
+import ConsultationBtn from "./consultation-btn.astro";
 import LogoComponent from "@/components/logoComponent.astro"
 import MenuLinks from "./menu-links.astro"
 import MobileIcon from "./mobile-icon.astro"; 
+import ContactInfoItems from "./contact-info-items.astro";
 ---
 <div 
     class="header"
@@ -12,7 +12,7 @@ import MobileIcon from "./mobile-icon.astro";
     <div class="container w-container">
         <div class="header-logo-wrap">
             <LogoComponent />
-            <div class="header-button-wrap"><a href="/contact-us" class="button header-button w-button">Book A Consultation</a></div>
+            <ContactInfoItems wrapperStyle = "my-auto [&>div]:my-auto"/>
         </div>
         <div class="header-navbar-wrap">
             <MobileIcon 
@@ -22,28 +22,7 @@ import MobileIcon from "./mobile-icon.astro";
             <MenuLinks 
                 ContactButton ={false} 
             />
-            <div class="header-contact-wrap">
-                <div class="header-contact-item-wrap">
-                <div class="header-contact-item">
-                    <div class="header-contact-icon-wrap header-link-wrap">
-                        <img src="/assets/icons/header-call-icon.svg" loading="lazy" alt="Header Contact Icon"/>
-                    </div>
-                    <div class="header-contact-link-wrap">
-                        <p class="header-contact-title whitespace-nowrap">Call Us On:</p>
-                        <a href={`tel:${BusinessInfo.phone}`} class="header-contact-link whitespace-nowrap">{formatPhone(BusinessInfo.phone)}</a>
-                    </div>
-                </div>
-                <div class="header-contact-item">
-                    <div class="header-contact-icon-wrap header-link-wrap">
-                        <img src="/assets/icons/header-mail-icon.svg" loading="lazy" alt="Header Contact Icon"/>
-                    </div>
-                    <div class="header-contact-link-wrap">
-                        <p class="header-contact-title">Email Us On:</p>
-                        <a href={`mailto:${BusinessInfo.email}`} class="header-contact-link">{BusinessInfo.email}</a>
-                    </div>
-                </div>
-                </div>
-            </div>
+            <ConsultationBtn />
         </div>
     </div>
 </div>

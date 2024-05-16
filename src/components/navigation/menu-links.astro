@@ -1,8 +1,6 @@
 ---
-import DownArrow from "@/assets/icons/down-arrow-white.png"; 
-import GoldDownArrow from "@/assets/icons/down-arrow-gold.png"; 
 import LinkItem from "./linkItem.astro"; 
-import { pages} from "./drop-downs.js"; 
+import { practice_areas } from "./practice-areas-links";
 const { 
     ContactButton = false,
   } = Astro.props; 
@@ -25,26 +23,28 @@ const currentPath = Astro.url.pathname;
             />
             <div data-hover="true" data-delay="0" class="nav-link dropdown-navigation w-dropdown">
                 <div class="dropdown-toggle w-dropdown-toggle peer group">
-                    <div
-                        class = "flex flex-cols whitespace-nowrap gap-[10px]"
-                    >
+                    <a href ="/practice-areas">
                         <div
-                            class = {`peer`}
-                        >Pages</div>
-                        <img 
-                            src ="/assets/icons/down-arrow-white.png"
-                            alt="drop down menu"
-                            class = "w-[32px] h-[32px] m-auto group-hover:hidden"
-                        />
-                        <img 
-                            src = "/assets/icons/down-arrow-gold.png"
-                            alt="drop down menu"
-                            class = "hidden w-[32px] h-[32px] m-auto group-hover:block"
-                        />                            
-                    </div>
+                            class = "flex flex-cols whitespace-nowrap gap-[10px]"
+                        >
+                                <div
+                                    class = {`peer ${currentPath.toLowerCase().replace(/\//g,"") === "practice-areas" ? "text-primaryC" : ""}`}
+                                >Practice Areas</div>
+                                <img 
+                                    src ="/assets/icons/down-arrow-white.png"
+                                    alt="drop down menu"
+                                    class = "w-[32px] h-[32px] m-auto group-hover:hidden"
+                                />
+                                <img 
+                                    src = "/assets/icons/down-arrow-gold.png"
+                                    alt="drop down menu"
+                                    class = "hidden w-[32px] h-[32px] m-auto group-hover:block"
+                                />   
+                        </div>
+                    </a>
                     <nav class="dropdown-list w-dropdown-list group-hover:block">
-                    {pages && pages.length > 0 && 
-                        pages.map(page => 
+                    {practice_areas && practice_areas.length > 0 && 
+                        practice_areas.map(page => 
                         <LinkItem 
                             {currentPath}
                             href = {page.link}

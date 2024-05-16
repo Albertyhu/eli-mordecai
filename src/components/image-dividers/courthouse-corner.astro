@@ -1,9 +1,10 @@
 ---
 const {
-    text
+    text, 
+    wrapperStyle,
 } = Astro.props; 
 ---
-<div class="image-section">
+<div class={`${wrapperStyle ? wrapperStyle : "image-section"}`}>
     <img 
     src="/assets/images/divider-image.webp" 
     loading="lazy" 

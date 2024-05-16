@@ -1,7 +1,7 @@
 ---
 import PracticeAreaLayout from "@/layout/PracticeAreaLayout.astro";
-import ListComponent
- from "@/components/listComponent.astro";
+import ListComponent from "@/components/listComponent.astro";
+import ResponsiveImage from "@/components/graphics/ResponsiveImage.astro";
 
 const steps =[
   {
@@ -29,18 +29,26 @@ const steps =[
 
 ---
 <PracticeAreaLayout
-    title = "Criminal Law" 
+    keyword = "Top Defense Attorney in Los Angeles"
+    title = "Criminal Defense Law" 
     customDescription = "If you are facing criminal charges in Los Angeles, finding the right criminal defense attorney is critical to maintaining your freedom, innocence, and reputation. "
-    defaultImg = "/assets/images/criminal-law.webp" 
-    phoneImg = "/assets/images/criminal-law-320.webp"  
-    mediumTabImg = "/assets/images/criminal-law-600.webp"  
-    tabletImg = "/assets/images/criminal-law--1080.webp"
     CTAHeader = "Are you looking for the best criminal defense attorney in Los Angeles? "
     CTAleftContent = "Get in touch with Eli Mordecai. "
 >
-    <h3
-        class = "text-4xl md:text-5xl my-5"
-    >In legal trouble? Secure the services of the <b>top defense attorney in Los Angeles.</b></h3>
+    <div
+      class = "flex flex-col lg:flex-row-reverse flex-nowrap gap-10 mb-10 justify-center"
+    >
+      <ResponsiveImage 
+        defaultImg = "/assets/images/criminal-law.webp" 
+        phoneImg = "/assets/images/criminal-law-320.webp"  
+        mediumTabImg = "/assets/images/criminal-law-600.webp"  
+        tabletImg = "/assets/images/criminal-law--1080.webp"
+        altText = "Top Defense Attorney in Los Angeles" 
+      /> 
+      <h1
+          class = "text-4xl md:text-5xl my-auto"
+      >In legal trouble? Secure the services of the <span class = "text-primaryC">top defense attorney</span> in Los Angeles.</h1>
+    </div>
     <p>If you are facing criminal charges in Los Angeles, finding the right criminal defense attorney is critical to maintaining your freedom, innocence, and reputation. A conviction can lead to far-reaching consequences such as heavy fines and a lengthy prison sentence. Furthermore, getting a criminal record will impede you from getting hired into good jobs after you leave prison.</p>
     <p>Therefore, it is in your best interest to build the strongest defense strategy for yourself.</p>
     <p>With my expertise and legal counsel, I am here to advocate for your rights, protect your interests, and provide you with the comprehensive legal representation you deserve. Multiple steps are followed to help build your defense case.</p>

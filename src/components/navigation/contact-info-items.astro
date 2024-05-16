@@ -1,0 +1,29 @@
+---
+import { BusinessInfo } from "@/data/business-info";
+import { formatPhone } from "@/hooks/number";
+const {
+    wrapperStyle, 
+    } = Astro.props; 
+---
+<div class={`header-contact-wrap wrapperStyle`}>
+    <div class="header-contact-item-wrap">
+        <div class="header-contact-item ">
+            <div class="header-contact-icon-wrap header-link-wrap">
+                <img src="/assets/icons/header-call-icon.svg" loading="lazy" alt="Header Contact Icon"/>
+            </div>
+            <div class="header-contact-link-wrap">
+                <p class="header-contact-title whitespace-nowrap">Call Us On:</p>
+                <a href={`tel:${BusinessInfo.phone}`} class="header-contact-link whitespace-nowrap">{formatPhone(BusinessInfo.phone)}</a>
+            </div>
+        </div>
+        <div class="header-contact-item">
+            <div class="header-contact-icon-wrap header-link-wrap">
+                <img src="/assets/icons/header-mail-icon.svg" loading="lazy" alt="Header Contact Icon"/>
+            </div>
+            <div class="header-contact-link-wrap">
+                <p class="header-contact-title">Email Us On:</p>
+                <a href={`mailto:${BusinessInfo.email}`} class="header-contact-link whitespace-normal">{BusinessInfo.email}</a>
+            </div>
+        </div>
+    </div>
+</div>

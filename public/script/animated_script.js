@@ -48,7 +48,7 @@ document.addEventListener("astro:page-load", () => {
     });
   };
   const options = {
-    threshold: 0.01,
+    threshold: 0.1,
   };
 
   const observer = new IntersectionObserver(callback, options);

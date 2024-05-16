@@ -3,10 +3,8 @@ export const prerender = true;
 import BaseLayout from "@/layout/BaseLayout.astro"
 import NavBar from "@/components/navigation/index.astro";
 import BannerTitleSeparator from "@/components/graphics/banner-title-separator.astro"; 
-import SmallTitleSeparator from "@/components/graphics/small-separator-gold.astro"
 import ConsultationSection from "@/components/call-to-action/version1.astro"; 
 import PracticeAreaSection from "@/components/practice-area-preview-section/index.astro"
-
 ---
 <BaseLayout 
 pageTitle="Practice Areas" 
@@ -16,9 +14,9 @@ customDescription="Lawyer site"
         <div class="banner-title-overlay"></div>
         <NavBar />
         <div class="container w-container">
-        <div class="banner-title-wrap">
-            <h1 class="banner-area-title">Practice Areas</h1>
-            <BannerTitleSeparator customStyle = "mx-auto" />
+        <div class="banner-title-wrap childrenFadeInFromBottomTag">
+            <h1 class="banner-area-title fadeOutIntoBottom ">Practice Areas</h1>
+            <BannerTitleSeparator customStyle = "mx-auto fadeOutIntoBottom " />
         </div>
         </div>
     </div>

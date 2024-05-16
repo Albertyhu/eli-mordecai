@@ -3,44 +3,34 @@ export const prerender = true;
 import BaseLayout from "@/layout/BaseLayout.astro"
 import NavBar from "@/components/navigation/index.astro";
 import BannerTitleSeparator from "@/components/graphics/banner-title-separator.astro"; 
-import ResponsiveImage from "@/components/graphics/ResponsiveImage.astro"
-import ImageDivider from "@/components/image-dividers/courthouse-corner.astro"; 
-import CTASection from "@/components/call-to-action/version1.astro"; 
+import CTASection from "@/components/call-to-action/version2.astro"; 
 const {
     title, 
-    customDescription,
-    defaultImg, 
-    phoneImg, 
-    mediumTabImg, 
-    tabletImg,  
+    keyword, 
+    customDescription, 
     CTAHeader,
     CTAleftContent, 
 } = Astro.props; 
 ---
 <BaseLayout 
-pageTitle={title} 
-{customDescription}
+  pageTitle={keyword}
+  {customDescription}
 >
   <div class="practice-area-banner">
     <div class="banner-title-overlay"></div>
     <NavBar />
     <div class="container w-container">
       <div class="banner-title-wrap childrenFadeInFromBottomTag">
-        <h1 class="banner-area-title fadeOutIntoBottom">{title}</h1>
-        <BannerTitleSeparator customStyle = "mx-auto fadeOutIntoBottom delay-500" />
+        <div class="fadeOutIntoBottom banner-area-title fadeOutIntoBottom font-primaryF">
+          <p class = "text-4xl lg:!text-6xl">{title}</p>
+        </div>
+        <BannerTitleSeparator customStyle = "fadeOutIntoBottom mx-auto delay-500" />
       </div>
     </div>
   </div>
-  <div class="practice-area-single-section">
+  <div class="practice-area-single-section1">
     <div class="container w-container">
       <div class="practice-content-wrap">
-        <ResponsiveImage 
-            {defaultImg}
-            {phoneImg}
-            {mediumTabImg}
-            {tabletImg}
-            altText = {title}
-        />
         <div class="practice-single-content">
           <div class="w-richtext [&>p]:mb-10">
               <slot />
@@ -49,12 +39,6 @@ pageTitle={title}
       </div>
     </div>
   </div>
-  <!-- <div class="divider-section">
-    <div class="container w-container">
-      <div class="divider-line"></div>
-    </div>
-  </div> -->
-  <ImageDivider />
   <CTASection 
     title = {CTAHeader}
     leftContent = {CTAleftContent}

@@ -3,6 +3,7 @@ import Footer from "@/components/footer/index.astro"
 import SEO from "@/components/SEO.astro"; 
 import MinimizedNav from "@/components/navigation/minimized-nav.astro";
 import MobileMenu from "@/components/navigation/mobile-menu.astro";
+import "@/components/interactive_animations/animation.css"; 
 import { ViewTransitions } from 'astro:transitions';
 const {
     pageTitle, 
@@ -31,7 +32,6 @@ const {
          <link rel="stylesheet" href="/style/global.css">
       </noscript>
       <link href="/assets/icons/favicon.webp" rel="shortcut icon" type="image/x-icon"/>
-      <link href="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e3b_attorney-webclip.webp" rel="apple-touch-icon"/>
       <ViewTransitions /> 
    </head>
    <body>

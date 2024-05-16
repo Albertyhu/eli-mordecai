@@ -3,15 +3,10 @@ import BaseLayout from "@/layout/BaseLayout.astro";
 import NavBar from "@/components/navigation/index.astro"; 
 import BannerTitleSeparator from "@/components/graphics/banner-title-separator.astro";
 import Eli from "@/components/eli-headshot.astro"; 
-import "@/components/interactive_animations/animation.css"; 
 import PracticeAreaLayout from "@/components/practice-area-preview-section/layout.astro"
 import PracticeAreaSection from "@/components/practice-area-preview-section/index.astro"; 
-import CTASection from "@/components/call-to-action/version1.astro"; 
+import CTASection from "@/components/call-to-action/version2.astro"; 
 import TrustSection from "@/components/trust-section/index.astro";
-import ClientSection from "@/components/client-section.astro";
-import ClientReviewSection from "@/components/client-review-section.astro";
-import TeamSection from "@/components/team-section.astro"; 
-import HistorySection from "@/components/history-section.astro"; 
 import ImageDivider from "@/components/image-dividers/courthouse-corner.astro"; 
 ---
 <BaseLayout
@@ -31,12 +26,6 @@ import ImageDivider from "@/components/image-dividers/courthouse-corner.astro";
                         alt="Small Separator"
                         class = "hidden sm:block fadeInTag fadeOut"
                         />
-                     <!-- <h1 class="hero-area-title fadeInFromBottomTag fadeOutIntoBottom text-center sm:text-left !sm:delay-500">Transforming Legal Hurdles into Success Stories</h1>
-                     <p class="hero-area-content fadeInFromBottomTag fadeOutIntoBottom text-center sm:text-left !delay-500 !sm:delay-[750]">Your Trusted General Practice Attorney</p>
-                     <a 
-                        href="/contact-us" 
-                        class="button w-button fadeInFromBottomTag block sm:inline-block !text-center text-left fadeOutIntoBottom !delay-1000 sm:!delay-[1000ms]"
-                        >Get In Touch</a> -->
                      <div
                         class = "childrenFadeInFromBottomTag"
                      >
@@ -81,18 +70,7 @@ import ImageDivider from "@/components/image-dividers/courthouse-corner.astro";
                      </div>
                      <h3 class="intro-author-name">Eli Mordecai</h3>
                   </div>
-                  <!-- <div class="intro-status-wrap">
-                     <div class="intro-percentage-item">
-                        <img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e4f_simple-intro-icon.svg" loading="lazy" alt="Cases Icon"/>
-                        <p class="percentage-content">95% <br/>Case Success</p>
-                     </div>
-                     <div class="intro-experience-wrap">
-                        <div class="intro-year-wrap">
-                           <h3 class="experience-title">35+</h3>
-                        </div>
-                        <p class="experience-content">Years<br/>Experience</p>
-                     </div>
-                  </div> -->
+                  <!-- <InfoStatus /> -->
                </div>
             </div>
          </div>
