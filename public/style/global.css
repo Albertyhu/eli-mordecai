@@ -5669,7 +5669,7 @@ blockquote {
 
   .footer-grid {
     grid-column-gap: 100px;
-    grid-template-columns: 1.75fr 1fr 1fr 2fr;
+    grid-template-columns: 1.75fr 1fr 2fr;
   }
 
   .footer-widget-title {

@@ -1,7 +1,6 @@
 ---
 import ContactUsColumn  from "./contact-us.astro"; 
 import QuickLinkColumn from "./quick-link.astro"; 
-import UtilityColumn from "./utility.astro"; 
 import PracticeAreaColumn from "./practice-area.astro"
 import LogoComponent from "../logoComponent.astro";
 ---
@@ -9,13 +8,14 @@ import LogoComponent from "../logoComponent.astro";
          <div class="container w-container">
             <div class="footer-top-logo">
                <div class="footer-top-logo-wrap">
-                  <LogoComponent />
+                  <LogoComponent 
+                     customDiv = "header-logo mx-auto"
+                  />
                </div>
             </div>
             <div class="footer-widget-wrap">
                <div class="w-layout-grid footer-grid">
                   <QuickLinkColumn />
-                  <!-- <UtilityColumn /> -->
                   <PracticeAreaColumn />
                   <ContactUsColumn />
                </div>
