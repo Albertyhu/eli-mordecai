@@ -1,0 +1,58 @@
+---
+import ResponsiveImage from "../graphics/ResponsiveImage.astro";
+const {
+pubDate,
+category,
+title,
+url,
+excerpt,
+featured_image, 
+phoneImg, 
+mediumTabImg, 
+tabletImg, 
+} = Astro.props; 
+
+---
+<div class="featured-blog-wrap home-featured-blog">
+    <div class="w-dyn-list">
+        <div role="list" class="w-dyn-items">
+            <div role="listitem" class="w-dyn-item">
+            <div class="featured-blog-item">
+                <div class="w-layout-grid featured-blog-grid">
+                    <div id="w-node-_25a59e16-114d-9856-7e7b-a3c4dc31e84b-9a1b9e10" class="featured-blog-image-wrap">
+                        <a href="/post/the-difference-between-information-legal-advice" class="w-inline-block">
+                        <ResponsiveImage 
+                            defaultImg = {featured_image} 
+                            {phoneImg}
+                            {mediumTabImg}
+                            {tabletImg} 
+                            altText = {title},                            
+                        />
+                        </a>
+                        </div>
+                    <div class="featured-blog-content-wrap">
+                        <div class="blog-meta-wrap">
+                        <div class="law-type-wrap">
+                            <a href={`/blog/category/${category}/1`} class="blog-law-type">{category}</a>
+                        </div>
+                        <div class="meta-separator">
+                            <p class="meta-separator-line">|</p>
+                        </div>
+                        <div class="date-wrap">
+                            <p class="published-date">{pubDate}</p>
+                        </div>
+                        </div>
+                        <div class="blog-content-area">
+                        <a href={url} class="featured-blog-title">{title}</a>
+                        {excerpt && <p class="blog-excerpt">{excerpt}</p>}
+                        </div>
+                        <div class="blog-viewmore-wrap">
+                            <a href={url} class="viewmore-link">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+---
+import FeaturedBlogSection from "./featuredBlogSection.astro";
+import FeaturedBlogLayout from "./featuredBlogLayout.astro";
+import type { PostType } from "@/util/interface";
+import { GetTheMostRecentBlogs } from "@/hooks/blogHooks.ts"; 
+import PreviewPanel from "./preview-panel.astro"; 
+let AllPosts : Array<PostType> | [] = [] 
+try{
+    AllPosts = await Astro.glob("../../pages/posts/*.md"); 
+}
+catch(e){
+    AllPosts = [];  
+    console.log("Error trying to retrieve blog posts: ", e)
+}
+const {
+    RETRIEVE_SIZE = 4, 
+} = Astro.props; 
+let recentPosts : Array<PostType> | [] = GetTheMostRecentBlogs(RETRIEVE_SIZE, AllPosts); 
+const mostRecent : PostType | undefined | null = recentPosts.shift()
+---
+<FeaturedBlogLayout>
+{mostRecent &&
+    <FeaturedBlogSection
+        {...mostRecent.frontmatter}
+        url={mostRecent.url}
+    />
+}
+</FeaturedBlogLayout>
+<div class="blog-section">
+    <div class="container w-container">
+        <div class="blog-content-wrap">
+            <div class="w-dyn-list">
+                <!-- blog here -->
+                {recentPosts && recentPosts.length > 0 && 
+                recentPosts.map(post =>
+                    <PreviewPanel 
+                        {...post.frontmatter}
+                        url={post.url}
+                    />
+                ) }
+            </div>
+        </div>
+    </div>
+</div>

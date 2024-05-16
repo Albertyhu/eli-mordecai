@@ -1,13 +1,12 @@
 ---
 import BaseLayout from "@/layout/BaseLayout.astro"; 
 import NavBar from "@/components/navigation/index.astro"; 
-import BannerTitleSeparator from "@/components/graphics/banner-title-separator.astro";
 import Eli from "@/components/eli-headshot.astro"; 
 import PracticeAreaLayout from "@/components/practice-area-preview-section/layout.astro"
 import PracticeAreaSection from "@/components/practice-area-preview-section/index.astro"; 
 import CTASection from "@/components/call-to-action/version2.astro"; 
 import TrustSection from "@/components/trust-section/index.astro";
-import ImageDivider from "@/components/image-dividers/courthouse-corner.astro"; 
+import BlogSection from "@/components/blogComponent/blogSection.astro";
 ---
 <BaseLayout
    pageTitle = "Home"
@@ -29,7 +28,7 @@ import ImageDivider from "@/components/image-dividers/courthouse-corner.astro";
                      <div
                         class = "childrenFadeInFromBottomTag"
                      >
-                        <h1 class="hero-area-title fadeOutIntoBottom text-center sm:text-left sm:!delay-[750ms]">Transforming Legal Hurdles into Success Stories</h1>
+                        <h1 class="hero-area-title font-light fadeOutIntoBottom text-center sm:text-left sm:!delay-[750ms]">Transforming Legal Hurdles into Success Stories</h1>
                         <p class="hero-area-content fadeOutIntoBottom text-center sm:text-left !delay-500 sm:!delay-[1000ms]">Your Trusted General Practice Attorney</p>
                         <a 
                            href="/contact-us" 
@@ -86,171 +85,10 @@ import ImageDivider from "@/components/image-dividers/courthouse-corner.astro";
       <CTASection 
          title = "Your best legal representation is just a phone call away."
       />
-      <div class="featured-blog-section">
-         <div class="container w-container">
-            <div class="section-title">
-               <h2 class="section-title-text">Recent Blogs</h2>
-               <BannerTitleSeparator customStyle = "mx-auto" />
-            </div>
-            <div class="featured-blog-wrap home-featured-blog">
-               <div class="w-dyn-list">
-                  <div role="list" class="w-dyn-items">
-                     <div role="listitem" class="w-dyn-item">
-                        <div class="featured-blog-item">
-                           <div class="w-layout-grid featured-blog-grid">
-                              <div id="w-node-_25a59e16-114d-9856-7e7b-a3c4dc31e84b-9a1b9e10" class="featured-blog-image-wrap"><a href="/post/the-difference-between-information-legal-advice" class="w-inline-block"><img src="https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec9_blog-thumbnail-image-7.jpg" loading="lazy" alt="Featured Blog Image" sizes="(max-width: 479px) 87vw, (max-width: 767px) 90vw, (max-width: 991px) 92vw, (max-width: 1439px) 94vw, (max-width: 1919px) 1360px, 1400px" srcset="https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec9_blog-thumbnail-image-7-p-500.jpeg 500w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec9_blog-thumbnail-image-7-p-800.jpeg 800w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec9_blog-thumbnail-image-7-p-1080.jpeg 1080w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec9_blog-thumbnail-image-7.jpg 1200w"/></a></div>
-                              <div id="w-node-_25a59e16-114d-9856-7e7b-a3c4dc31e84e-9a1b9e10" class="featured-blog-content-wrap">
-                                 <div class="blog-meta-wrap">
-                                    <div class="law-type-wrap"><a href="/law-types/corporate-law" class="blog-law-type">Corporate Law</a></div>
-                                    <div class="meta-separator">
-                                       <p class="meta-separator-line">|</p>
-                                    </div>
-                                    <div class="date-wrap">
-                                       <p class="published-date">Friday, February 4, 2022</p>
-                                    </div>
-                                 </div>
-                                 <div class="blog-content-area">
-                                    <a href="/post/the-difference-between-information-legal-advice" class="featured-blog-title">The Difference between Information &amp; Legal Advice</a>
-                                    <p class="blog-excerpt">Collaborative on low-hanging fruit to identify a ballpark value added activity to beta matrix economically test override the digital.</p>
-                                 </div>
-                                 <div class="blog-viewmore-wrap"><a href="/post/the-difference-between-information-legal-advice" class="viewmore-link">View More</a></div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
       <div class="divider-section">
          <div class="container w-container">
-            <div class="divider-line"></div>
+         <div class="divider-line"></div>
          </div>
       </div>
-      <div class="blog-section">
-         <div class="container w-container">
-            <div class="blog-content-wrap">
-               <div class="w-dyn-list">
-                  <div role="list" class="w-dyn-items w-row">
-                     <div role="listitem" class="w-dyn-item w-col w-col-4">
-                        <div class="blog-item">
-                           <a href="/post/how-to-tell-who-is-at-fault-in-a-car-accident" class="w-inline-block"><img src="https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9e3f_blog-thumbnail-image-1.jpg" loading="lazy" alt="Blog Image" sizes="(max-width: 479px) 83vw, (max-width: 767px) 87vw, (max-width: 991px) 29vw, (max-width: 1279px) 30vw, (max-width: 1439px) 31vw, (max-width: 1919px) 440px, 453.328125px" srcset="https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9e3f_blog-thumbnail-image-1-p-500.jpeg 500w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9e3f_blog-thumbnail-image-1-p-800.jpeg 800w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9e3f_blog-thumbnail-image-1-p-1080.jpeg 1080w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9e3f_blog-thumbnail-image-1.jpg 1200w"/></a>
-                           <div class="blog-meta-wrap">
-                              <div class="law-type-wrap"><a href="/law-types/corporate-law" class="blog-law-type">Corporate Law</a></div>
-                              <div class="meta-separator">
-                                 <p class="meta-separator-line">|</p>
-                              </div>
-                              <div class="date-wrap">
-                                 <p class="published-date">Friday, February 4, 2022</p>
-                              </div>
-                           </div>
-                           <div class="blog-content-area">
-                              <a href="/post/how-to-tell-who-is-at-fault-in-a-car-accident" class="blog-title-link">How to Tell Who Is at Fault in a Car Accident</a>
-                              <p class="blog-excerpt">Capitalize on low-hanging fruit to identify a ballpark value added matrix economically activity to beta test override the digital.</p>
-                           </div>
-                           <div class="blog-viewmore-wrap"><a href="/post/how-to-tell-who-is-at-fault-in-a-car-accident" class="viewmore-link">View More</a></div>
-                        </div>
-                     </div>
-                     <div role="listitem" class="w-dyn-item w-col w-col-4">
-                        <div class="blog-item">
-                           <a href="/post/when-sue-outside-of-workers-compensation" class="w-inline-block"><img src="https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9e73_blog-thumbnail-image-2.jpg" loading="lazy" alt="Blog Image" sizes="(max-width: 479px) 83vw, (max-width: 767px) 87vw, (max-width: 991px) 29vw, (max-width: 1279px) 30vw, (max-width: 1439px) 31vw, (max-width: 1919px) 440px, 453.328125px" srcset="https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9e73_blog-thumbnail-image-2-p-500.jpeg 500w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9e73_blog-thumbnail-image-2-p-800.jpeg 800w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9e73_blog-thumbnail-image-2-p-1080.jpeg 1080w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9e73_blog-thumbnail-image-2.jpg 1200w"/></a>
-                           <div class="blog-meta-wrap">
-                              <div class="law-type-wrap"><a href="/law-types/legal-advice" class="blog-law-type">Legal Advice</a></div>
-                              <div class="meta-separator">
-                                 <p class="meta-separator-line">|</p>
-                              </div>
-                              <div class="date-wrap">
-                                 <p class="published-date">Friday, February 4, 2022</p>
-                              </div>
-                           </div>
-                           <div class="blog-content-area">
-                              <a href="/post/when-sue-outside-of-workers-compensation" class="blog-title-link">When Sue Outside of Workers’ Compensation</a>
-                              <p class="blog-excerpt">Strategies on low-hanging fruit to identify a ballpark value added activity matrix economically to beta test override the digital.</p>
-                           </div>
-                           <div class="blog-viewmore-wrap"><a href="/post/when-sue-outside-of-workers-compensation" class="viewmore-link">View More</a></div>
-                        </div>
-                     </div>
-                     <div role="listitem" class="w-dyn-item w-col w-col-4">
-                        <div class="blog-item">
-                           <a href="/post/social-media-postings-lead-to-defense-verdict" class="w-inline-block"><img src="https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ea4_blog-thumbnail-image-3.jpg" loading="lazy" alt="Blog Image" sizes="(max-width: 479px) 83vw, (max-width: 767px) 87vw, (max-width: 991px) 29vw, (max-width: 1279px) 30vw, (max-width: 1439px) 31vw, (max-width: 1919px) 440px, 453.328125px" srcset="https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ea4_blog-thumbnail-image-3-p-500.jpeg 500w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ea4_blog-thumbnail-image-3-p-800.jpeg 800w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ea4_blog-thumbnail-image-3-p-1080.jpeg 1080w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ea4_blog-thumbnail-image-3.jpg 1200w"/></a>
-                           <div class="blog-meta-wrap">
-                              <div class="law-type-wrap"><a href="/law-types/social-justice-" class="blog-law-type">Social Justice </a></div>
-                              <div class="meta-separator">
-                                 <p class="meta-separator-line">|</p>
-                              </div>
-                              <div class="date-wrap">
-                                 <p class="published-date">Friday, February 4, 2022</p>
-                              </div>
-                           </div>
-                           <div class="blog-content-area">
-                              <a href="/post/social-media-postings-lead-to-defense-verdict" class="blog-title-link">Social Media Postings Lead to Defense Verdict</a>
-                              <p class="blog-excerpt">Collaborative on low-hanging fruit to identify a ballpark value added activity to beta matrix economically test override the digital.</p>
-                           </div>
-                           <div class="blog-viewmore-wrap"><a href="/post/social-media-postings-lead-to-defense-verdict" class="viewmore-link">View More</a></div>
-                        </div>
-                     </div>
-                     <div role="listitem" class="w-dyn-item w-col w-col-4">
-                        <div class="blog-item">
-                           <a href="/post/riding-solo-to-the-rescue-of-her-beloved-nonprofits" class="w-inline-block"><img src="https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec4_blog-thumbnail-image-4.jpg" loading="lazy" alt="Blog Image" sizes="(max-width: 479px) 83vw, (max-width: 767px) 87vw, (max-width: 991px) 29vw, (max-width: 1279px) 30vw, (max-width: 1439px) 31vw, (max-width: 1919px) 440px, 453.328125px" srcset="https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec4_blog-thumbnail-image-4-p-500.jpeg 500w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec4_blog-thumbnail-image-4-p-800.jpeg 800w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec4_blog-thumbnail-image-4-p-1080.jpeg 1080w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec4_blog-thumbnail-image-4.jpg 1200w"/></a>
-                           <div class="blog-meta-wrap">
-                              <div class="law-type-wrap"><a href="/law-types/corporate-law" class="blog-law-type">Corporate Law</a></div>
-                              <div class="meta-separator">
-                                 <p class="meta-separator-line">|</p>
-                              </div>
-                              <div class="date-wrap">
-                                 <p class="published-date">Friday, February 4, 2022</p>
-                              </div>
-                           </div>
-                           <div class="blog-content-area">
-                              <a href="/post/riding-solo-to-the-rescue-of-her-beloved-nonprofits" class="blog-title-link">Riding solo to the rescue of her beloved nonprofits</a>
-                              <p class="blog-excerpt">Podcasting on low-hanging fruit to identify a ballpark value added activity to beta test override matrix economically the digital.</p>
-                           </div>
-                           <div class="blog-viewmore-wrap"><a href="/post/riding-solo-to-the-rescue-of-her-beloved-nonprofits" class="viewmore-link">View More</a></div>
-                        </div>
-                     </div>
-                     <div role="listitem" class="w-dyn-item w-col w-col-4">
-                        <div class="blog-item">
-                           <a href="/post/case-filed-on-behalf-of-injured-tugboat-worker" class="w-inline-block"><img src="https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ecb_blog-thumbnail-image-5.jpg" loading="lazy" alt="Blog Image" sizes="(max-width: 479px) 83vw, (max-width: 767px) 87vw, (max-width: 991px) 29vw, (max-width: 1279px) 30vw, (max-width: 1439px) 31vw, (max-width: 1919px) 440px, 453.328125px" srcset="https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ecb_blog-thumbnail-image-5-p-500.jpeg 500w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ecb_blog-thumbnail-image-5-p-800.jpeg 800w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ecb_blog-thumbnail-image-5-p-1080.jpeg 1080w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ecb_blog-thumbnail-image-5.jpg 1200w"/></a>
-                           <div class="blog-meta-wrap">
-                              <div class="law-type-wrap"><a href="/law-types/legal-advice" class="blog-law-type">Legal Advice</a></div>
-                              <div class="meta-separator">
-                                 <p class="meta-separator-line">|</p>
-                              </div>
-                              <div class="date-wrap">
-                                 <p class="published-date">Friday, February 4, 2022</p>
-                              </div>
-                           </div>
-                           <div class="blog-content-area">
-                              <a href="/post/case-filed-on-behalf-of-injured-tugboat-worker" class="blog-title-link">Case Filed on Behalf of Injured Tugboat Worker</a>
-                              <p class="blog-excerpt">Efficiently on low-hanging fruit to identify a ballpark value added activity to beta test matrix economically override the digital.</p>
-                           </div>
-                           <div class="blog-viewmore-wrap"><a href="/post/case-filed-on-behalf-of-injured-tugboat-worker" class="viewmore-link">View More</a></div>
-                        </div>
-                     </div>
-                     <div role="listitem" class="w-dyn-item w-col w-col-4">
-                        <div class="blog-item">
-                           <a href="/post/how-companies-choose-legal-representation" class="w-inline-block"><img src="https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec7_blog-thumbnail-image-6.jpg" loading="lazy" alt="Blog Image" sizes="(max-width: 479px) 83vw, (max-width: 767px) 87vw, (max-width: 991px) 29vw, (max-width: 1279px) 30vw, (max-width: 1439px) 31vw, (max-width: 1919px) 440px, 453.328125px" srcset="https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec7_blog-thumbnail-image-6-p-500.jpeg 500w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec7_blog-thumbnail-image-6-p-800.jpeg 800w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec7_blog-thumbnail-image-6-p-1080.jpeg 1080w, https://assets-global.website-files.com/663690b06ff2152d9a1b9e32/663690b06ff2152d9a1b9ec7_blog-thumbnail-image-6.jpg 1200w"/></a>
-                           <div class="blog-meta-wrap">
-                              <div class="law-type-wrap"><a href="/law-types/social-justice-" class="blog-law-type">Social Justice </a></div>
-                              <div class="meta-separator">
-                                 <p class="meta-separator-line">|</p>
-                              </div>
-                              <div class="date-wrap">
-                                 <p class="published-date">Friday, February 4, 2022</p>
-                              </div>
-                           </div>
-                           <div class="blog-content-area">
-                              <a href="/post/how-companies-choose-legal-representation" class="blog-title-link">How Companies Choose Legal Representation</a>
-                              <p class="blog-excerpt">Objectively on low-hanging fruit to identify a ballpark value added activity to beta matrix economically test override the digital.</p>
-                           </div>
-                           <div class="blog-viewmore-wrap"><a href="/post/how-companies-choose-legal-representation" class="viewmore-link">View More</a></div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <ImageDivider />
+      <BlogSection />
 </BaseLayout>

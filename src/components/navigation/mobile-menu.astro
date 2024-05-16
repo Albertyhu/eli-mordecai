@@ -32,11 +32,16 @@ id="MobileMenu"
                 label = "About Us"
             />
             <MobileDropDown 
-                label = "Pages"
+                label = "Practice Areas"
                 options = {practice_areas}
                 client:only = "react"
                 currentPath = {currentPath}
                 client:only="react"
+            />
+            <LinkItem 
+                {currentPath}
+                href = "/blog/1"
+                label = "Blog"
             />
             <LinkItem 
                 {currentPath}

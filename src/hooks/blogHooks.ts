@@ -204,26 +204,6 @@ const setBlogPostImages = (
   return payload;
 };
 
-// const retrieveRecentImages = (
-//   allPosts: Array<PostType>,
-//   assets: Array<PostAssetType>,
-//   max: number
-// ) => {
-//   //recentPost is formmatted
-//   const recentPost = formatRecentPostArray(allPosts, max);
-//   var hydratedRecentPost = [];
-//   hydratedRecentPost = recentPost.map((post) => {
-//     var uploadedImage = assets.find((asset) => {
-//       return getImageFileName(asset.default.src) === post.featured_image;
-//     });
-//     return {
-//       ...post,
-//       featured_image: uploadedImage ? uploadedImage.default.src : null,
-//     };
-//   });
-//   return hydratedRecentPost;
-// };
-
 //This function extracts the file name from the file path excluding the extension
 //For example, './src/asset/uploads.sample.jpg' becomes 'sample'
 const getImageFileName = (imageFile: string) => {
@@ -312,12 +292,7 @@ const createStaticPathArrayForAuthors = ({
     do {
       //acquire array of blog posts to be displayed by each page, limited by PAGE_SIZE
       var paginatedArray = getPaginatedArray(postsArr, i, PAGE_SIZE);
-      //insert the corresponding image data of each featured image of the blog post
-      // paginatedArray = hydratePaginatedPostArray(
-      //   paginatedArray,
-      //   assetMap,
-      //   assets
-      // );
+
       var path = {
         params: {
           name: author,
@@ -369,6 +344,16 @@ const getAuthorInfoFromArray = (
   }
 };
 
+const GetTheMostRecentBlogs = (size: number, AllPosts: Array<PostType>) => {
+  try {
+    let sortedBlogs = SortPostsByNew(AllPosts);
+    return sortedBlogs.slice(0, size);
+  } catch (e) {
+    console.log("GetTheMostRecentBlog error: ", e);
+    return [];
+  }
+};
+
 export {
   getPaginatedArray,
   createStaticPathArray,
@@ -380,4 +365,5 @@ export {
   createStaticPathArrayForAuthors,
   filterPostsByAuthor,
   getAuthorInfoFromArray,
+  GetTheMostRecentBlogs,
 };

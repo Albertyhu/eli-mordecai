@@ -1,0 +1,17 @@
+---
+import BannerTitleSeparator from "../graphics/banner-title-separator.astro"
+---
+<div class="featured-blog-section">
+    <div class="container w-container">
+        <div class="section-title childrenFadeInFromBottomTag">
+            <h2 class="section-title-text fadeOutIntoBottom">Recent Blogs</h2>
+            <BannerTitleSeparator customStyle = "mx-auto fadeOutIntoBottom !delay-500" />
+        </div>
+        <slot />
+    </div>
+</div>
+<div class="divider-section">
+    <div class="container w-container">
+    <div class="divider-line"></div>
+    </div>
+</div>

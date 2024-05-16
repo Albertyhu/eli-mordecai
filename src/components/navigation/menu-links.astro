@@ -8,7 +8,7 @@ const currentPath = Astro.url.pathname;
 ---
 <div class="header-nav-area justify-center align-middle hidden lg:flex lg:flex-row">
     <div 
-        class="w-nav bg-transparent flex align-middle mr-[0] ml-auto" 
+        class="w-nav bg-transparent flex align-middle mr-[0] ml-auto flex-nowrap" 
     >
         <nav role="navigation" class="nav-menu w-nav-menu flex flex-row ![&>*]:z-[1]">
             <LinkItem 
@@ -56,6 +56,11 @@ const currentPath = Astro.url.pathname;
                     </nav>
                 </div>
             </div>
+            <LinkItem 
+                {currentPath}
+                href = "/blog/1"
+                label = "Blog"
+            />
             {ContactButton ? 
             <a href="/contact-us" class="nav-link w-nav-link">           
                 <button
