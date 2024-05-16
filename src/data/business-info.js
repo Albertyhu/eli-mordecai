@@ -1,5 +1,6 @@
 export const BusinessInfo = {
   tile: "Eli Mordecai",
+  owner: "Eli Mordecai",
   companyName: "Eli Mordecai - General Attorney",
   street: "3700 S Federal Blvd.",
   city: "Englewood",
@@ -8,6 +9,8 @@ export const BusinessInfo = {
   country: "USA",
   phone: "0123456789",
   email: "eliasmordecai@gmail.com",
+  website_name: "Eli Mordecai website",
+  websiteURL: "www.EliMordecai.com",
   OpenGraphImg: {
     src: "/assets/images/open-graph-image.webp",
     alt: "Eli Mordecai - Los Angeles General Practice Attorney",

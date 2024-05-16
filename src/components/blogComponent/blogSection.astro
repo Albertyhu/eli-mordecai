@@ -1,4 +1,7 @@
 ---
+/* This is a blog component createas a section in the web page that displays the most recent blogs. RETRIEVE_SIZE indicates how many blogs 
+will be displayed in the blog components. It is integrated into the home page and about us page.
+If there are no blogs, this section remains hidden. */
 import FeaturedBlogSection from "./featuredBlogSection.astro";
 import FeaturedBlogLayout from "./featuredBlogLayout.astro";
 import type { PostType } from "@/util/interface";
@@ -18,27 +21,42 @@ const {
 let recentPosts : Array<PostType> | [] = GetTheMostRecentBlogs(RETRIEVE_SIZE, AllPosts); 
 const mostRecent : PostType | undefined | null = recentPosts.shift()
 ---
-<FeaturedBlogLayout>
-{mostRecent &&
-    <FeaturedBlogSection
-        {...mostRecent.frontmatter}
-        url={mostRecent.url}
-    />
-}
-</FeaturedBlogLayout>
-<div class="blog-section">
-    <div class="container w-container">
-        <div class="blog-content-wrap">
-            <div class="w-dyn-list">
-                <!-- blog here -->
-                {recentPosts && recentPosts.length > 0 && 
-                recentPosts.map(post =>
-                    <PreviewPanel 
-                        {...post.frontmatter}
-                        url={post.url}
-                    />
-                ) }
+{AllPosts && AllPosts.length > 0 &&
+    <FeaturedBlogLayout>
+    {mostRecent &&
+        <FeaturedBlogSection
+            {...mostRecent.frontmatter}
+            url={mostRecent.url}
+        />
+    }
+    </FeaturedBlogLayout>
+    <div class="blog-section">
+        <div class="container w-container">
+            <div class="blog-content-wrap">
+                <div class="w-dyn-list">
+                    <!-- blog here -->
+                    {recentPosts && recentPosts.length > 0 && 
+                    recentPosts.map(post =>
+                        <PreviewPanel 
+                            {...post.frontmatter}
+                            url={post.url}
+                        />
+                    ) }
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <a
+        href="/blog/1"
+    >
+    <button
+        type = "button"
+        class = "button transition-all w-button block mx-auto mb-10"
+    >View More Posts</button>
+    </a>
+    <div class="divider-section">
+        <div class="container w-container">
+            <div class="divider-line"></div>
+        </div>
+    </div>
+}
