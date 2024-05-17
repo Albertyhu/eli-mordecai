@@ -642,6 +642,10 @@ a {
   line-height: 1.2;
 }
 
+.history-image-wrap {
+  display: none;
+}
+
 .simple-intro-section {
   padding-top: 120px;
   padding-bottom: 90px;
@@ -1099,6 +1103,10 @@ a {
 }
 
 @media screen and (min-width: 1280px) {
+  .history-image-wrap {
+    display: block;
+  }
+
   #w-node-b65b1a3d-ddb9-afd1-e2c9-f7bc0a364088-0a36402f {
     justify-self: start;
   }
