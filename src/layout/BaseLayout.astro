@@ -21,15 +21,6 @@ const {
          description = {customDescription}
       />
       <meta content="width=device-width, initial-scale=1" name="viewport"/>
-      {homePage ? 
-      <link 
-      href="/style/home.css" 
-      rel="stylesheet" 
-      type="text/css"
-      media="print"
-      onload="this.media='all'; this.onload=null;"
-      />
-      :
       <link 
       href="/style/global.css" 
       rel="stylesheet" 
@@ -37,15 +28,8 @@ const {
       media="print"
       onload="this.media='all'; this.onload=null;"
       />
-
-      }
-
       <noscript>
-         {homePage ? 
-         <link rel="stylesheet" href="/style/home.css">
-         :
          <link rel="stylesheet" href="/style/global.css">
-         }
       </noscript>
       <link href="/assets/icons/favicon.webp" rel="shortcut icon" type="image/x-icon"/>
       <ViewTransitions /> 
