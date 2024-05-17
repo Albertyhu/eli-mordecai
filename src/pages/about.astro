@@ -2,6 +2,7 @@
 export const prerender = true;
 import BaseLayout from "@/layout/BaseLayout.astro"
 import NavBar from "@/components/navigation/index.astro"; 
+import EliHeadshot from "@/components/eli-headshot.astro";
 ---
 <BaseLayout
    pageTitle = "About Us"
@@ -12,7 +13,7 @@ import NavBar from "@/components/navigation/index.astro";
          <NavBar />
          <div class="container w-container">
             <div class="banner-title-wrap childrenFadeInFromBottomTag">
-               <h1 class="banner-area-title fadeOutIntoBottom ">About Us</h1>
+               <h1 class="banner-area-title fadeOutIntoBottom ">About Eli Mordecai</h1>
                <img 
                 src="/assets/icons/banner-title-separator.svg" 
                 loading="lazy" 
@@ -28,11 +29,16 @@ import NavBar from "@/components/navigation/index.astro";
             <div class="about-intro-wrap">
                <div class="w-layout-grid about-intro-grid">
                   <div class="about-intro-image-wrap">
-                     <div class="about-image-area"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e7f_about-intro-image.jpg" loading="lazy" sizes="(max-width: 716px) 87vw, 623px" srcset="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e7f_about-intro-image-p-500.jpeg 500w, https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e7f_about-intro-image.jpg 623w" alt="About Intro Image" class="about-intro-image"/></div>
+                     <!-- <div class="about-image-area">
+                        <img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e7f_about-intro-image.jpg" loading="lazy" sizes="(max-width: 716px) 87vw, 623px" srcset="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e7f_about-intro-image-p-500.jpeg 500w, https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e7f_about-intro-image.jpg 623w" alt="About Intro Image" class="about-intro-image"/>
+                     </div> -->
+                     <EliHeadshot
+                        wrapperStyle =  "md:w-11/12"
+                     />
                   </div>
                   <div class="about-intro-content-wrap">
                      <div class="section-title-left">
-                        <h2 class="section-left-title-text">I’m Peter parker,<br/>Expert legal advicer</h2>
+                        <h2 class="section-left-title-text">I’m Eli Mordecai,<br/>Expert general attorney</h2>
                         <img src="/assets/icons/small-separator-gold.svg" loading="lazy" alt="Title Separator"/>
                         <p class="section-left-content">Our lawyers are regularly invited to speak at seminars and educate other attorneys and industry representatives about important and constantly evolving legal issues &amp; proud to help the injured throughout the nation, including workers.<br/></p>
                      </div>
