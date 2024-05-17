@@ -5,5 +5,5 @@ const { customStyle } = Astro.props;
     src="/assets/icons/small-separator-gold.svg" 
     loading="lazy" 
     alt="Title Separator"
-    class = {`${customStyle}`}
+    class = {`${customStyle ? customStyle : "w-[95px] h-[44px]"}`}
 />

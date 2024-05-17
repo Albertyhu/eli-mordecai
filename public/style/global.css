@@ -2987,8 +2987,6 @@ blockquote {
   background-color: var(--dark-black);
   border-radius: 100%;
   align-self: center;
-  width: 90px;
-  height: 90px;
 }
 
 .intro-author-name {
