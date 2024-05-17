@@ -8,6 +8,7 @@ import { ViewTransitions } from 'astro:transitions';
 const {
     pageTitle, 
     customDescription, 
+    homePage = false, 
 } = Astro.props; 
 ---
 <!DOCTYPE html>
@@ -27,9 +28,12 @@ const {
       media="print"
       onload="this.media='all'; this.onload=null;"
       />
-      <!-- <link href="./output.css" rel="stylesheet"> -->
       <noscript>
+         {homePage ? 
+         <link rel="stylesheet" href="/style/home.css">
+         :
          <link rel="stylesheet" href="/style/global.css">
+         }
       </noscript>
       <link href="/assets/icons/favicon.webp" rel="shortcut icon" type="image/x-icon"/>
       <ViewTransitions /> 
