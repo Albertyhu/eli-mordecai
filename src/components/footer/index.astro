@@ -3,6 +3,8 @@ import ContactUsColumn  from "./contact-us.astro";
 import QuickLinkColumn from "./quick-link.astro"; 
 import PracticeAreaColumn from "./practice-area.astro"
 import LogoComponent from "../logoComponent.astro";
+import { BusinessInfo } from "@/data/business-info";
+var YEAR = new Date().getFullYear(); 
 ---
       <div class="footer">
          <div class="container w-container">
@@ -23,7 +25,8 @@ import LogoComponent from "../logoComponent.astro";
             <div class="copyright">
                <div class="w-layout-grid copyright-grid">
                   <div id="w-node-b65b1a3d-ddb9-afd1-e2c9-f7bc0a364088-0a36402f" class="copyright-left-section">
-                     <p class="copyright-content">Copyright © Attorneyster | Website developed by <a href = "https://www.LADesignInitiative.com" target = "_blank">LA Design Initiative</a></p>
+                     <span id = "WebsiteName">{BusinessInfo.companyName}</span>
+                     <p class="copyright-content">Copyright © <span id = "CopyRight">{YEAR}</span> | Website developed by <a href = "https://www.LADesignInitiative.com" target = "_blank">LA Design Initiative</a></p>
                   </div>
                   <div id="w-node-b65b1a3d-ddb9-afd1-e2c9-f7bc0a364090-0a36402f" class="copyright-right-section">
                      <div class="copyright-social-area">
