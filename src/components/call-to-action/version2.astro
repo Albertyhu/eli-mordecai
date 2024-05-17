@@ -33,7 +33,9 @@ leftContent ="We're always available for new cases big or small. Send us an emai
                class = "relative mx-auto lg:ml-0 sm:h-[500px] w-full my-10"
             >  
                <EliHeadshot
-                  wrapperStyle = "sm:absolute bg-transparent z-[1] "
+                  wrapperStyle = "sm:absolute bg-transparent z-[1] sm:h-[500px]"
+                  imgStyle = "object-fit w-[300px] min-[400px]:w-[400px] sm:w-[461px] mx-auto block"
+                  immediateLoading = {false}
                />
                <div
                   class = "hidden sm:block absolute rounded-full overflow-hidden w-[300px] h-[300px] 
@@ -45,6 +47,7 @@ leftContent ="We're always available for new cases big or small. Send us an emai
                      class = "object-cover m-auto w-full h-full"
                      loading = "lazy"
                      decoding="async"
+                     class = "object-fit w-[300px] h-[300px] sm:w-[460px] sm:h-[460px]"
                   />
                </div>
             </div>

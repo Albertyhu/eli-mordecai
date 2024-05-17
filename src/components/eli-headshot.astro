@@ -2,8 +2,11 @@
 const {
     wrapperStyle, 
     imgStyle, 
+    immediateLoading = true, 
 } = Astro.props; 
 ---
+{
+immediateLoading ?
 <div
     class ={`${wrapperStyle ? wrapperStyle : "bg-transparent"}`}
 >
@@ -14,3 +17,15 @@ const {
         class = {`${imgStyle ? imgStyle : "w-full h-full object-fit"}`}
     />
 </div>
+:
+<div
+    class ={`${wrapperStyle ? wrapperStyle : "bg-transparent"}`}
+>
+    <img 
+        alt="Eli Mordecai"
+        src ="/assets/images/authors/eli_mordecai.webp"
+        loading = "lazy"
+        class = {`${imgStyle ? imgStyle : "w-full h-full object-fit"}`}
+    />
+</div>
+}
