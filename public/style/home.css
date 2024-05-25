@@ -2855,6 +2855,11 @@ a {
   .hireus-badge {
     display: none;
   }
+  .w-col {
+    width: 100%;
+    left: auto;
+    right: auto;
+  }
 }
 
 @media screen and (max-width: 767px) {
