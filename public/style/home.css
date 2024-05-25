@@ -228,7 +228,7 @@ button,
 
 .w-nav {
   z-index: 1000;
-  background: #ddd;
+  /* background: #ddd; */
   position: relative;
 }
 
