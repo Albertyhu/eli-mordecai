@@ -207,6 +207,7 @@ button,
   padding: 20px;
   text-decoration: none;
   position: relative;
+  display: block;
 }
 
 .w-dropdown-toggle {
