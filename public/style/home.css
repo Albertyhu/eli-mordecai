@@ -112,7 +112,7 @@ img {
   border-radius: 0;
   padding: 9px 15px;
   text-decoration: none;
-  display: inline-block;
+  display: block;
 }
 
 h1,
