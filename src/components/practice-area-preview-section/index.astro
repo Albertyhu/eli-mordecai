@@ -2,9 +2,9 @@
 import PracticeAreaData from "@/data/practice-areas.js"; 
 import Panel from "./panel.astro"; 
 ---
-<div class="practice-area-wrap">
+<div class="bg-[#161d27] pt-10">
     <div class="w-dyn-list">
-        <div role="list" class="flex flex-row flex-wrap justify-center">
+        <div role="list" class="flex flex-row flex-wrap justify-center mx-auto sm:w-[560px] lg:w-[1024px] xl:w-full">
             {PracticeAreaData && PracticeAreaData.length > 0 && 
                 PracticeAreaData.map(area =>{ 
                 if(area.hasPage){

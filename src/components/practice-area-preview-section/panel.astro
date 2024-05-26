@@ -6,15 +6,15 @@ const {
 } = Astro.props; 
 const url = `/practice-areas/${type.toLowerCase().replace(/\s+/g, '-')}`
 ---
-<div role="listitem" class="practice-area-collection w-dyn-item w-col w-col-4 h-full">
-    <div class="practice-area-item h-auto">
+<div role="listitem" class="practice-area-collection w-dyn-item w-col w-col-4 h-full md:min-w-[280px] lg:min-w-[300px]">
+    <div class="practice-area-item h-auto hover:bg-slate-700 transition-all duration-1000">
         <div class="practice-listing-content-wrap !pb-[40px]">
             <div
                 class = "h-[110px]"
             >
                 <a href={url} class="practice-area-title">{type}</a>
             </div>
-            <p class = "h-[250px] max-h-[250px]">{description}</p>
+            <p class = "h-[120px] md:h-[300px] min-[991px]:h-[250px] max-h-[250px]">{description}</p>
         </div>
         <div class="grid [&>div]:mx-auto mb-0 mt-auto text-center sm:flex sm:flex-row sm:align-start">
             <div class="mx-auto w-[53px] min-[788px]:w-[53px] sm:mt-[20px]">
@@ -27,7 +27,7 @@ const url = `/practice-areas/${type.toLowerCase().replace(/\s+/g, '-')}`
                 />
             </div>
             <div class="">
-                <a href={url} class="practice-button w-button">View More</a>
+                <a href={url} class="practice-button w-button hover:bg-primaryC hover:text-secondaryC transition-all duration-1000">View More</a>
             </div>
         </div>
     </div>

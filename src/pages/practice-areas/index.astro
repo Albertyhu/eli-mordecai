@@ -1,43 +1,16 @@
 ---
 export const prerender = true;
 import BaseLayout from "@/layout/BaseLayout.astro"
-import NavBar from "@/components/navigation/index.astro";
-import BannerTitleSeparator from "@/components/graphics/banner-title-separator.astro"; 
-import ConsultationSection from "@/components/call-to-action/version1.astro"; 
-import PracticeAreaSection from "@/components/practice-area-preview-section/index.astro"
+import ConsultationSection from "@/components/call-to-action/version2.astro"; 
+import PracticeAreaSection from "@/components/practice-area-preview-section/index.astro";
+import BannerTitleSection from "@/components/banner-title-section.astro";
 ---
 <BaseLayout 
 pageTitle="Practice Areas" 
 customDescription="Lawyer site"
 >
-    <div class="banner-title-area">
-        <div class="banner-title-overlay"></div>
-        <NavBar />
-        <div class="container w-container">
-        <div class="banner-title-wrap childrenFadeInFromBottomTag">
-            <h1 class="banner-area-title fadeOutIntoBottom ">Practice Areas</h1>
-            <BannerTitleSeparator customStyle = "mx-auto fadeOutIntoBottom " />
-        </div>
-        </div>
-    </div>
+    <BannerTitleSection title = "Practice Areas" />
     <PracticeAreaSection />
     <ConsultationSection/>
-    <div class="client-section large-space-section">
-        <div class="container w-container">
-        <div class="section-center-title">
-            <div class="center-title-wrap">
-                <img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e50_center-separator.svg" loading="lazy" alt="Title Large Separator"/>
-                <h2 class="section-center-title-text dark-color-title">Meet the Partners</h2>
-                <img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e50_center-separator.svg" loading="lazy" alt="Title Large Separator"/>
-            </div>
-        </div>
-        <div class="w-layout-grid client-image-grid">
-            <div id="w-node-a796f921-3af6-5e8d-03ab-534923629651-9a1b9e23" class="client-image-item"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e5a_client-logo-1.svg" loading="lazy" alt="Client Logo"/></div>
-            <div id="w-node-a796f921-3af6-5e8d-03ab-534923629653-9a1b9e23" class="client-image-item"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e5b_client-logo-2.svg" loading="lazy" alt="Client Logo"/></div>
-            <div id="w-node-a796f921-3af6-5e8d-03ab-534923629655-9a1b9e23" class="client-image-item"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e5c_client-logo-3.svg" loading="lazy" alt="Client Logo"/></div>
-            <div id="w-node-a796f921-3af6-5e8d-03ab-534923629657-9a1b9e23" class="client-image-item"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e59_client-logo-4.svg" loading="lazy" alt="Client Logo"/></div>
-            <div id="w-node-a796f921-3af6-5e8d-03ab-534923629659-9a1b9e23" class="client-image-item"><img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e58_client-logo-5.svg" loading="lazy" alt="Client Logo"/></div>
-        </div>
-        </div>
-    </div>
+
 </BaseLayout>

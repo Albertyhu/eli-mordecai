@@ -1,34 +1,18 @@
 ---
 export const prerender = true;
 import BaseLayout from "@/layout/BaseLayout.astro"
-import NavBar from "@/components/navigation/index.astro"; 
 import EliHeadshot from "@/components/eli-headshot.astro";
 import SmallSeparatorGold from "@/components/graphics/small-separator-gold.astro";
 import PracticeAreaSection from "@/components/about-page/practice-area-section/index.astro"; 
 import SpecializedSection from "@/components/about-page/specialized-section.astro";
 import CTASection from "@/components/call-to-action/version2.astro"; 
-import ImageDivider from "@/components/image-dividers/courthouse-corner.astro"
+import BannerTitleSection from "@/components/banner-title-section.astro";
 ---
 <BaseLayout
    pageTitle = "About Eli Mordecai"
    customDescription = "I'm Eli Mordecai, a general practice attorney in Venice, CA."
 >
-      <div class="banner-title-area">
-         <div class="banner-title-overlay"></div>
-         <NavBar />
-         <div class="container w-container">
-            <div class="banner-title-wrap childrenFadeInFromBottomTag">
-               <h1 class="banner-area-title fadeOutIntoBottom ">About Me</h1>
-               <img 
-                src="/assets/icons/banner-title-separator.svg" 
-                loading="lazy" 
-                decoding="async"
-                alt="Banner Title Separator"
-                class="mx-auto fadeOutIntoBottom "
-                />
-            </div>
-         </div>
-      </div>
+      <BannerTitleSection title = "About Me" />
       <div class="about-intro-section">
          <div class="container w-container">
             <div class="about-intro-wrap">
@@ -42,7 +26,7 @@ import ImageDivider from "@/components/image-dividers/courthouse-corner.astro"
                   </div>
                   <div class="about-intro-content-wrap">
                      <div class="section-title-left childrenFadeInFromBottomTag">
-                        <h1 class="section-left-title-text fadeOutIntoBottom text-5xl lg:text-6xl">I’m Eli Mordecai</h1>
+                        <h2 class="section-left-title-text fadeOutIntoBottom text-5xl lg:text-6xl">I’m Eli Mordecai</h2>
                         <h2 class="section-left-title-text fadeOutIntoBottom !delay-500">A General Practice Attorney in Venice, CA</h2>
                         <SmallSeparatorGold 
                             customStyle = "w-[95px] h-[44px] fadeOutIntoBottom !delay-[1000ms]"

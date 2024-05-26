@@ -1,0 +1,19 @@
+---
+import NavBar from "@/components/navigation/index.astro"; 
+import BannerTitleSeparator from "@/components/graphics/banner-title-separator.astro";
+const {
+    title
+} = Astro.props; 
+---
+<div class="banner-title-area">
+    <div class="banner-title-overlay"></div>
+    <NavBar />
+    <div class="container w-container">
+    <div class="banner-title-wrap childrenFadeInFromBottomTag">
+        <h1 class="text-3xl sm:text-6xl fadeOutIntoBottom ">{title}</h1>
+        <BannerTitleSeparator 
+            customStyle = "w-[95px] h-[44px] fadeOutIntoBottom mx-auto"
+        />
+    </div>
+    </div>
+</div>
