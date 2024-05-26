@@ -1,6 +1,7 @@
 :root {
   --fallingDur: 1500ms;
   --duration1: 1000ms;
+  --duration2: 2000ms;
   --duration3: 3000ms;
   --duration4: 4000ms;
   --duration5: 5000ms;
@@ -67,7 +68,7 @@ Add delay property for each children where the animation delay gets longer for e
 
 .rotateUpTag {
   will-change: transform, opacity;
-  transition: opacity var(--duration3), transform var(--duration3);
+  transition: opacity var(--duration3), transform var(--duration2);
 }
 
 .rotateDown {
