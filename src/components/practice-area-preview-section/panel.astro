@@ -6,7 +6,7 @@ const {
 } = Astro.props; 
 const url = `/practice-areas/${type.toLowerCase().replace(/\s+/g, '-')}`
 ---
-<div role="listitem" class="practice-area-collection w-dyn-item w-col w-col-4 h-full md:min-w-[280px] lg:min-w-[300px]">
+<div role="listitem" class="md:w-[300px] min-[992px]:w-[375px] 2xl:w-[468px] h-full md:min-w-[280px] lg:min-w-[270px]">
     <div class="practice-area-item h-auto hover:bg-slate-700 transition-all duration-1000">
         <div class="practice-listing-content-wrap !pb-[40px]">
             <div
