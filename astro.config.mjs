@@ -4,11 +4,9 @@ import react from "@astrojs/react";
 import netlify from "@astrojs/netlify";
 import sitemap from "@astrojs/sitemap";
 
-import compressor from "astro-compressor";
-
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), sitemap(), compressor()],
+  integrations: [tailwind(), react(), sitemap()],
   output: "server",
-  adapter: netlify()
+  adapter: netlify(),
 });
