@@ -3435,7 +3435,7 @@ blockquote {
 
 .consultation-section {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 0px;
 }
 
 .consultation-grid {
@@ -3595,7 +3595,7 @@ blockquote {
 
 .about-intro-section {
   padding-top: 100px;
-  padding-bottom: 80px;
+  padding-bottom: 0px;
 }
 
 .about-intro-grid {
@@ -5217,7 +5217,7 @@ blockquote {
 
   .consultation-section {
     padding-top: 120px;
-    padding-bottom: 120px;
+    padding-bottom: 0px;
   }
 
   .consultation-grid {
@@ -5260,7 +5260,7 @@ blockquote {
 
   .about-intro-section {
     padding-top: 120px;
-    padding-bottom: 110px;
+    padding-bottom: 0px;
   }
 
   .about-intro-grid {
@@ -5732,7 +5732,7 @@ blockquote {
   .consultation-section,
   .appointment-section {
     padding-top: 140px;
-    padding-bottom: 140px;
+    padding-bottom: 0px;
   }
 
   .banner-title-area {
@@ -5745,7 +5745,7 @@ blockquote {
 
   .about-intro-section {
     padding-top: 140px;
-    padding-bottom: 130px;
+    padding-bottom: 0px;
   }
 
   .about-intro-grid {

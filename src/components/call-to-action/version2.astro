@@ -5,9 +5,9 @@ const {
          title ="Do you think you have a case?",
          leftContent = "I'm ready to offer my expertise to get you the best results. Send me a message and I'll get in touch with you shortly, or you can call me between 9:00 am and 8:00 pm Monday to Saturday."
 } = Astro.props;
-const responsiveSize = "sm:w-[400px] sm:h-[400px] min-[992px]:w-[340px] min-[992px]:h-[340px] lg:w-[400px] lg:h-[400px]"
+const responsiveSize = "sm:w-[400px] sm:h-[400px] min-[992px]:w-[340px] min-[992px]:h-[340px]  min-[1100px]:w-[400px] min-[1100px]:h-[400px]"
 ---
-<div class="consultation-section lg:pt-0">
+<div class="consultation-section lg:pt-0 overflow-hidden">
    <div class="container w-container">
       <div class="consultation-wrap">
          <div class="w-layout-grid consultation-grid">
@@ -33,7 +33,7 @@ const responsiveSize = "sm:w-[400px] sm:h-[400px] min-[992px]:w-[340px] min-[992
                </div>
             </div>
             <div
-               class = "relative mx-auto lg:ml-0 sm:h-[500px] w-full my-10 childrenFadeInFromBottomTag"
+               class = "relative mx-auto lg:ml-0 sm:h-[560px] w-full my-10 childrenFadeInFromBottomTag"
             >  
                <EliHeadshot
                   wrapperStyle = "sm:absolute bg-transparent z-[1] sm:h-[400px] md:left-[75px] min-[991px]:left-0 min-[991px]:translate-x-[0px] fadeOutIntoBottom"
@@ -42,7 +42,7 @@ const responsiveSize = "sm:w-[400px] sm:h-[400px] min-[992px]:w-[340px] min-[992
                />
                <div
                   class = {`hidden sm:block absolute rounded-full overflow-hidden w-[300px] h-[300px] fadeOutIntoBottom
-                  ${responsiveSize} translate-x-[140px] md:right-[75px] md:translate-x-[0px] min-[991px]:translate-x-[100px] translate-y-[100px]`}
+                  ${responsiveSize} translate-x-[140px] md:right-[75px] md:translate-x-[0px] min-[991px]:translate-x-[150px] min-[991px]:translate-y-[150px] lg:translate-x-[150px] xl:translate-x-[50px] translate-y-[100px]`}
                >
                   <img 
                      src = "/assets/images/court-house.webp"

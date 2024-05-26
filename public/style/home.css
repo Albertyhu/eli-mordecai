@@ -722,7 +722,7 @@ a {
 
 .consultation-section {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 0px;
 }
 
 .consultation-grid {
@@ -1039,7 +1039,7 @@ a {
 
   .consultation-section {
     padding-top: 120px;
-    padding-bottom: 120px;
+    padding-bottom: 0px;
   }
 
   .consultation-grid {
@@ -1416,7 +1416,7 @@ a {
 
   .consultation-section {
     padding-top: 120px;
-    padding-bottom: 120px;
+    padding-bottom: 0px;
   }
 
   .consultation-grid {
@@ -1931,7 +1931,7 @@ a {
   .consultation-section,
   .appointment-section {
     padding-top: 140px;
-    padding-bottom: 140px;
+    padding-bottom: 0px;
   }
 
   .banner-title-area {
