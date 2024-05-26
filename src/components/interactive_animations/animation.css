@@ -57,6 +57,20 @@
   transform: translateY(100px);
 }
 
+/* The parent div is tagged with the class name "childrenFadeInFromBottomTag". 
+The children elements are then tagged with "fadeOutIntoBottom" class name. 
+Add delay property for each children where the animation delay gets longer for each consecutive children
+*/
 .childrenFadeInFromBottomTag > * {
   transition: opacity var(--duration3) ease, transform var(--duration1) ease;
+}
+
+.rotateUpTag {
+  will-change: transform, opacity;
+  transition: opacity var(--duration3), transform var(--duration3);
+}
+
+.rotateDown {
+  opacity: 0;
+  transform: rotateX(90deg);
 }

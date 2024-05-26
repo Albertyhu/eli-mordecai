@@ -1,0 +1,45 @@
+---
+
+const {
+    type, 
+    icon, 
+    description, 
+    hasPage, 
+} = Astro.props; 
+const url = `/practice-areas/${type.toLowerCase().replace(/\s+/g, '-')}`
+---
+{hasPage ? 
+<a 
+href = {url}
+>
+    <div class={`our-values-item hover:bg-slate-600 cursor-pointer rotateUpTag rotateDown`}>
+        <div class="values-icon-wrap">
+            <img 
+                src={icon.src} 
+                loading="lazy" 
+                alt="Values Icon"
+                class = "w-[40px] h-[40px]"
+            />
+        </div>
+        <div class="our-values-content-area">
+            <h3 class="our-values-title">{type}</h3>
+            <p>{description}</p>
+        </div>
+    </div> 
+</a>
+:
+<div class={`our-values-item hover:bg-slate-600 rotateUpTag rotateDown`}>
+    <div class="values-icon-wrap">
+        <img 
+            src={icon.src} 
+            loading="lazy" 
+            alt="Values Icon"
+            class = "w-[40px] h-[40px]"
+        />
+    </div>
+    <div class="our-values-content-area">
+        <h3 class="our-values-title">{type}</h3>
+        <p>{description}</p>
+    </div>
+</div>
+}

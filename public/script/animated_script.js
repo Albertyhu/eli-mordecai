@@ -23,6 +23,9 @@ document.addEventListener("astro:page-load", () => {
             entry.target.children[i].classList.remove("fadeOutIntoBottom");
           }
         }
+        if (entry.target.classList.contains("rotateUpTag")) {
+          entry.target.classList.remove("rotateDown");
+        }
       } else {
         if (entry.target.classList.contains("fadeInFromTop")) {
           entry.target.classList.add("fadeOutFromTopAnim");
@@ -43,6 +46,9 @@ document.addEventListener("astro:page-load", () => {
           for (let i = 0; i < entry.target.children.length; i++) {
             entry.target.children[i].classList.add("fadeOutIntoBottom");
           }
+        }
+        if (entry.target.classList.contains("rotateUpTag")) {
+          entry.target.classList.add("rotateDown");
         }
       }
     });
@@ -83,5 +89,10 @@ document.addEventListener("astro:page-load", () => {
   );
   for (var i = 0; i < ChildrenFadeInFromBottom.length; i++) {
     observer.observe(ChildrenFadeInFromBottom[i]);
+  }
+
+  const RotateUpTag = document.getElementsByClassName("rotateUpTag");
+  for (var i = 0; i < RotateUpTag.length; i++) {
+    observer.observe(RotateUpTag[i]);
   }
 });

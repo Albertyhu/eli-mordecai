@@ -333,7 +333,6 @@ const getAuthorInfoFromArray = (
   author: string,
   authorArray: Array<authorType>
 ): authorType | undefined | null => {
-  console.log("authorArray: ", authorArray);
   try {
     return authorArray.find(
       (val) => val.frontmatter.author.toLowerCase() === author.toLowerCase()

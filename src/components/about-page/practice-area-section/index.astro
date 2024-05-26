@@ -1,0 +1,63 @@
+---
+import SmallSeparatorGold from "../../graphics/small-separator-gold.astro"
+import PracticeAreaItem from "./practice-area-item.astro"; 
+import PracticeAreas from "@/data/practice-areas";
+import PlusIcon from "@/assets/icons/practice-areas/plus_icon.png"; 
+---
+<div 
+class="our-values-section"
+id = "our-value-section"
+>
+    <div class="container w-container">
+    <div class="our-values-wrap">
+        <div class="w-layout-grid our-values-grid">
+            <div class="our-values-title-wrap">
+                <div 
+                    class="our-values-title-content"
+                    id="our-values-title-content"
+                    >
+                    <div class="section-title-left childrenFadeInFromBottomTag">
+                        <h2 class="section-left-title-text fadeOutIntoBottom">From Business Deals to Dispute Resolution <br/></h2>
+                        <SmallSeparatorGold 
+                            customStyle = "w-[95px] h-[44px] fadeOutIntoBottom !delay-[500ms]"
+                        />
+                        <p class="section-left-content fadeOutIntoBottom !delay-[1000ms]">Whether you're navigating a complex business transaction, facing a legal challenge, or planning for the future, I'm here to guide you through the process. My experience covers a wide range of legal areas, including: <br/></p>
+                    </div>
+                </div>
+            </div>
+            <div class="our-values-content-wrap">
+                {PracticeAreas && PracticeAreas.length > 0 && 
+                    PracticeAreas.map(area =><PracticeAreaItem {...area} />)
+                }
+            <a href = "/practice-areas">
+                <div class={`our-values-item hover:bg-slate-600 cursor-pointer`}>
+                    <div class="values-icon-wrap">
+                        <img 
+                            src={PlusIcon.src}
+                            loading="lazy" 
+                            alt="Values Icon"
+                            class = "w-[40px] h-[40px]"
+                        />
+                    </div>
+                    <div class="our-values-content-area">
+                        <h3 class="our-values-title">And more...</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    </div>
+</div>
+<script is:inline>
+    document.addEventListener("astro:page-load", () => {
+        const OverValueSection = document.getElementById("our-value-section"); 
+        const OverValueContent = document.getElementById("our-values-title-content"); 
+        const ShiftContentDown = () =>{
+            let TopHeight = OverValueSection.getBoundingClientRect().top; 
+            if(window.innerWidth > 991 && TopHeight < 45){
+                OverValueContent.style.top = "160px"; 
+            }
+        }
+        window.addEventListener("scroll", ShiftContentDown)
+    })
+</script>

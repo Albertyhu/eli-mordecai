@@ -3,12 +3,13 @@ const {
     wrapperStyle, 
     imgStyle, 
     immediateLoading = true, 
+    animationTag, 
 } = Astro.props; 
 ---
 {
 immediateLoading ?
 <div
-    class ={`${wrapperStyle ? wrapperStyle : "bg-transparent"}`}
+    class ={`${wrapperStyle ? wrapperStyle : "bg-transparent w-[270px] h-[270px] sm:w-[400px] sm:h-[400px]"} ${animationTag}`}
 >
     <img 
         alt="Eli Mordecai"
@@ -19,7 +20,7 @@ immediateLoading ?
 </div>
 :
 <div
-    class ={`${wrapperStyle ? wrapperStyle : "bg-transparent"}`}
+    class ={`${wrapperStyle ? wrapperStyle : "bg-transparent w-[270px] h-[270px] sm:w-[400px] sm:h-[400px]"} ${animationTag}`}
 >
     <img 
         alt="Eli Mordecai"

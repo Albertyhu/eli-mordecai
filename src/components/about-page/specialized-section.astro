@@ -1,0 +1,60 @@
+---
+import SmallSeparatorBlack from "../graphics/small-separator-black.astro"
+---
+<div class="specialized-section">
+    <div class="specialized-wrap">
+    <div class="w-layout-grid specialized-grid">
+        <!-- <div class="specialized-image-wrap">
+            <picture>
+                <source 
+                    media="(min-width:400px)"
+                    srcset = "/assets/images/handshake-800.webp"
+                />
+                <source 
+                    media="(min-width:800px)"
+                    srcset = "/assets/images/handshake.webp"
+                />
+                <img 
+                 src="/assets/images/handshake-400.webp" 
+                 loading="lazy" 
+                 decoding = "async"
+                 class = "h-full"
+                 alt="Specialized Image"
+                />
+            </picture>
+        </div> -->
+        <div
+            class = "overflow-hidden"
+        >
+            <picture>
+                <source 
+                    media="(min-width:400px)"
+                    srcset = "/assets/images/handshake-800.webp"
+                />
+                <source 
+                    media="(min-width:800px)"
+                    srcset = "/assets/images/handshake.webp"
+                />
+                <img 
+                 src="/assets/images/handshake-400.webp" 
+                 loading="lazy" 
+                 decoding = "async"
+                 class = "object-cover h-[483px] w-[992px]"
+                 alt="Specialized Image"
+                />
+            </picture>
+        </div>
+        <div class="specialized-content-wrap">
+            <div class="progress-title-wrap">
+                <div class="section-title-left childrenFadeInFromBottomTag">
+                <h2 class="section-left-title-text dark-color-title fadeOutIntoBottom">Building Strong Relationships </h2>
+                <SmallSeparatorBlack
+                    customStyle = "w-[95px] h-[44px] fadeOutIntoBottom !delay-500"
+                />
+                <p class="section-left-content dark-color-content fadeOutIntoBottom !delay-[1000ms]">I understand that legal matters can be stressful and confusing. That's why I take the time to build strong relationships with my clients, listening carefully to their needs and concerns. I'll explain your options in clear, concise language, and work collaboratively with you to develop a legal strategy that meets your unique goals.♥<br/><br/></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

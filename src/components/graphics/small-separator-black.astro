@@ -1,0 +1,9 @@
+---
+const { customStyle } = Astro.props; 
+---
+<img 
+    src="/assets/icons/banner-title-separator-black.svg" 
+    loading="lazy" 
+    alt="Title Separator"
+    class = {`${customStyle ? customStyle : "w-[95px] h-[44px]"}`}
+/>

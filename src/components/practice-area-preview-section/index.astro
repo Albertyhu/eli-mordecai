@@ -6,7 +6,12 @@ import Panel from "./panel.astro";
     <div class="w-dyn-list">
         <div role="list" class="flex flex-row flex-wrap justify-center">
             {PracticeAreaData && PracticeAreaData.length > 0 && 
-                PracticeAreaData.map(area => <Panel {...area} />)
+                PracticeAreaData.map(area =>{ 
+                if(area.hasPage){
+                    return <Panel {...area} />
+                }
+                return null
+            })
             }
         </div>
     </div>
