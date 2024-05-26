@@ -12,7 +12,7 @@ document.addEventListener("astro:page-load", () => {
   const CloseMobileMenuLink = document.getElementById("CloseMobileMenuLink");
 
   window.addEventListener("scroll", () => {
-    let position = StaticNav.getBoundingClientRect().bottom;
+    let position = StaticNav?.getBoundingClientRect().bottom;
     if (position < 0) {
       MinimizedHeader.classList.remove("hidden_minimized_nav");
     } else {
