@@ -34,7 +34,22 @@ const {
       <link href="/assets/icons/favicon.webp" rel="shortcut icon" type="image/x-icon"/>
       <ViewTransitions /> 
    </head>
-   <BodyLayout>
+   <!-- <BodyLayout>
       <slot />
-   </BodyLayout>
+   </BodyLayout> -->
+   <body>
+      <MinimizedNav />
+      <MobileMenu /> 
+      <slot />
+      <Footer />
+      <script 
+      src="/script/nav-script.js" 
+      type = "text/javascript" 
+      is:inline></script>
+      <script 
+         src ="/script/animated_script.js"
+         type="text/javascript"
+         is:inline
+      ></script>
+   </body>
 </html>
