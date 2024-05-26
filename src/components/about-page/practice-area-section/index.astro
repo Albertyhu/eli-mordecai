@@ -56,9 +56,13 @@ id = "our-value-section"
         const OverValueSection = document.getElementById("our-value-section"); 
         const OverValueContent = document.getElementById("our-values-title-content"); 
         const ShiftContentDown = () =>{
-            let TopHeight = OverValueSection.getBoundingClientRect().top; 
-            if(window.innerWidth > 991 && TopHeight < 45){
-                OverValueContent.style.top = "160px"; 
+            try{
+                let TopHeight = OverValueSection?.getBoundingClientRect().top; 
+                if(window.innerWidth > 991 && TopHeight < 45){
+                    OverValueContent.style.top = "160px"; 
+                }
+            }catch(e){
+                console.log("ShiftContentDown Error: ", e)
             }
         }
         window.addEventListener("scroll", ShiftContentDown)
