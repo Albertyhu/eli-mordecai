@@ -33,7 +33,10 @@ const mostRecent : PostType | undefined | null = recentPosts.shift()
     <div class="blog-section">
         <div class="container w-container">
             <div class="blog-content-wrap">
-                <div class="w-dyn-list">
+                <div 
+                    class="w-dyn-list"
+                    role = "list"
+                    >
                     <!-- blog here -->
                     {recentPosts && recentPosts.length > 0 && 
                     recentPosts.map(post =>

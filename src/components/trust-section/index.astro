@@ -15,6 +15,7 @@ before:z-[0]`}>
             <div class ="md:flex md:flex-row md:gap-5">
                 <div
                     class = "flex flex-col"
+                    role ="list"
                 >
                     {TrustReasons && TrustReasons.length > 0 && 
                         TrustReasons.map((reason: TrustReasonType, index: number) =><Panel {...reason} {index} />)
