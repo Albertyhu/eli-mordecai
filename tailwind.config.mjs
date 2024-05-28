@@ -13,6 +13,7 @@ export default {
         historyBG: "url('/assets/images/history-background.webp')",
         historyBG_mobile:
           "url('/assets/images/history-background-mobile.webp')",
+        heroBG: "url(`/assets/images/hero-background-desk.webp`)",
       },
       colors: {
         primaryC: "#d1b06b",
