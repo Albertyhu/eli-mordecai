@@ -118,6 +118,8 @@ img {
   bottom: 0%;
   left: 0%;
   right: 0%;
+  width: screen;
+  height: screen;
 }
 
 .hero-grid {

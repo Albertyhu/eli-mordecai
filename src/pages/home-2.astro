@@ -12,7 +12,7 @@ import BlogSection from "@/components/blogComponent/blogSection.astro";
    pageTitle = "Eli Mordecai - Home Page"
    customDescription = "Your trusted general practice attorney in Los Angeles, CA."
 >
-      <div class="bg-[#1f2732] relative lg:min-h-[605px] before:absolute before:inset-0 before:bg-[50%] before:bg-no-repeat before:bg-[length:1270px_860px] before:bg-[url('/assets/images/hero-background-desk.webp')] before:">
+      <div class="hero-section lg:min-h-[605px]">
          <div class="hero-overlay"></div>
          <NavBar />
          <div class="hero-main-wrap">
@@ -26,13 +26,15 @@ import BlogSection from "@/components/blogComponent/blogSection.astro";
                         class = "hidden sm:block fadeInTag fadeOut w-[95px] h-[44px]"
                         />
                      <div
-                        class = "childrenFadeInFromBottomTag"
+                        class = ""
                      >
-                        <h1 class="hero-area-title font-light fadeOutIntoBottom text-center sm:text-left sm:!delay-[750ms]">Transforming Legal Hurdles into Success Stories</h1>
-                        <p class="hero-area-content fadeOutIntoBottom text-center sm:text-left !delay-500 sm:!delay-[1000ms]">Your Trusted General Practice Attorney</p>
+                        <h1 class="hero-area-title font-light  text-center sm:text-left ">Transforming Legal Hurdles into Success Stories</h1>
+                        <p class="hero-area-content  text-center sm:text-left">Your Trusted General Practice Attorney</p>
                         <a 
                            href="/contact-us" 
-                           class="button w-button mx-auto sm:ml-0 sm:mr-auto block sm:inline-block !text-center text-left hover:bg-transparent hover:text-primaryC fadeOutIntoBottom transition-all duration-1000 w-fit !delay-[750ms] sm:!delay-[1250ms]"
+                           role="button"
+                           aria-label="Go to Contact Page"
+                           class="button w-button mx-auto sm:ml-0 sm:mr-auto block sm:inline-block !text-center text-left hover:bg-transparent hover:text-primaryC  transition-[background-color] duration-1000 w-fit "
                            >Get In Touch</a>
                      </div>
                   </div>
@@ -48,7 +50,7 @@ import BlogSection from "@/components/blogComponent/blogSection.astro";
       <div class="simple-intro-section">
          <div class="container w-container">
             <div class="flex flex-col lg:flex-row gap-5">
-               <div class="simple-intro-image-wrap  fadeInFromBottomTag fadeOutIntoBottom md:min-w-[467px] w-full ">
+               <div class="simple-intro-image-wrap md:min-w-[467px] w-full ">
                   <img 
                      src="/assets/images/statue-library.webp" 
                      loading="lazy" 
@@ -58,7 +60,7 @@ import BlogSection from "@/components/blogComponent/blogSection.astro";
                   />
                </div>
                <div class="simple-intro-content-wrap">
-                  <div class="section-title-left  fadeInFromBottomTag fadeOutIntoBottom">
+                  <div class="section-title-left   ">
                      <h2 class="section-left-title-text">Are you seeking reliable legal advice and representation? <span class = "text-primaryC">Look no further.</span></h2>
                      <img 
                      src="/assets/icons/small-separator-gold.svg" 
@@ -68,7 +70,7 @@ import BlogSection from "@/components/blogComponent/blogSection.astro";
                      />
                      <p class="section-left-content"> As your trusted <b class = "text-primaryC">general practice attorney</b> in Los Angeles, CA, I am here to help you navigate through a wide range of legal matters, ensuring your rights and interests are protected every step of the way. You’re in good hands. </p>
                   </div>
-                  <div class="intro-lawyer-area fadeInFromBottomTag fadeOutIntoBottom ">
+                  <div class="intro-lawyer-area   ">
                      <div class="intro-lawyer-wrap">
                         <img 
                         src="/assets/images/authors/eli-mordecai-small.webp" 
