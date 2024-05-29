@@ -2,7 +2,7 @@
 import ContactUsColumn  from "./contact-us.astro"; 
 import QuickLinkColumn from "./quick-link.astro"; 
 import PracticeAreaColumn from "./practice-area.astro"
-import LogoComponent from "../logoComponent.astro";
+import LogoComponent from "../logoComponent-lazy.astro";
 import { BusinessInfo } from "@/data/business-info";
 var YEAR = new Date().getFullYear(); 
 ---
@@ -11,7 +11,7 @@ var YEAR = new Date().getFullYear();
       <div class="footer-top-logo">
          <div class="footer-top-logo-wrap">
             <LogoComponent 
-               customDiv = "header-logo mx-auto "
+               customDiv = "header-logo mx-auto"
             />
          </div>
       </div>
