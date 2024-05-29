@@ -5,7 +5,6 @@ const {
  customImg,
  immediateLoading = false, 
  } = Astro.props; 
-// const imgStyle = "w-[225px] h-[116px] min-[500px]:w-[300px]"
  const imgStyle = "w-[225px] aspect-[5/2] min-[500px]:w-[300px]"
 ---
 {immediateLoading ? 
@@ -17,7 +16,7 @@ const {
         <img 
         src={Logo.src} 
         loading="eager" 
-        class = {imgStyle}
+        class = "w-[225px] aspect-[5/2] min-[500px]:w-[300px]"
         alt="Attorney Brand Logo"/>
     </a>
 </div>
@@ -30,7 +29,7 @@ const {
         <img 
         src={Logo.src} 
         loading="lazy" 
-        class = {imgStyle}
+        class = "w-[225px] aspect-[5/2] min-[500px]:w-[300px]"
         alt="Attorney Brand Logo"/>
     </a>
 </div>
