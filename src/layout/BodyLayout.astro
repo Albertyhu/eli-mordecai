@@ -11,12 +11,13 @@ import "@/components/interactive_animations/animation.css";
     <slot />
     <Footer />
     <script 
-    src="/script/nav-script.js" 
-    type = "text/javascript" 
-    is:inline></script>
+        src="/script/nav-script.js" 
+        type = "text/javascript" 
+        defer
+        is:inline></script>
     <script 
         src ="/script/animated_script.js"
         type="text/javascript"
-        is:inline
-    ></script>
+        defer
+        is:inline></script>
 </body>
