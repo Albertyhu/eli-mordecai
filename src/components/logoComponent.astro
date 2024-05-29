@@ -5,7 +5,8 @@ const {
  customImg,
  immediateLoading = false, 
  } = Astro.props; 
- const imgStyle = "w-[225px] h-[116px] min-[500px]:w-[300px]"
+// const imgStyle = "w-[225px] h-[116px] min-[500px]:w-[300px]"
+ const imgStyle = "w-[225px] aspect-[5/2] min-[500px]:w-[300px]"
 ---
 {immediateLoading ? 
 <div class={`${customDiv ? customDiv : "header-logo"}`}>
