@@ -20,3 +20,22 @@ export const formatPhone = (num) => {
     }
   }
 };
+
+export const formatPhoneInContactForm = (num) => {
+  const numberOnly = num.replace(/[^\d]/g, "");
+  if (numberOnly.length < 4) {
+    return numberOnly;
+  } else if (numberOnly.length >= 4 && numberOnly.length < 7) {
+    var area_code = numberOnly.slice(0, 3);
+    var prefix = numberOnly.slice(3, numberOnly.length);
+    return `(${area_code}) - ${prefix}`;
+  } else if (numberOnly.length >= 7) {
+    var area_code = numberOnly.slice(0, 3);
+    var prefix = numberOnly.slice(3, 6);
+    var suffix = "";
+    if (numberOnly.length <= 10)
+      suffix = numberOnly.slice(6, numberOnly.length);
+    else suffix = numberOnly.slice(6, 10);
+    return `(${area_code})-${prefix}-${suffix}`;
+  }
+};

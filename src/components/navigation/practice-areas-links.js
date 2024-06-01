@@ -20,7 +20,7 @@ export const practice_areas = [
     subDirectory: [],
   },
   {
-    label: "Tenant Landlord Law",
+    label: "Landlord Tenant Law",
     link: "/practice-areas/tenant-law",
     subDirectory: [],
   },

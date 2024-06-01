@@ -4917,6 +4917,18 @@ blockquote {
   position: relative;
 }
 
+/*Gets rid of the arrow buttons of the number input on the contact form*/ 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 100%;

@@ -1,63 +1,72 @@
 ---
 import BaseLayout from "@/layout/BaseLayout.astro"
-import NavBar from "@/components/navigation/index.astro"; 
-import BannerTitleSeparator from "@/components/graphics/banner-title-separator.astro"; 
 import FAQComponent from "@/components/faqComponent.astro";
 import { General_FAQ } from "@/data/sampe-faq.js"; 
 import PhoneIcon from "@/components/graphics/phone-icon.astro";
 import EmailIcon from "@/components/graphics/email-icon.astro";
+import { BusinessInfo } from "@/data/business-info";
+import ContactForm from "@/components/contact-form.tsx";
+import BannerTitleSection from "@/components/banner-title-section.astro"; 
+import {formatPhone} from "@/hooks/number";
+import NavBar from "@/components/navigation/index.astro"; 
+import BannerTitleSeparator from "@/components/graphics/banner-title-separator.astro";
 ---
 <BaseLayout
    pageTitle = "Contact Us"
    customDescription = "Lawyer site"
 >
-      <div class="banner-title-area">
-         <div class="banner-title-overlay"></div>
-         <NavBar />
-         <div class="container w-container">
-            <div class="banner-title-wrap childrenFadeInFromBottomTag">
-               <h1 class="banner-area-title fadeOutIntoBottom">Contact Us</h1>
-               <BannerTitleSeparator  customStyle = "mx-auto fadeOutIntoBottom" />
-            </div>
-         </div>
-      </div>
+      <BannerTitleSection title = "Contact Me"/>
       <div class="contact-form-section">
          <div class="container w-container">
             <div class="contact-info-wrap">
                <div class="w-layout-grid contact-info-grid">
-                  <div class="info-intro-item">
-                     <h3 class="contact-info-title">Say Hello To Attorney law</h3>
-                     <p>If you have any questions about the services we simply use the form below. We try and its respond to all queries and comments within 24 hours.<br/></p>
-                  </div>
-                  <div class="info-intro-item">
-                     <h3 class="contact-info-title">Las Vegas</h3>
-                     <p class="info-office-address">124 New Street, Las Vegas, USA.</p>
-                     <a href="mailto:contact@attoorneylaw.com" class="contact-intro-link">contact@attoorneylaw.com</a><a href="tel:+012365478910" class="contact-intro-link">+0 123 654 78910</a>
-                  </div>
-                  <div class="info-intro-item last-info-item">
-                     <h3 class="contact-info-title">New York</h3>
-                     <p class="info-office-address">Main Office, Law Street Av,</p>
-                     <a href="mailto:contact@attoorneylaw.com" class="contact-intro-link">contact@attoorneylaw.com</a><a href="tel:+012365478910" class="contact-intro-link">+0 123 654 78910</a>
+                  <div class="info-intro-item grid sm:grid-cols-2 sm:gap-x-10">
+                     <div>
+                        <h3 class="contact-info-title">{BusinessInfo.city}</h3>
+                        <p class="info-office-address">{BusinessInfo.street}, {BusinessInfo.city}, {BusinessInfo.state} {BusinessInfo.zip}</p>
+                     </div>
+                     <div class = "mt-10 sm:mt-0">
+                        <div
+                           class = "flex flex-row gap-5"
+                        >
+                           <div class="flex border-2 border-solid border-primaryC rounded-full justify-center align-center w-[62px] h-[62px] p-4 sm:p-5">
+                              <img 
+                              src="/assets/icons/header-mail-icon.svg" 
+                              loading="lazy" 
+                              alt="Email Icon"/
+                              class = ""
+                              >
+                           </div>    
+                           <a 
+                           href={`mailto:${BusinessInfo.email}`}
+                           class="contact-intro-link my-auto">{BusinessInfo.email}</a>
+                        </div>
+                        <div
+                           class = "flex flex-row gap-5 my-5"
+                        >
+                           <div class="flex border-2 border-solid border-primaryC rounded-full justify-center align-center w-[62px] h-[62px] p-4 sm:p-5">
+                              <img 
+                              src="/assets/icons/header-call-icon.svg" 
+                              loading="lazy" 
+                              alt="Phone Icon"/
+                              class = ""
+                              >
+                           </div>  
+                           <a href={`tel:${BusinessInfo.phone}`} class="contact-intro-link">{formatPhone(BusinessInfo.phone)}</a>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
             <div class="contact-form-wrap">
                <div class="contact-form-item">
                   <div class="w-form">
-                     <form id="email-form" name="email-form" data-name="Email Form" method="get" class="contact-form" data-wf-page-id="663690b06ff2152d9a1b9e1c" data-wf-element-id="578df7e1-f4ff-e7a7-6436-8847b1666e0e">
-                        <div class="contact-input-fields">
-                           <div class="contact-form-left-wrap">
-                              <div class="input-wrap"><input class="input-field contact-form-input w-input" maxlength="256" name="email" data-name="Email" placeholder="Your Mail Here" type="email" id="email" required=""/></div>
-                              <div class="input-wrap"><input class="input-field contact-form-input w-input" maxlength="256" name="name" data-name="Name" placeholder="Your Name Here" type="text" id="name" required=""/></div>
-                           </div>
-                           <div class="contact-form-right-wrap">
-                              <div class="input-wrap"><input class="input-field contact-form-input w-input" maxlength="256" name="Subject" data-name="Subject" placeholder="What Service You Want" type="text" id="Subject"/></div>
-                              <div class="input-wrap"><input class="input-field contact-form-input w-input" maxlength="256" name="Phone-Number" data-name="Phone Number" placeholder="Your Phone Number" type="text" id="Phone-Number"/></div>
-                           </div>
-                        </div>
-                        <div class="input-wrap"><input class="input-field text-area w-input" maxlength="256" name="Your-Message" data-name="Your Message" placeholder="Your Message" type="text" id="Your-Message"/></div>
-                        <div class="contact-form-button"><input type="submit" data-wait="Please wait..." class="button-large w-button" value="Send Message"/></div>
-                     </form>
+                     <h2
+                        class = "text-primaryC text-3xl sm:text-4xl"
+                     >Send me a message</h2>
+                     <ContactForm 
+                        client:only="react"
+                     />
                      <div class="success-message w-form-done">
                         <div>Thank you! Your submission has been received!</div>
                      </div>
@@ -69,42 +78,12 @@ import EmailIcon from "@/components/graphics/email-icon.astro";
             </div>
             <div class="contact-links-wrap">
                <div class="w-layout-grid contact-links-grid">
-                  <div class="contact-link-infos">
-                     <div class="contact-link-info">
-                        <!-- <div class="header-contact-item contact-info-item">
-                           <div class="header-contact-icon-wrap header-link-wrap">
-                              <img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e42_header-call-icon.svg" loading="lazy" alt="Header Contact Icon"/>
-                           </div>
-                           <div class="header-contact-link-wrap">
-                              <p class="header-contact-title">Call Us On:</p>
-                              <a href={`tel:${BusinessInfo.phone}`} class="header-contact-link">{formatPhone(BusinessInfo.phone)}</a>
-                           </div>
-                        </div> -->
-                        <PhoneIcon />
-                     </div>
-                     <div class="contact-link-info">
-                        <!-- <div class="header-contact-item contact-info-item">
-                           <div class="header-contact-icon-wrap header-link-wrap">
-                              <img src="https://assets-global.website-files.com/663690af6ff2152d9a1b9618/663690b06ff2152d9a1b9e41_header-mail-icon.svg" loading="lazy" alt="Header Contact Icon"/>
-                           </div>
-                           <div class="header-contact-link-wrap">
-                              <p class="header-contact-title">Email Us On:</p>
-                              <a href={`mailto:${BusinessInfo.email}`}class="header-contact-link">{BusinessInfo.email}</a>
-                           </div>
-                        </div> -->
-                        <EmailIcon />
-                     </div>
+                  <div class="hidden contact-link-infos">
+                     <PhoneIcon />
+                     <EmailIcon />
                   </div>
-                  <div id="w-node-_66a806ef-97b1-b9d7-c04b-0e3d21e2bd07-9a1b9e1c" class="contact-address-info">
-                     <div class="header-contact-item">
-                        <div class="header-contact-icon-wrap header-link-wrap">
-                           <img src="/assets/icons/header-mail-icon.svg"  loading="lazy" alt="Header Contact Icon"/>
-                        </div>
-                        <div class="header-contact-link-wrap">
-                           <p class="header-contact-title">Main Office :</p>
-                           <p class="contact-info-address">124, New Street, Las Vegas 90027, USA.</p>
-                        </div>
-                     </div>
+                  <div class="contact-link-info">
+
                   </div>
                </div>
             </div>

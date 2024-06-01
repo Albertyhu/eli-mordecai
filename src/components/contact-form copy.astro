@@ -1,0 +1,82 @@
+---
+import { BusinessInfo } from "@/data/business-info";
+const { } = Astro.props; 
+---
+<form 
+id="email-form" 
+name="email-form" 
+data-name="Email Form" 
+method="get" 
+class="contact-form" 
+data-wf-page-id="663690b06ff2152d9a1b9e1c" 
+data-wf-element-id="578df7e1-f4ff-e7a7-6436-8847b1666e0e">
+    <div class="contact-input-fields">
+        <div class="contact-form-left-wrap">
+            <div class="input-wrap">
+                <input 
+                class="input-field contact-form-input w-input" 
+                maxlength="256" 
+                name="email" 
+                data-name="Email"
+                 placeholder="Your Mail Here" 
+                 type="email" id="email" 
+                 required=""
+                 />
+                </div>
+            <div class="input-wrap">
+                <input 
+                class="input-field contact-form-input w-input" 
+                maxlength="256" 
+                name="name" 
+                data-name="Name" 
+                placeholder="Your Name Here" 
+                type="text" id="name" 
+                required=""
+                />
+            </div>
+        </div>
+        <div class="contact-form-right-wrap">
+            <div class="input-wrap">
+                <input 
+                class="input-field contact-form-input w-input" 
+                maxlength="256" 
+                name="Subject" 
+                data-name="Subject" 
+                placeholder="What Service You Want" 
+                type="text" 
+                id="Subject"
+                />
+            </div>
+            <div class="input-wrap">
+                <input 
+                class="input-field contact-form-input w-input" 
+                maxlength="256" 
+                name="Phone-Number" 
+                data-name="Phone Number" 
+                placeholder="Your Phone Number" 
+                type="text" 
+                id="Phone-Number"
+                />
+            </div>
+        </div>
+    </div>
+    <div class="input-wrap">
+        <input 
+        class="input-field text-area w-input" 
+        maxlength="256" 
+        name="Your-Message" 
+        data-name="Your Message" 
+        placeholder="Your Message" 
+        type="text" 
+        id="Your-Message"
+        />
+    </div>
+    <div class="contact-form-button">
+        <input 
+        type="submit" 
+        data-wait="Please wait..." 
+        class="button-large w-button" 
+        value="Send Message"
+        />
+    </div>
+</form>
