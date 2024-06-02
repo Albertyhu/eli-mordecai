@@ -8,8 +8,6 @@ import { BusinessInfo } from "@/data/business-info";
 import ContactForm from "@/components/contact-form.tsx";
 import BannerTitleSection from "@/components/banner-title-section.astro"; 
 import {formatPhone} from "@/hooks/number";
-import NavBar from "@/components/navigation/index.astro"; 
-import BannerTitleSeparator from "@/components/graphics/banner-title-separator.astro";
 ---
 <BaseLayout
    pageTitle = "Contact Us"
@@ -19,41 +17,41 @@ import BannerTitleSeparator from "@/components/graphics/banner-title-separator.a
       <div class="contact-form-section">
          <div class="container w-container">
             <div class="contact-info-wrap">
-               <div class="w-layout-grid contact-info-grid">
-                  <div class="info-intro-item grid sm:grid-cols-2 sm:gap-x-10">
-                     <div>
-                        <h3 class="contact-info-title">{BusinessInfo.city}</h3>
-                        <p class="info-office-address">{BusinessInfo.street}, {BusinessInfo.city}, {BusinessInfo.state} {BusinessInfo.zip}</p>
+               <div class="grid md:grid-cols-2 md:gap-x-10 w-full">
+                  <div
+                     class = "md:border-r-[1px] md:border-r-[rgba(255,255,255,0.3)] md:text-right md:pr-10"
+                  >
+                     <h3 class="contact-info-title">{BusinessInfo.city}</h3>
+                     <p class="info-office-address">{BusinessInfo.street},<br /> {BusinessInfo.city}, {BusinessInfo.state} {BusinessInfo.zip}</p>
+                  </div>
+                  <div class = "mt-10 md:mt-0">
+                     <div
+                        class = "flex flex-row gap-5"
+                     >
+                        <div class="flex border-2 border-solid border-primaryC rounded-full justify-center align-center w-[62px] h-[62px] min-w-[62px] p-4 sm:p-5">
+                           <img 
+                           src="/assets/icons/header-mail-icon.svg" 
+                           loading="lazy" 
+                           alt="Email Icon"/
+                           class = ""
+                           >
+                        </div>    
+                        <a 
+                        href={`mailto:${BusinessInfo.email}`}
+                        class="contact-intro-link my-auto">{BusinessInfo.email}</a>
                      </div>
-                     <div class = "mt-10 sm:mt-0">
-                        <div
-                           class = "flex flex-row gap-5"
-                        >
-                           <div class="flex border-2 border-solid border-primaryC rounded-full justify-center align-center w-[62px] h-[62px] p-4 sm:p-5">
-                              <img 
-                              src="/assets/icons/header-mail-icon.svg" 
-                              loading="lazy" 
-                              alt="Email Icon"/
-                              class = ""
-                              >
-                           </div>    
-                           <a 
-                           href={`mailto:${BusinessInfo.email}`}
-                           class="contact-intro-link my-auto">{BusinessInfo.email}</a>
-                        </div>
-                        <div
-                           class = "flex flex-row gap-5 my-5"
-                        >
-                           <div class="flex border-2 border-solid border-primaryC rounded-full justify-center align-center w-[62px] h-[62px] p-4 sm:p-5">
-                              <img 
-                              src="/assets/icons/header-call-icon.svg" 
-                              loading="lazy" 
-                              alt="Phone Icon"/
-                              class = ""
-                              >
-                           </div>  
-                           <a href={`tel:${BusinessInfo.phone}`} class="contact-intro-link">{formatPhone(BusinessInfo.phone)}</a>
-                        </div>
+                     <div
+                        class = "flex flex-row gap-5 my-5"
+                     >
+                        <div class="flex border-2 border-solid border-primaryC rounded-full justify-center align-center w-[62px] h-[62px] min-w-[62px] p-4 sm:p-5">
+                           <img 
+                           src="/assets/icons/header-call-icon.svg" 
+                           loading="lazy" 
+                           alt="Phone Icon"/
+                           class = ""
+                           >
+                        </div>  
+                        <a href={`tel:${BusinessInfo.phone}`} class="contact-intro-link">{formatPhone(BusinessInfo.phone)}</a>
                      </div>
                   </div>
                </div>
