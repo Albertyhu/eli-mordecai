@@ -1,5 +1,5 @@
 //This method handles the search query that is typed into the search bar
-import type { PostType, TagType } from "@/util/interface.tsx";
+import type { PostType } from "@/util/interface.tsx";
 //import * as fs from "@astrojs/node";
 
 export const SearchQuery = (query: string, list: Array<PostType>) => {

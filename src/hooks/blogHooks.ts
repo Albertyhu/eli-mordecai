@@ -30,7 +30,6 @@ const createStaticPathArray = ({
 }: CreateStaticPathArrayType): Array<any> => {
   var staticPaths: Array<any> = [];
   var i = 1;
-  var assetMap = new Map();
   const sortedPosts = SortPostsByNew(allPosts);
   do {
     //acquire array of blog posts to be displayed by each page, limited by PAGE_SIZE

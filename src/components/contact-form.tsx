@@ -173,7 +173,7 @@ const ContactFromComponent = () => {
               name="Phone-Number"
               placeholder="Your Phone Number"
               id="Phone-Number"
-              value={phone}
+              value={phone as number}
               onChange={handlePhone}
               type="number"
             />
