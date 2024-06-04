@@ -59,13 +59,13 @@ const ContactFromComponent = () => {
     evt.preventDefault();
 
     let templateParams = {
-      to_name: BusinessInfo.owner,
+      to_name: "Eli",
       from_name: name,
       subject_line: `Someone sent you a new message through ${BusinessInfo.websiteURL}`,
       service,
-      phone_number: phone,
+      phone: phone,
       message: message,
-      reply_to: email,
+      email: email,
     };
     emailjs.send(SERVICE_ID, TEMPLATE_KEY, templateParams, PUBLIC_KEY).then(
       (result) => {
