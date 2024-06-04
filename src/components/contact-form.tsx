@@ -71,11 +71,6 @@ const ContactFromComponent = () => {
       (result) => {
         console.log(result.text);
         reset();
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "smooth",
-        });
         DisplayMessage();
       },
       (error) => {
