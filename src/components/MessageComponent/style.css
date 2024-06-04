@@ -1,16 +1,14 @@
 .Message {
-  background-color: #ececec;
+  /* background-color: #ececec; */
   border-radius: 15px;
   color: #2e2e2e;
   font-size: 15px;
   font-weight: bold;
   font-family: inherit;
   text-align: center;
-  opacity: 0;
   position: fixed;
   transform: translateY(-20px);
   transition: opacity 1s ease-in, transform 500ms ease-in !important;
-  z-index: 99;
   width: 50%;
   padding: 15px 15px;
   left: 25%;
