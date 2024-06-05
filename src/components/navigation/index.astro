@@ -4,6 +4,7 @@ import LogoComponent from "@/components/logoComponent.astro"
 import MenuLinks from "./menu-links.astro"
 import MobileIcon from "./mobile-icon.astro"; 
 import ContactInfoItems from "./contact-info-items.astro";
+import LogoComponentLazy from "../logoComponent-lazy.astro";
 ---
 <div 
     class="header"
@@ -13,6 +14,10 @@ import ContactInfoItems from "./contact-info-items.astro";
         <div class="header-logo-wrap">
             <LogoComponent 
                 immediateLoading = {true}
+                customDiv = "header-logo hidden sm:block"
+            />
+            <LogoComponentLazy 
+                customDiv = "header-logo block sm:hidden"
             />
             <ContactInfoItems wrapperStyle = "my-auto [&>div]:my-auto"/>
         </div>
