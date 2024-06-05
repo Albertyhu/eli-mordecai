@@ -6,12 +6,13 @@ import LinkItem from "./linkItem.astro";
 import "./nav-style.css";
 import ConsultationBtn from "./consultation-btn.astro";
 const currentPath = Astro.url.pathname;
+import LogoComponentLazy from "../logoComponent-lazy.astro";
 ---
 <div 
 class="bg-secondaryC w-[250px] h-full overflow-y-scroll overflow-x-hidden fixed z-20 py-10 px-5 border-r-white border-r-2 border-r-solid transform-all duration-500 closedMobileMenu lg:hidden"
 id="MobileMenu"
 >
-    <LogoComponent 
+    <LogoComponentLazy 
         customDiv = "header-logo w-[200px]"
     />
     <div
