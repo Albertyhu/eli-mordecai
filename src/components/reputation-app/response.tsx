@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext, useRef, useEffect } from "react";
 import { FeedbackContext } from "./context.tsx";
 import { StarComponent } from "./rating-component.tsx";
 import CopyButton from "./copy-button.tsx";
@@ -22,9 +22,19 @@ const ResponseElement = () => {
 
 const GoogleReviewRequest = () => {
   const CopiedMessageRef = useRef(null);
-  const { message, rating, values } = useContext(FeedbackContext);
+  const { message, rating, values, GoodRatingRef } =
+    useContext(FeedbackContext);
+  // useEffect(() => {
+  //   GoodRatingRef.current.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "start",
+  //   });
+  // }, [GoodRatingRef.current]);
   return (
-    <div className="my-10 [&>p]:leading-[25px] [&>p]:text-center [&>p]:my-5">
+    <div
+      className="my-10 [&>p]:leading-[25px] [&>p]:text-center [&>p]:my-5"
+      ref={GoodRatingRef}
+    >
       <MessageComponent
         message="Your feedback has been copied."
         messageRef={CopiedMessageRef}

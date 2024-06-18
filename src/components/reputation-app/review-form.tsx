@@ -1,13 +1,10 @@
-import React, {
-  useState,
-  useEffect,
-  useRef,
-  type ReactHTMLElement,
-} from "react";
+import React, { useState, useRef } from "react";
 import ResponseComponent from "./response.tsx";
 import emailjs from "@emailjs/browser";
 import { RatingComponent } from "./rating-component";
 import { FeedbackContext } from "./context.tsx";
+import { checkEmail } from "@/hooks/checkEmail.ts";
+import { isNamedExports } from "typescript";
 
 const PUBLIC_KEY = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
 const TEMPLATE_KEY = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
@@ -17,20 +14,69 @@ const testMess =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
 
 const ReviewForm = () => {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [rating, setRating] = useState<number>(0);
 
+  const [ratingError, setRatingError] = useState<string | null>(null);
+  const [nameError, setNameError] = useState<string | null>(null);
+
+  const [emailError, setEmailError] = useState<string | null>(null);
+
+  const [feedbackError, setFeedbackError] = useState<string | null>(null);
+
   const formRef = useRef<HTMLFormElement>(null);
   const responseRef = useRef<HTMLDivElement>(null);
+  const GoodRatingRef = useRef<HTMLDivElement>(null);
+
+  const handleName = (evt: any) => {
+    setName(evt.target.value);
+  };
+
+  const handleEmail = (evt: any) => {
+    setEmail(evt.target.value);
+  };
+
   const handleMessage = (evt: any) => {
     setMessage(evt.target.value);
   };
 
+  const checkValidity = () => {
+    let valid = true;
+    if (rating === 0) {
+      valid = false;
+      setRatingError("You have to put your rating.");
+    }
+    if (name == "") {
+      valid = false;
+      setNameError("The name field cannot be empty.");
+    }
+    if (email == "") {
+      valid = false;
+      setEmailError("The email field cannot be empty.");
+    } else if (!checkEmail(email)) {
+      valid = false;
+      setEmailError("Your email is not valid.");
+    }
+    if (message == "") {
+      setFeedbackError("Your feedback cannot be empty.");
+    }
+    return valid;
+  };
+
   const submitEvent = (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
-    formRef?.current?.classList.add("hidden");
-    responseRef?.current?.classList.remove("hidden");
-    responseRef?.current?.classList.add("block");
+    if (checkValidity()) {
+      formRef?.current?.classList.add("hidden");
+      responseRef?.current?.classList.remove("hidden");
+      responseRef?.current?.classList.add("block");
+      window.scrollTo({
+        top: 300,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
   };
   const context = {
     message,
@@ -38,6 +84,7 @@ const ReviewForm = () => {
     rating,
     setRating,
     responseRef,
+    GoodRatingRef,
     values: [1, 2, 3, 4, 5],
   };
 
@@ -45,6 +92,43 @@ const ReviewForm = () => {
     <FeedbackContext.Provider value={context}>
       <form ref={formRef} onSubmit={submitEvent}>
         <RatingComponent />
+        {ratingError && (
+          <div
+            id="rating error message"
+            className="text-red-700 text-lg text-center"
+          >
+            {ratingError}
+          </div>
+        )}
+        <div className="input-wrap">
+          <input
+            className="input-field contact-form-input w-input"
+            maxLength={256}
+            name="name"
+            data-name="Name"
+            placeholder="Your Name Here"
+            type="text"
+            id="name"
+            value={name}
+            onChange={handleName}
+            required
+          />
+          {nameError && <div className="text-red-600 text-lg">{nameError}</div>}
+        </div>
+        <div className="input-wrap">
+          <input
+            className="input-field contact-form-input w-input"
+            maxLength={256}
+            name="email"
+            data-name="Email"
+            placeholder="Your Email Here"
+            type="email"
+            id="email"
+            value={email}
+            onChange={handleEmail}
+            required
+          />
+        </div>
         <textarea
           onChange={handleMessage}
           className="input-field text-area w-input resize-none bg-slate-700 rounded-lg px-5"
