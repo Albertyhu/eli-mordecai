@@ -65,6 +65,7 @@ export const StarComponent = (props: StarComponentType) => {
 
 const InputStarComponent = (props: InputStarComponentType) => {
   const { value, hoverRating, setRating, setHoverRating } = props;
+  const { setRatingError } = useContext(FeedbackContext);
   const handleHoverEvent = () => {
     setHoverRating(value);
   };
@@ -72,6 +73,7 @@ const InputStarComponent = (props: InputStarComponentType) => {
   const clickEvent = () => {
     setHoverRating(value);
     setRating(value);
+    setRatingError(null);
   };
 
   return (

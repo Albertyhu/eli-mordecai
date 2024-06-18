@@ -21,9 +21,7 @@ const ReviewForm = () => {
 
   const [ratingError, setRatingError] = useState<string | null>(null);
   const [nameError, setNameError] = useState<string | null>(null);
-
   const [emailError, setEmailError] = useState<string | null>(null);
-
   const [feedbackError, setFeedbackError] = useState<string | null>(null);
 
   const formRef = useRef<HTMLFormElement>(null);
@@ -32,6 +30,7 @@ const ReviewForm = () => {
 
   const handleName = (evt: any) => {
     setName(evt.target.value);
+    setNameError(null);
   };
 
   const handleEmail = (evt: any) => {
@@ -40,6 +39,7 @@ const ReviewForm = () => {
 
   const handleMessage = (evt: any) => {
     setMessage(evt.target.value);
+    setFeedbackError(null);
   };
 
   const checkValidity = () => {
@@ -52,21 +52,13 @@ const ReviewForm = () => {
       valid = false;
       setNameError("The name field cannot be empty.");
     }
-    if (email == "") {
-      valid = false;
-      setEmailError("The email field cannot be empty.");
-    } else if (!checkEmail(email)) {
-      valid = false;
-      setEmailError("Your email is not valid.");
-    }
     if (message == "") {
       setFeedbackError("Your feedback cannot be empty.");
     }
     return valid;
   };
 
-  const submitEvent = (evt: React.FormEvent<HTMLFormElement>) => {
-    evt.preventDefault();
+  const submitEvent = () => {
     if (checkValidity()) {
       formRef?.current?.classList.add("hidden");
       responseRef?.current?.classList.remove("hidden");
@@ -86,11 +78,12 @@ const ReviewForm = () => {
     responseRef,
     GoodRatingRef,
     values: [1, 2, 3, 4, 5],
+    setRatingError,
   };
 
   return (
     <FeedbackContext.Provider value={context}>
-      <form ref={formRef} onSubmit={submitEvent}>
+      <form ref={formRef}>
         <RatingComponent />
         {ratingError && (
           <div
@@ -126,7 +119,6 @@ const ReviewForm = () => {
             id="email"
             value={email}
             onChange={handleEmail}
-            required
           />
         </div>
         <textarea
@@ -139,9 +131,13 @@ const ReviewForm = () => {
           id="Your-Message"
           value={message}
         ></textarea>
+        {feedbackError && (
+          <div className="text-red-600 text-lg">{feedbackError}</div>
+        )}
         <div className="mx-auto text-center mt-[60px]">
           <input
-            type="submit"
+            type="button"
+            onClick={submitEvent}
             data-wait="Please wait..."
             className="duration-500 py-[20px] px-[30px] text-[18px] min-[480px]:px-[50px] min-[480px]:text-[20px] md:py-[24px] md:px-[110px] md:text-[22px] cursor-pointer rounded-[0px] no-underline inline-block border-[1px] border-solid border-primaryC bg-primaryC text-secondaryC text-center my-[10px] mr-[10px] font-secondaryF font-[500] transition-all hover:bg-secondaryC hover:text-primaryC"
             value="Send Message"
