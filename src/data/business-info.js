@@ -7,7 +7,7 @@ export const BusinessInfo = {
   state: "CO",
   zip: "80110-3240",
   country: "USA",
-  phone: "0123456789",
+  phone: "3108060011",
   email: "Eliasmordecai@gmail.com",
   website_name: "Eli Mordecai website",
   websiteURL: "www.EliMordecai.com",
@@ -20,6 +20,8 @@ export const BusinessInfo = {
   pinterest: "https://www.pinterest.com",
   instagram: "https://www.instagram.com",
   youtube: "https://www.youtube.com",
+  /*URL that leads to Google Business Profile review */
+  Google_review_url: "https://www.google.com",
   hours: [
     { day: "Monday", hours: "9am-8pm" },
     { day: "Tuesday", hours: "9am-8pm" },

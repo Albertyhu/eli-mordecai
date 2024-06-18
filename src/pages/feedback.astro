@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layout/BaseLayout.astro"
+import EliHeadshot from "@/components/eli-headshot.astro";
+import SmallSeparatorGold from "@/components/graphics/small-separator-gold.astro";
+import PracticeAreaSection from "@/components/about-page/practice-area-section/index.astro"; 
+import SpecializedSection from "@/components/about-page/specialized-section.astro";
+import CTASection from "@/components/call-to-action/version2.astro"; 
+import BannerTitleSection from "@/components/banner-title-section.astro";
+import ReputationForm from "@/components/reputation-app/index.astro";
+---
+<BaseLayout
+   pageTitle = "Feedback"
+   customDescription = "Let me know how well I handled your case. I value your feedback."
+>
+    <BannerTitleSection title = "Let me know how I am doing"/>
+    <ReputationForm />
+</BaseLayout>
