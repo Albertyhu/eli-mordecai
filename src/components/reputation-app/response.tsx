@@ -37,7 +37,7 @@ const GoogleReviewRequest = () => {
           <StarComponent rating={rating} value={value} key={uuid()} />
         ))}
       </div>
-      <div className="my-10">{message}</div>
+      <div className="my-10 bg-slate-700 rounded-lg p-5">{message}</div>
       <CopyButton CopiedMessageRef={CopiedMessageRef} />
       <p>
         <span className="text-primaryC font-bold">We need your help. </span>
