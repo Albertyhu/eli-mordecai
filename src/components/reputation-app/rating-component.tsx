@@ -26,7 +26,7 @@ const StarStyle: StarStyleType = {
 };
 
 const emotion = [
-  "Very Dissatisfed",
+  "Very Dissatisfied",
   "Dissatisfied",
   "Average",
   "Satisfied",
