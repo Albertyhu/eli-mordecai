@@ -66,16 +66,16 @@ const currentPath = Astro.url.pathname;
                 label = "Blog"
             />
             {ContactButton ? 
-            <a href="/contact-us" class="nav-link w-nav-link my-auto">           
+            <a href="/contact" class="nav-link w-nav-link my-auto">           
                 <button
                 class = "bg-primaryC px-10 text-black hover:bg-transparent hover:text-primaryC border-[2px] border-solid border-primaryC transition-all duration-500"
-                >Contact Us</button>
+                >Contact Me</button>
             </a>
             :
             <LinkItem 
                 {currentPath}
-                href = "/contact-us"
-                label = "Contact Us"
+                href = "/contact"
+                label = "Contact"
             />
             }
         </nav>
