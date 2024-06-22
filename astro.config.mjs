@@ -9,4 +9,5 @@ export default defineConfig({
   integrations: [tailwind(), react(), sitemap()],
   output: "server",
   adapter: netlify(),
+  site: "https://mordecai-law.com/",
 });
