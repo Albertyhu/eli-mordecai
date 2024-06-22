@@ -10,7 +10,7 @@ export const BusinessInfo = {
   phone: "3108060011",
   email: "Eliasmordecai@gmail.com",
   website_name: "Eli Mordecai website",
-  websiteURL: "www.EliMordecai.com",
+  websiteURL: "www.Mordecai-Law.com",
   OpenGraphImg: {
     src: "/assets/images/open-graph-image.webp",
     alt: "Eli Mordecai - Los Angeles General Practice Attorney",
