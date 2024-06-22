@@ -1,6 +1,7 @@
 ---
 import LinkItem from "./linkItem.astro"; 
 import { practice_areas } from "./practice-areas-links";
+import PracticeDropdown from "./practice-dropdown.astro";
 const { 
     ContactButton = false,
   } = Astro.props; 
@@ -46,13 +47,14 @@ const currentPath = Astro.url.pathname;
                                 />   
                         </div>
                     </a>
-                    <nav class="dropdown-list w-dropdown-list group-hover:block">
+                    <!-- <PracticeDropdown /> -->
+                    <nav class="bg-white absolute hidden group-hover:block !z-[9999] min-h-[250px]" id ="practice_area_dropdown">
                     {practice_areas && practice_areas.length > 0 && 
                         practice_areas.map(page => 
                         <LinkItem 
                             {currentPath}
                             href = {page.link}
-                            customStyle = "dropdown-link w-dropdown-link"
+                            customStyle = "dropdown-link w-dropdown-link !z-[9999]"
                             label = {page.label}
                         />
                     )

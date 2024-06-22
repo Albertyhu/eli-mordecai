@@ -4,10 +4,12 @@ import react from "@astrojs/react";
 import netlify from "@astrojs/netlify";
 import sitemap from "@astrojs/sitemap";
 
+import robotsTxt from "astro-robots-txt";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), sitemap()],
+  integrations: [tailwind(), react(), sitemap(), robotsTxt()],
   output: "server",
   adapter: netlify(),
-  site: "https://mordecai-law.com/",
+  site: "https://mordecai-law.com/"
 });
