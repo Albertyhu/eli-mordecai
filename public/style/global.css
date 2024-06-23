@@ -1986,7 +1986,6 @@ textarea.w-select {
 
 .w-nav-link {
   vertical-align: top;
-  color: #222;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
@@ -4917,7 +4916,7 @@ blockquote {
   position: relative;
 }
 
-/*Gets rid of the arrow buttons of the number input on the contact form*/ 
+/*Gets rid of the arrow buttons of the number input on the contact form*/
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -4925,7 +4924,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
