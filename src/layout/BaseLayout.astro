@@ -11,6 +11,7 @@ const {
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <style>body{visibility: hidden; opacity: 0; transition: opacity 500ms;}</style>
       <meta charset="utf-8"/>
       <title>{pageTitle}</title>
       <SEO 
@@ -37,4 +38,10 @@ const {
    <BodyLayout>
       <slot />
    </BodyLayout>
+   <script 
+   src ="/script/body_appearance.js"
+   type="text/javascript"
+   defer
+   is:inline>
+   </script>
 </html>

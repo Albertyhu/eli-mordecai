@@ -1,5 +1,6 @@
 ---
-import Logo from "@/assets/logo/Eli_Mordecai-Logo.webp";
+import Logo from "@/assets/logo/Eli_Mordecai-Logo-216.webp";
+import LogoMobile from "@/assets/logo/Eli_Mordecai-Logo-150.webp"
 const { 
  customDiv,
  } = Astro.props; 
@@ -9,11 +10,11 @@ const {
     <a 
         href="/" 
         aria-current="page" 
-        class="w-inline-block w--current">
+        class="inline-block max-w-full w--current">
         <img 
             src={Logo.src} 
             loading="lazy" 
-            class = "w-[225px] aspect-[5/2] min-[500px]:w-[300px]"
+            class = "w-[218px] aspect-[3/1]"
             alt="General Practice Attorney Logo"
         />
     </a>

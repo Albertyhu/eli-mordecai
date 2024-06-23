@@ -48,13 +48,13 @@ const currentPath = Astro.url.pathname;
                         </div>
                     </a>
                     <!-- <PracticeDropdown /> -->
-                    <nav class="bg-white absolute hidden group-hover:block !z-[9999] min-h-[250px]" id ="practice_area_dropdown">
+                    <nav class="bg-[#2F3B4B] text-white absolute hidden group-hover:block !z-[9999] min-h-[250px]" id ="practice_area_dropdown">
                     {practice_areas && practice_areas.length > 0 && 
                         practice_areas.map(page => 
                         <LinkItem 
                             {currentPath}
                             href = {page.link}
-                            customStyle = "dropdown-link w-dropdown-link !z-[9999]"
+                            customStyle = "dropdown-link w-dropdown-link !z-[9999] text-white"
                             label = {page.label}
                         />
                     )

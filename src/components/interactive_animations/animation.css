@@ -1,5 +1,6 @@
 :root {
   --fallingDur: 1500ms;
+  --duration500ms: 500ms;
   --duration1: 1000ms;
   --duration2: 2000ms;
   --duration3: 3000ms;
@@ -49,7 +50,8 @@
 
 .fadeInFromBottomTag {
   will-change: transform, opacity;
-  transition: opacity var(--duration3) ease, transform var(--duration1) ease;
+  transition: opacity var(--duration500ms) ease,
+    transform var(--duration500ms) ease;
 }
 
 .fadeOutIntoBottom {
@@ -63,12 +65,13 @@ The children elements are then tagged with "fadeOutIntoBottom" class name.
 Add delay property for each children where the animation delay gets longer for each consecutive children
 */
 .childrenFadeInFromBottomTag > * {
-  transition: opacity var(--duration3) ease, transform var(--duration1) ease;
+  transition: opacity var(--duration500ms) ease,
+    transform var(--duration500ms) ease;
 }
 
 .rotateUpTag {
   will-change: transform, opacity;
-  transition: opacity var(--duration3), transform var(--duration2);
+  transition: opacity var(--duration1), transform var(--duration1);
 }
 
 .rotateDown {
