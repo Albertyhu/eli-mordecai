@@ -17,7 +17,7 @@ import BlogSection from "@/components/blogComponent/blogSection.astro";
          <NavBar />
          <div class="hero-main-wrap bg-cover pb-[20px] aspect-[2/3] min-[470px]:aspect-[11/13] md:aspect-auto">
             <div class="container w-container">
-               <div class="flex flex-col md:flex-row gap justify-center items-center">
+               <div class="flex flex-col md:flex-row gap justify-between items-center">
                   <div class="hero-content-area">
                      <img 
                         src="/assets/icons/small-separator-gold.svg" 
@@ -41,6 +41,7 @@ import BlogSection from "@/components/blogComponent/blogSection.astro";
                   <div class="hero-image-area m-auto lg:ml-auto lg:mr-0 fadeInTag fadeOut">
                      <Eli
                         wrapperStyle = "bg-transparent w-[270px] h-[270px] sm:w-[450px] sm:h-[450px] m-auto"
+                        imgStyle = "w-[270px] h-[270px] sm:w-[400px] sm:h-[400px] object-fit mx-auto lg:ml-auto lg:mr-0"
                         immediateLoading = {true}
                      />
                   </div>
