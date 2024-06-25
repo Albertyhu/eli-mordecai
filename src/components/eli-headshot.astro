@@ -9,24 +9,24 @@ const {
 {
 immediateLoading ?
 <div
-    class ={`${wrapperStyle ? wrapperStyle : "bg-transparent w-[270px] h-[270px] sm:w-[400px] sm:h-[400px]"} ${animationTag}`}
+    class ={`${wrapperStyle ? wrapperStyle : "bg-transparent w-fit h-fit"} ${animationTag}`}
 >
     <img 
         alt="Eli Mordecai"
         src ="/assets/images/authors/eli_mordecai.webp"
         loading = "eager"
-        class = {`${imgStyle ? imgStyle : "w-full h-full object-fit"}`}
+        class = {`${imgStyle ? imgStyle : "w-[270px] h-[270px] sm:w-[400px] sm:h-[400px] object-fit"}`}
     />
 </div>
 :
 <div
-    class ={`${wrapperStyle ? wrapperStyle : "bg-transparent w-[270px] h-[270px] sm:w-[400px] sm:h-[400px]"} ${animationTag}`}
+    class ={`${wrapperStyle ? wrapperStyle : "bg-transparent w-fit h-fit"} ${animationTag}`}
 >
     <img 
         alt="Eli Mordecai"
         src ="/assets/images/authors/eli_mordecai.webp"
         loading = "lazy"
-        class = {`${imgStyle ? imgStyle : "w-full h-full object-fit"}`}
+        class = {`${imgStyle ? imgStyle : "w-[270px] h-[270px] sm:w-[400px] sm:h-[400px] object-fit"}`}
     />
 </div>
 }
