@@ -1,6 +1,6 @@
-import NetworkIcon from "@/assets/icons/trust/network.png";
-import PersonalizedIcon from "@/assets/icons/trust/personalized.png";
-import SatisfactionIcon from "@/assets/icons/trust/satisfaction.png";
+import NetworkIcon from "@/assets/icons/trust/network.webp";
+import PersonalizedIcon from "@/assets/icons/trust/personalized.webp";
+import SatisfactionIcon from "@/assets/icons/trust/satisfaction.webp";
 
 const TrustReasons = [
   {
