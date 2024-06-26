@@ -10,7 +10,7 @@ featured_image: /assets/images/banner-title-background-books.webp
 phoneImg: https://assets-global.website-files.com/61fd0d3090785d374bf9afc3/6200b30819a334c9cc6e330e_blog-large-image-2-p-500.jpeg
 mediumTabImg: https://assets-global.website-files.com/61fd0d3090785d374bf9afc3/6200b30819a334c9cc6e330e_blog-large-image-2-p-800.jpeg
 tabletImg: https://assets-global.website-files.com/61fd0d3090785d374bf9afc3/6200b30819a334c9cc6e330e_blog-large-image-2-p-1080.jpeg
-altText: How to Tell Who Is at Fault in a Car Accident
+altText: How to Tell Who Is at Fault in Car Accidents
 ---
 
 <p>
