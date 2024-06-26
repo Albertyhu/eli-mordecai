@@ -14,10 +14,7 @@ import LogoComponentLazy from "../logoComponent-lazy.astro";
         <div class="header-logo-wrap">
             <LogoComponent 
                 immediateLoading = {true}
-                customDiv = "header-logo hidden sm:block"
-            />
-            <LogoComponentLazy 
-                customDiv = "header-logo block sm:hidden"
+                customDiv = "header-logo"
             />
             <ContactInfoItems wrapperStyle = "my-auto [&>div]:my-auto"/>
         </div>
