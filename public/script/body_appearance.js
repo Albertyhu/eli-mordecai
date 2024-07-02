@@ -1,3 +1,4 @@
+//This is an attempt to fix the FOUC issue
 document.addEventListener("astro:page-load", () => {
   let domReady = (cb) => {
     document.readyState === "interactive" || document.readyState === "complete"

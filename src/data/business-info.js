@@ -8,7 +8,7 @@ export const BusinessInfo = {
   zip: "90291",
   country: "USA",
   phone: "3108060011",
-  email: "Eliasmordecai@gmail.com",
+  email: "Eli@Mordecai-Law.com",
   website_name: "Eli Mordecai website",
   websiteURL: "www.Mordecai-Law.com",
   OpenGraphImg: {
