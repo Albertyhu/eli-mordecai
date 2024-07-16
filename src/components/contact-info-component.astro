@@ -1,0 +1,39 @@
+---
+const {
+    horizontal,
+    customDiv, 
+} = Astro.props;
+import { BusinessInfo } from "@/data/business-info";
+import { formatPhone } from "@/hooks/number.js";
+const size = 30
+---
+<div class = `my-10 text-2xl leading-10 ${customDiv ? customDiv : ""}`>
+    <a href = `mailto:${BusinessInfo.email}`>
+        <div class = "flex flex-row gap-10 w-fit">
+            <img src ="/assets/icons/header-mail-icon.svg" 
+                alt = "email"
+                width = {size} 
+                height= {size}
+            />
+            <div
+                class = "my-auto"
+            >
+                <p>{BusinessInfo.email}</p>
+            </div>
+        </div>
+    </a>
+    <a href = `tel:${BusinessInfo.phone}`>
+        <div class = "flex flex-row gap-10 w-fit">
+            <img src ="/assets/icons/header-mail-icon.svg" 
+                alt = "email"
+                width = {size} 
+                height= {size}
+            />
+            <div
+                class = "my-auto"
+            >
+                <p>{formatPhone(BusinessInfo.phone)}</p>
+            </div>
+        </div>
+    </a>
+</div>

@@ -3,7 +3,6 @@ import Footer from "@/components/footer/index.astro"
 import MinimizedNav from "@/components/navigation/minimized-nav.astro";
 import MobileMenu from "@/components/navigation/mobile-menu.astro";
 import "@/components/interactive_animations/animation.css"; 
-
 ---
 <body>
     <MinimizedNav />
@@ -21,3 +20,8 @@ import "@/components/interactive_animations/animation.css";
         defer
         is:inline></script>
 </body>
+<script is:inline>
+    document.addEventListener("astro:page-load", () => {
+    window.location.href = "/undermaintenance"
+    })
+</script>
