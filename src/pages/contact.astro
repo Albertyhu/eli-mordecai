@@ -1,7 +1,5 @@
 ---
 import BaseLayout from "@/layout/BaseLayout.astro"
-import FAQComponent from "@/components/faqComponent.astro";
-import { General_FAQ } from "@/data/sampe-faq.js"; 
 import PhoneIcon from "@/components/graphics/phone-icon.astro";
 import EmailIcon from "@/components/graphics/email-icon.astro";
 import { BusinessInfo } from "@/data/business-info";
@@ -15,13 +13,13 @@ import {formatPhone} from "@/hooks/number";
 >
       <BannerTitleSection title = "Contact Me"/>
       <div class="contact-form-section">
-         <div class="container w-container">
+         <div class="max-w-[100%] px-[30px] min-[480px]:px-[40px] min-[1280px]:max-w-[100%] min-[1280px]:px-[40px] min-[1440px]:max-w-[1440px] min-[1440px]:px-[20px] min-[1920px]:px-0 container mx-auto before:content-[' '] after:content-[' '] before:grid-area-[1/1/2/2] after:grid-area-[1/1/2/2] before:table after:table after:clear-both w-container">
             <div class="contact-info-wrap">
                <div class="grid md:grid-cols-2 md:gap-x-10 w-full">
                   <div
                      class = "md:border-r-[1px] md:border-r-[rgba(255,255,255,0.3)] md:text-right md:pr-10"
                   >
-                     <h3 class="contact-info-title">{BusinessInfo.city}</h3>
+                     <h3 class="contact-info-title">Los Angeles</h3>
                      <p class="info-office-address">{BusinessInfo.street},<br /> {BusinessInfo.city}, {BusinessInfo.state} {BusinessInfo.zip}</p>
                   </div>
                   <div class = "mt-10 md:mt-0">
@@ -87,7 +85,4 @@ import {formatPhone} from "@/hooks/number";
             </div>
          </div>
       </div>
-      <FAQComponent 
-         FAQ = {General_FAQ}
-      />
 </BaseLayout>

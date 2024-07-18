@@ -7,7 +7,7 @@ export default {
       xm: { min: "360px" },
       fontFamily: {
         primaryF: "Cormorant Garamond",
-        secondaryC: "Outfit",
+        secondaryF: "Outfit",
       },
       backgroundImage: {
         historyBG: "url('/assets/images/history-background.webp')",
@@ -18,6 +18,7 @@ export default {
       colors: {
         primaryC: "#d1b06b",
         secondaryC: "#1F2732",
+        darkBlack: "#161d27",
       },
     },
   },

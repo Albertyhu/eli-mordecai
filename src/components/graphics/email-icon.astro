@@ -2,11 +2,11 @@
 import { BusinessInfo } from "@/data/business-info";
 ---
 <div class="header-contact-item contact-info-item">
-    <div class="header-contact-icon-wrap header-link-wrap">
+    <div class=" header-link-wrap border-[2px] border-primaryC rounded-[100px] justify-center items-center w-[62px] h-[62px] md:flex">
         <img src="/assets/icons/header-mail-icon.svg" loading="lazy" alt="Email Icon"/>
     </div>
-    <div class="header-contact-link-wrap">
-        <p class="header-contact-title">Email Us On:</p>
+    <div class="header-contact-link-wrap pl-[12px]">
+        <p class="header-contact-title text-primaryC mb-[0] text-[18px] font-[500] md:text-[18px]">Email Us On:</p>
         <a href={`mailto:${BusinessInfo.email}`} class="">{BusinessInfo.email}</a>
     </div>
 </div>

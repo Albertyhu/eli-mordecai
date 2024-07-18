@@ -2,12 +2,12 @@ export const General_FAQ = [
   {
     title: "What types of cases does your law firm handle?",
     content:
-      "At Attorney Law Firm we handle claims at all levels of litigation. Our areas of practice include Business Law, Employment and Labor Law, Intellectual Property/Technology Transactions, and Litigation  another attorney may perform certain duties within the case itself.",
+      "At Mordecai Law, we handle claims at all levels of litigation. Our areas of practice include Transactional Law, Employment Law, Personal Injury Law, Landlord-Tenant Law, Criminal Defense Law another attorney may perform certain duties within the case itself.",
   },
   {
     title: "How will I know which attorney in the group is best for me?",
     content:
-      "Our leadership team at the Thurman Law firm will determine which attorney can best represent you in handling your case. It may not be possible, or advantageous, to have one attorney handle all of your legal matters of the case, but from time to time.",
+      "Our leadership team at the Mordecai Law firm will determine which attorney can best represent you in handling your case. It may not be possible, or advantageous, to have one attorney handle all of your legal matters of the case, but from time to time.",
   },
   {
     title: "How can I avoid being sued if a claim is made against me?",

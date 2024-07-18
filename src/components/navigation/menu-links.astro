@@ -7,13 +7,14 @@ const {
   } = Astro.props; 
 const currentPath = Astro.url.pathname;
 ---
-<div class="header-nav-area justify-center align-middle hidden lg:flex lg:flex-row z-0">
+<div class="header-nav-area1 justify-center align-middle hidden lg:flex lg:flex-row z-0">
     <div 
-        class="w-nav bg-transparent flex align-middle mr-[0] ml-auto flex-nowrap" 
+        class="w-nav! align-top text-left no-underline inline-block relative mx-auto pl-0 pr-5 py-5 bg-transparent flex align-middle mr-[0] ml-auto flex-nowrap" 
     >
-        <nav role="navigation" class="nav-menu w-nav-menu flex flex-row ![&>*]:z-[1]">
+        <nav role="navigation" class="nav-menu! w-nav-menu! relative float-right flex flex-row ![&>*]:z-[1]">
             <LinkItem 
                 {currentPath}
+                customStyle = "!pl-0"
                 href = "/"
                 label = "Home"
             />
@@ -22,14 +23,14 @@ const currentPath = Astro.url.pathname;
                 href = "/about"
                 label = "About"
             />
-            <div data-hover="true" data-delay="0" class="nav-link dropdown-navigation w-dropdown my-auto">
-                <div class="dropdown-toggle w-dropdown-toggle peer group">
-                    <a href ="/practice-areas">
+            <div data-hover="true" data-delay="0" class="text-[#ffffff] pl-[20px] pr-[18px] md:pl-[23px] md:pr-[23px] text-[20px] font-secondaryF font-[400] transition-colors duration-20 dropdown-navigation w-dropdown my-auto">
+                <div class="dropdown-toggle! w-dropdown-toggle! peer group text-white mr-0 pl-[2px] pr-[2px] transition-[color] duration-200 min-[1280px]:pl-[2px] min-[1280px]:pr-[2px] w-dropdown-toggle select-none cursor-pointer pr-[2px] inline-block align-top text-[#222222] text-left whitespace-nowrap mx-auto p-[20px] no-underline relative block">
+                    <a href ="/practice-areas" class = "text-[20px]">
                         <div
                             class = "flex flex-cols whitespace-nowrap gap-[10px]"
                         >
                                 <div
-                                    class = {`peer ${currentPath.toLowerCase().replace(/\//g,"") === "practice-areas" ? "text-primaryC" : "text-white"}`}
+                                    class = {`peer !font-['Outfit'] ${currentPath.toLowerCase().replace(/\//g,"") === "practice-areas" ? "text-primaryC" : "text-white"}`}
                                 >Practice Areas</div>
                                 <img 
                                     src ="/assets/icons/down-arrow-white.png"
@@ -48,13 +49,13 @@ const currentPath = Astro.url.pathname;
                         </div>
                     </a>
                     <!-- <PracticeDropdown /> -->
-                    <nav class="bg-[#2F3B4B] text-white absolute hidden group-hover:block !z-[9999] min-h-[250px]" id ="practice_area_dropdown">
+                    <nav class="bg-[#2F3B4B] text-white absolute hidden group-hover:grid !z-[9999] min-h-[250px]" id ="practice_area_dropdown">
                     {practice_areas && practice_areas.length > 0 && 
                         practice_areas.map(page => 
                         <LinkItem 
                             {currentPath}
                             href = {page.link}
-                            customStyle = "dropdown-link w-dropdown-link !z-[9999] !text-white"
+                            customStyle = "!z-[9999] !text-white"
                             label = {page.label}
                         />
                     )
@@ -62,11 +63,6 @@ const currentPath = Astro.url.pathname;
                     </nav>
                 </div>
             </div>
-            <LinkItem 
-                {currentPath}
-                href = "/blog/1"
-                label = "Blog"
-            />
             {ContactButton ? 
             <a href="/contact" class="nav-link w-nav-link my-auto">           
                 <button

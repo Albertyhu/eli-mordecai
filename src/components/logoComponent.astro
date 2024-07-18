@@ -5,11 +5,11 @@ const {
  customDiv,
  } = Astro.props; 
 ---
-<div class={`${customDiv ? customDiv : "header-logo"}`}>
+<div class={`${customDiv ? customDiv : "justify-center flex"}`}>
     <a 
         href="/" 
         aria-current="page" 
-        class="w-inline-block w--current">
+        class="w-inline-block max-w-full inline-block">
         <img 
         src={Logo216.src} 
         loading="eager" 

@@ -6,11 +6,11 @@ const {
  } = Astro.props; 
 ---
 
-<div class={`${customDiv ? customDiv : "header-logo"}`}>
+<div class={`${customDiv ? customDiv : "my-auto"}`}>
     <a 
         href="/" 
         aria-current="page" 
-        class="inline-block max-w-full w--current">
+        class="justify-center flex max-w-full w--current">
         <img 
             src={Logo.src} 
             loading="lazy" 

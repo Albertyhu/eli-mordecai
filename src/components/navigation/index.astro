@@ -7,20 +7,19 @@ import ContactInfoItems from "./contact-info-items.astro";
 import LogoComponentLazy from "../logoComponent-lazy.astro";
 ---
 <div 
-    class="header lg:z-[99999]"
+    class="pt-[40px] pb-[20px] relative min-[1440px]:pt-[40px] min-[1440px]:pb-[20px] lg:z-[99999]"
     id="static_nav"
 >
-    <div class="container w-container">
-        <div class="header-logo-wrap">
+    <div class="max-w-[100%] px-[30px] min-[480px]:px-[40px] min-[1280px]:max-w-[100%] min-[1280px]:px-[40px] min-[1440px]:max-w-[1440px] min-[1440px]:px-[20px] min-[1920px]:px-0 container mx-auto  before:content-[' '] after:content-[' '] before:grid-area-[1/1/2/2] after:grid-area-[1/1/2/2] before:table after:table after:clear-both w-container">
+        <div class="flex justify-between pb-[20px] min-[1280px]:justify-between min-[1280px]:items-stretch min-[1280px]:flex max-[991px]:flex-col max-[991px]:items-center">
             <LogoComponent 
                 immediateLoading = {true}
-                customDiv = "header-logo"
             />
             <ContactInfoItems wrapperStyle = "my-auto [&>div]:my-auto"/>
         </div>
-        <div class="header-navbar-wrap">
+        <div class="header-navbar-wrap1 justify-between items-center flex mt-2.5 pt-[25px] pb-7 border-y-[1px] border-y-[#4e555f] border-t border-solid border-b">
             <MobileIcon 
-                customMargin = "mx-auto md:ml-0 md:mr-auto"
+                customMargin = "ml-0 mr-auto"
                 ID = "staticMobileIcon" 
                 />
             <MenuLinks 

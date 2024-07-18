@@ -5,8 +5,8 @@ export const practice_areas = [
     subDirectory: [],
   },
   {
-    label: "Transaction Law",
-    link: "/practice-areas/transaction-law",
+    label: "Transactional Law",
+    link: "/practice-areas/transactional-law",
     subDirectory: [],
   },
   {
@@ -20,8 +20,8 @@ export const practice_areas = [
     subDirectory: [],
   },
   {
-    label: "Landlord Tenant Law",
-    link: "/practice-areas/tenant-law",
+    label: "Landlord-Tenant Law",
+    link: "/practice-areas/landlord-tenant-law",
     subDirectory: [],
   },
 ];

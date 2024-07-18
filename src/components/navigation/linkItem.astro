@@ -10,10 +10,10 @@ const {
 <a 
     href={href}
     aria-current="page" 
-    class={`w--current whitespace-nowrap my-auto ${customStyle ? customStyle : "nav-link w-nav-link"}`}>{label}</a>
+class={`w--current !text-primaryC !transition-[color] duration-[200ms] whitespace-nowrap my-auto nav-link text-primaryC pl-[20px] pr-[18px] text-[20px] min-[1280]:text-[22px] min-[1280]:px-[23px] font-secondaryF, sans-serif font-[400] transition-[color] duration-[200ms] w-nav-link align-top text-left no-underline inline-block relative mx-auto p-[20px] ${customStyle}`}>{label}</a>
     :
 <a 
     href={href}
-    class={`whitespace-nowrap my-auto ${customStyle ? customStyle : "nav-link w-nav-link"}`}>{label}</a>
+    class={`whitespace-nowrap my-auto nav-link text-white px-[20px] text-[20px] min-[1280]:text-[22px] min-[1280]:px-[23px] font-secondaryF, sans-serif font-[400] transition-[color] duration-[200ms] w-nav-link align-top text-left no-underline inline-block relative mx-auto p-[20px] ${customStyle}`}>{label}</a>
 }
 

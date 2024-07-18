@@ -16,14 +16,14 @@ const PracticeAreas = [
   {
     type: "Personal Injury Law",
     description:
-      "If you've been injured due to someone else's negligence, I will fight for your rights and pursue fair compensation for your injuries and losses.",
+      "If you've been injured due to someone else's negligence, I am dedicated to advocating for your rights and ensuring you receive the compensation you deserve for your injuries and losses.",
     icon: PersonalInjuryIcon,
     hasPage: true,
   },
   {
-    type: "Landlord Tenant Law",
+    type: "Landlord-Tenant Law",
     description:
-      "Whether you're a landlord dealing with tenant disputes or a tenant facing eviction or lease issues, I offer knowledgeable legal advice and representation to protect your rights and interests.",
+      "Whether you're a landlord dealing with a dispute with a tenant or a tenant facing eviction or lease issues, I offer legal representation to protect your rights and interests.",
     icon: TenantLawIcon,
     hasPage: true,
   },
@@ -40,13 +40,6 @@ const PracticeAreas = [
       "If you're facing criminal charges, I will vigorously defend your rights and work towards achieving the best possible results for your case.",
     icon: CriminalLawIcon,
     hasPage: true,
-  },
-  {
-    type: "Estate Planning",
-    description:
-      "It's never too early to plan what happens to your assets when you need to part from them. It's best to take advantage of existing options to reduce and eliminate estate and capital gains taxes early on.",
-    icon: EstatePlanningIcon,
-    hasPage: false,
   },
 ];
 

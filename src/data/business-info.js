@@ -1,14 +1,14 @@
 export const BusinessInfo = {
   tile: "Eli Mordecai",
   owner: "Eli Mordecai",
-  companyName: "Eli Mordecai - General Attorney",
+  companyName: "Eli Mordecai - General Practice Attorney",
   street: "14 Wavecrest Ave, Suite 11",
   city: "Venice",
   state: "CA",
   zip: "90291",
   country: "USA",
   phone: "3108060011",
-  email: "Eli@Mordecai-Law.com",
+  email: "Eli@mordecai-law.com",
   website_name: "Eli Mordecai website",
   websiteURL: "www.Mordecai-Law.com",
   OpenGraphImg: {

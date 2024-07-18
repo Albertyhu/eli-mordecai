@@ -460,7 +460,7 @@ a {
   color: var(--white);
   margin-right: 0;
   padding-left: 2px;
-  padding-right: 45px;
+  padding-right: 2px;
   transition: color 0.2s;
 }
 
@@ -922,7 +922,7 @@ a {
   }
   .dropdown-toggle {
     padding-left: 2px;
-    padding-right: 45px;
+    padding-right: 2px;
   }
 
   .header-contact-item {
@@ -1117,12 +1117,6 @@ a {
 /* new*/
 
 @media screen and (min-width: 1280px) {
-  .container {
-    max-width: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
   .header-navbar-wrap {
     justify-content: space-between;
     align-items: center;
@@ -1165,7 +1159,7 @@ a {
 
   .dropdown-toggle {
     padding-left: 2px;
-    padding-right: 45px;
+    padding-right: 2px;
   }
 
   .header-contact-item {
@@ -1278,10 +1272,6 @@ a {
 
   .hero-grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .hero-content-area {
-    padding-top: 40px;
   }
 
   .hero-area-content {
@@ -1713,11 +1703,6 @@ a {
 
   .practice-areas-title-grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .practice-area-item {
-    min-height: auto;
-    padding: 55px 50px 70px;
   }
 
   .practice-area-title {
@@ -2201,7 +2186,7 @@ a {
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 0;
+    padding-left: 20px;
     display: inline-block;
     position: relative;
   }
@@ -3732,22 +3717,6 @@ a {
     font-size: 18px;
   }
 }
-
-/* @font-face {
-  font-family: "Cormorant Garamond";
-  src: url("../fonts/CormorantGaramond-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-} */
-
-/* @font-face {
-  font-family: "Outfit";
-  src: url("../fonts/Outfit-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-} */
 
 @font-face {
   font-family: "Cormorant Garamond";

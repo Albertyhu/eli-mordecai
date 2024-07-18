@@ -5,10 +5,10 @@ const {
     wrapperStyle, 
     } = Astro.props; 
 ---
-<div class={`header-contact-wrap wrapperStyle`}>
-    <div class="header-contact-item-wrap">
-        <div class="header-contact-item ">
-            <div class="header-contact-icon-wrap header-link-wrap">
+<div class={`wrapperStyle`}>
+    <div class="header-contact-item-wrap1 grid md:flex md:flex-row justify-between items-[flex-start] min-[1280px]:flex-row min-[1280px]:justify-between min-[1280px]:items-center min-[1280px]:flex">
+        <div class="header-contact-item1 flex items-center mb-[15px] pl-[10px] min-[1280px]:justify-start min-[1280px]:pl-[50px]">
+            <div class=" header-link-wrap border-[2px] border-primaryC rounded-[100px] justify-center items-center w-[62px] h-[62px] md:flex">
                 <img 
                 src="/assets/icons/header-call-icon.svg" 
                 loading="lazy" 
@@ -16,13 +16,13 @@ const {
                 class = "w-[17px] h-[17px]"
                 />
             </div>
-            <div class="header-contact-link-wrap">
-                <p class="header-contact-title whitespace-nowrap">Call Us On:</p>
-                <a href={`tel:${BusinessInfo.phone}`} class="header-contact-link whitespace-nowrap">{formatPhone(BusinessInfo.phone)}</a>
+            <div class="header-contact-link-wrap1 pl-0 md:pl-[12px] mt-5 md:mt-auto md:mx-auto">
+                <p class="header-contact-title1 hidden sm:block text-primaryC mb-[0] text-[18px] font-[500] md:text-[18px] whitespace-nowrap">Call Us:</p>
+                <a href={`tel:${BusinessInfo.phone}`} class="header-contact-link1 text-[#ffffff] text-[16px] sm:text-[22px] leading-[1.2] no-underline transition-[color] hover:text-primaryC md:text-[22px] whitespace-nowrap">{formatPhone(BusinessInfo.phone)}</a>
             </div>
         </div>
-        <div class="header-contact-item">
-            <div class="header-contact-icon-wrap header-link-wrap">
+        <div class="header-contact-item1 flex items-center mb-[15px] pl-[10px] min-[1280px]:justify-start min-[1280px]:pl-[50px]">
+            <div class="header-link-wrap border-[2px] border-primaryC rounded-[100px] justify-center items-center w-[62px] h-[62px] md:flex">
                 <img 
                 src="/assets/icons/header-mail-icon.svg" 
                 loading="lazy" 
@@ -30,9 +30,9 @@ const {
                 class = "w-[17px] h-[17px]"
                 />
             </div>
-            <div class="header-contact-link-wrap">
-                <p class="header-contact-title">Email Us On:</p>
-                <a href={`mailto:${BusinessInfo.email}`} class="header-contact-link whitespace-normal">{BusinessInfo.email}</a>
+            <div class="header-contact-link-wrap1 pl-0 md:pl-[12px] mx-auto">
+                <p class="header-contact-title1 hidden sm:block text-primaryC mb-[0] text-[18px] font-[500] md:text-[18px]">Email Us:</p>
+                <a href={`mailto:${BusinessInfo.email}`} class="header-contact-link1 text-[#ffffff] text-[16px] sm:text-[22px] leading-[1.2] no-underline transition-[color] hover:text-primaryC md:text-[22px] whitespace-normal">{BusinessInfo.email}</a>
             </div>
         </div>
     </div>

@@ -7,11 +7,11 @@ const {
 } = Astro.props;
 ---
    <div class="consultation-section">
-      <div class="container w-container">
+      <div class="max-w-[100%] px-[30px] min-[480px]:px-[40px] min-[1280px]:max-w-[100%] min-[1280px]:px-[40px] min-[1440px]:max-w-[1440px] min-[1440px]:px-[20px] min-[1920px]:px-0 container mx-auto before:content-[' '] after:content-[' '] before:grid-area-[1/1/2/2] after:grid-area-[1/1/2/2] before:table after:table after:clear-both w-container">
          <div class="consultation-wrap">
             <div class="w-layout-grid consultation-grid">
                <div class="consultation-intro-wrap">
-                  <div class="section-title-left">
+                  <div class="mb-[20px] min-[768]: mb-[30px]">
                      {title ? 
                      <h2 class="section-left-title-text">{title}</h2>
                      :
@@ -48,7 +48,7 @@ const {
       </div>
    </div>
    <div class="appointment-section">
-      <div class="container w-container">
+      <div class="max-w-[100%] px-[30px] min-[480px]:px-[40px] min-[1280px]:max-w-[100%] min-[1280px]:px-[40px] min-[1440px]:max-w-[1440px] min-[1440px]:px-[20px] min-[1920px]:px-0 container mx-auto before:content-[' '] after:content-[' '] before:grid-area-[1/1/2/2] after:grid-area-[1/1/2/2] before:table after:table after:clear-both w-container">
          <div class="appointment-form-wrap">
             <div class="w-form">
                <form id="email-form" name="email-form" data-name="Email Form" method="get" class="appointment-form" data-wf-page-id="61fcc5ec0803af737de5f139" data-wf-element-id="0c9f643d-56bb-a80e-7fd6-1464eea22925">

@@ -9,6 +9,8 @@ document.addEventListener("astro:page-load", () => {
   domReady(() => {
     // Display body when DOM is loaded
     document.body.style.visibility = "visible";
-    document.body.style.opacity = "1.0";
+    document.body.style.setProperty("visibility", "visible", "important");
+    document.body.style.setProperty("opacity", "1.0", "important");
+    //document.body.style.opacity = "1.0";
   });
 });

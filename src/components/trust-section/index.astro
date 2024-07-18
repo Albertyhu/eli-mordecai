@@ -7,9 +7,9 @@ import type {TrustReasonType } from "@/util/interface.js";
 <div class={`help-section relative overflow-hidden h-auto bg-no-repeat bg-cover bg-historyBG_mobile md:bg-historyBG before:w-full before:h-full 
 before:absolute before:bg-gradient-to-t before:from-transparent before:to-white before:bottom-0 
 before:z-[0]`}>
-    <div class="container w-container">
-        <div class="section-title">
-            <h2 class="section-title-text dark-color-title z-[3] relative">Why should you trust your case with me?</h2>
+    <div class="max-w-[100%] px-[30px] min-[480px]:px-[40px] min-[1280px]:max-w-[100%] min-[1280px]:px-[40px] min-[1440px]:max-w-[1440px] min-[1440px]:px-[20px] min-[1920px]:px-0 container mx-auto  before:content-[' '] after:content-[' '] before:grid-area-[1/1/2/2] after:grid-area-[1/1/2/2] before:table after:table after:clear-both w-container">
+        <div class="section-title! text-center mb-[30px]">
+            <h2 class="section-title-text! text-center text-darkBlack capitalize text-[30px] min-w-[480]:text-[32px] min-w-[768px]:text-[36] min-w-[992]:text-[45px] dark-color-title z-[3] relative">Why should you trust your case with me?</h2>
             <BannerTitleSeparator 
                 customStyle = "mx-auto my-10 fadeInFromBottomTag fadeOutIntoBottom z-[3] relative w-[95px] h-[44px]"/>
             <div class ="md:flex md:flex-row md:gap-5">
@@ -21,7 +21,7 @@ before:z-[0]`}>
                         TrustReasons.map((reason: TrustReasonType, index: number) =><Panel {...reason} {index} />)
                     }
                 </div>
-                <div class="history-image-wrap w-full h-full h-auto z-[2]">
+                <div class="hidden xl:block w-full xl:max-h-[687px] z-[2] overflow-hidden">
                     <img 
                         src="/assets/images/blind-justice.webp" 
                         loading="lazy" 
