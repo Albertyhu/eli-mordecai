@@ -1,0 +1,37 @@
+/* empty css                         */
+import { a as createComponent, r as renderTemplate, d as renderComponent, m as maybeRenderHead } from './astro/server_BWzPTXNg.mjs';
+import 'kleur/colors';
+import { $ as $$PracticeAreaLayout } from './PracticeAreaLayout_C8npzcRK.mjs';
+import { $ as $$ListComponent } from './listComponent_H0lnnqWt.mjs';
+import { $ as $$ResponsiveImage } from './ResponsiveImage_BzMXR-ER.mjs';
+
+const $$CriminalDefenseLaw = createComponent(($$result, $$props, $$slots) => {
+  const steps = [
+    {
+      "label": "Legal Consultation",
+      "description": "We begin by conducting a thorough legal consultation to understand your case, assess the charges against you, and discuss your legal options. My service includes providing clear and honest guidance to help you make informed decisions about your defense strategy."
+    },
+    {
+      "label": "Case Investigation",
+      "description": "My service includes conducting meticulous investigations to gather evidence, interview witnesses, review police reports, and examine all aspects of your case. I leave no stone unturned in building a strong defense on your behalf."
+    },
+    {
+      "label": "Court Representation",
+      "description": "Whether you're facing misdemeanor or felony charges, I will represent you in court, providing aggressive advocacy, strategic defense arguments, and courtroom experience to fight for the best possible outcome."
+    },
+    {
+      "label": "Negotiation and Plea Bargaining",
+      "description": "In some cases, negotiation and plea bargaining may be viable options to achieve reduced charges or sentencing. I will negotiate with prosecutors to seek favorable plea deals when appropriate."
+    },
+    {
+      "label": "Trial Defense",
+      "description": "If your case goes to trial, I will meticulously prepare for trial, present compelling evidence, cross-examine witnesses, and make persuasive arguments to defend your innocence."
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "PracticeAreaLayout", $$PracticeAreaLayout, { "keyword": "Top Defense Attorney in Los Angeles", "title": "Criminal Defense Law", "customDescription": "If you are facing criminal charges in Los Angeles, finding the right criminal defense attorney is critical to maintaining your freedom, innocence, and reputation. ", "CTAHeader": "Are you looking for the best criminal defense attorney in Los Angeles? ", "CTAleftContent": "Get in touch with Eli Mordecai. " }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="flex flex-col lg:flex-row-reverse flex-nowrap gap-10 mb-10 justify-center"> ${renderComponent($$result2, "ResponsiveImage", $$ResponsiveImage, { "defaultImg": "/assets/images/criminal-law.webp", "phoneImg": "/assets/images/criminal-law-320.webp", "mediumTabImg": "/assets/images/criminal-law-600.webp", "tabletImg": "/assets/images/criminal-law--1080.webp", "altText": "Top Defense Attorney in Los Angeles" })} <h1 class="text-4xl md:text-5xl my-auto">In legal trouble? Secure the services of a <span class="text-primaryC">defense attorney</span> in Los Angeles.</h1> </div> <p>If you are facing criminal charges in Los Angeles, finding the right criminal defense attorney is critical to maintaining your freedom, innocence, and reputation. A conviction can lead to far-reaching consequences such as heavy fines and a lengthy prison sentence. Furthermore, getting a criminal record will impede you from getting hired into good jobs after you leave prison.</p> <p>Therefore, it is in your best interest to build the strongest defense strategy for yourself.</p> <p>With my expertise and legal counsel, I am here to advocate for your rights, protect your interests, and provide you with the comprehensive legal representation you deserve. Multiple steps are followed to help build your defense case.</p> ${renderComponent($$result2, "ListComponent", $$ListComponent, { "ordered": false, "list": steps, "wrapperStyle": "mb-10" })} ` })}`;
+}, "D:/Astro/eli-mordecai/src/pages/practice-areas/criminal-defense-law.astro", void 0);
+
+const $$file = "D:/Astro/eli-mordecai/src/pages/practice-areas/criminal-defense-law.astro";
+const $$url = "/practice-areas/criminal-defense-law";
+
+export { $$CriminalDefenseLaw as default, $$file as file, $$url as url };
