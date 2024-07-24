@@ -63,6 +63,28 @@ const ReviewForm = () => {
       formRef?.current?.classList.add("hidden");
       responseRef?.current?.classList.remove("hidden");
       responseRef?.current?.classList.add("block");
+      let customMessage = `Rating: ${rating}
+      Feedback: ${message}
+      `;
+      let templateParams = {
+        to_name: "Eli",
+        from_name: name,
+        subject_line: `Left feedback for your business on your website.`,
+        service: "n/a",
+        phone: "n/a",
+        message: customMessage,
+        email: email,
+      };
+
+      emailjs.send(SERVICE_ID, TEMPLATE_KEY, templateParams, PUBLIC_KEY).then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log("Error with review form submission", error);
+        }
+      );
+
       window.scrollTo({
         top: 300,
         left: 0,
@@ -140,7 +162,7 @@ const ReviewForm = () => {
             onClick={submitEvent}
             data-wait="Please wait..."
             className="duration-500 py-[20px] px-[30px] text-[18px] min-[480px]:px-[50px] min-[480px]:text-[20px] md:py-[24px] md:px-[110px] md:text-[22px] cursor-pointer rounded-[0px] no-underline inline-block border-[1px] border-solid border-primaryC bg-primaryC text-secondaryC text-center my-[10px] mr-[10px] font-secondaryF font-[500] transition-all hover:bg-secondaryC hover:text-primaryC"
-            value="Send Message"
+            value="Leave Feedback"
           />
         </div>
       </form>

@@ -3,10 +3,10 @@ import { FeedbackContext } from "./context.tsx";
 import { StarComponent } from "./rating-component.tsx";
 import CopyButton from "./copy-button.tsx";
 import type {} from "./interface.tsx";
-import CopyIcon from "./copy.png";
 import MessageComponent from "../MessageComponent/index.tsx";
 import uuid from "react-uuid";
 import { BusinessInfo } from "@/data/business-info.js";
+
 const ResponseElement = () => {
   const { rating, responseRef } = useContext(FeedbackContext);
   return (
@@ -24,12 +24,7 @@ const GoogleReviewRequest = () => {
   const CopiedMessageRef = useRef(null);
   const { message, rating, values, GoodRatingRef } =
     useContext(FeedbackContext);
-  // useEffect(() => {
-  //   GoodRatingRef.current.scrollIntoView({
-  //     behavior: "smooth",
-  //     block: "start",
-  //   });
-  // }, [GoodRatingRef.current]);
+
   return (
     <div
       className="my-10 [&>p]:leading-[25px] [&>p]:text-center [&>p]:my-5"

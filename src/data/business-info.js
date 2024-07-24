@@ -21,7 +21,7 @@ export const BusinessInfo = {
   instagram: "https://www.instagram.com",
   youtube: "https://www.youtube.com",
   /*URL that leads to Google Business Profile review */
-  Google_review_url: "https://www.google.com",
+  Google_review_url: "https://g.page/r/CTgI7n7FUoGjEAI/review",
   hours: [
     { day: "Monday", hours: "9am-8pm" },
     { day: "Tuesday", hours: "9am-8pm" },
