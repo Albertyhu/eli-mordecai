@@ -9,11 +9,11 @@ export const practice_areas = [
     link: "/practice-areas/transactional-law",
     subDirectory: [],
   },
-  // {
-  //   label: "Employment Law",
-  //   link: "/practice-areas/employment-law",
-  //   subDirectory: [],
-  // },
+  {
+    label: "Employment Law",
+    link: "/practice-areas/employment-law",
+    subDirectory: [],
+  },
   {
     label: "Personal Injury Law",
     link: "/practice-areas/personal-injury-law",

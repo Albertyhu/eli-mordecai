@@ -6,13 +6,13 @@ import PersonalInjuryIcon from "@/assets/icons/practice-areas/injury.png";
 import EstatePlanningIcon from "@/assets/icons/practice-areas/estate-planning.png";
 
 const PracticeAreas = [
-  // {
-  //   type: "Employment Law",
-  //   description:
-  //     "From workplace discrimination and wrongful termination to wage disputes and employment contracts, I provide strategic guidance and advocacy for employees and employers alike.",
-  //   icon: EmploymentLawIcon,
-  //   hasPage: true,
-  // },
+  {
+    type: "Employment Law",
+    description:
+      "From workplace discrimination and wrongful termination to wage disputes and employment contracts, I provide strategic guidance and advocacy for employees and employers alike.",
+    icon: EmploymentLawIcon,
+    hasPage: true,
+  },
   {
     type: "Personal Injury Law",
     description:
