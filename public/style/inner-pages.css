@@ -2651,7 +2651,7 @@ blockquote {
   align-items: center;
   width: 62px;
   height: 62px;
-  display: none;
+  display: flex;
 }
 
 .header-contact-link-wrap {
@@ -6782,7 +6782,9 @@ input[type="number"] {
   }
 
   .header-link-wrap {
-    display: none;
+    display: flex;
+    width: 45px;
+    height: 45px;
   }
 
   .header-contact-title {

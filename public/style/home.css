@@ -2950,7 +2950,7 @@ a {
   }
 
   .header-link-wrap {
-    display: none;
+    display: flex;
   }
 
   .header-contact-title {

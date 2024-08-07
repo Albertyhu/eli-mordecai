@@ -7,7 +7,7 @@ export const BusinessInfo = {
   state: "CA",
   zip: "90291",
   country: "USA",
-  phone: "3108060011",
+  phone: "3106335119",
   email: "Eli@mordecai-law.com",
   website_name: "Eli Mordecai website",
   websiteURL: "www.Mordecai-Law.com",
