@@ -13,10 +13,12 @@ immediateLoading ?
 >
     <img 
         alt="Eli Mordecai"
-        src ="/assets/images/authors/eli_mordecai.webp"
+        src ="/assets/images/authors/Headshot-400.webp"
         loading = "eager"
-        class = {`${imgStyle ? imgStyle : "w-[270px] h-[270px] sm:w-[400px] sm:h-[400px] object-fit mx-auto"}`}
+        decoding = "async"
+        class = {`${imgStyle ? imgStyle : "sm:w-[400px] sm:h-[400px] object-fit mx-auto rounded-full"}`}
     />
+
 </div>
 :
 <div
@@ -24,9 +26,11 @@ immediateLoading ?
 >
     <img 
         alt="Eli Mordecai"
-        src ="/assets/images/authors/eli_mordecai.webp"
+        src ="/assets/images/authors/Headshot-400.webp"
         loading = "lazy"
-        class = {`${imgStyle ? imgStyle : "w-[270px] h-[270px] sm:w-[400px] sm:h-[400px] object-fit mx-auto"}`}
+        decoding = "async"
+        class = {`${imgStyle ? imgStyle : "w-[270px] h-[270px] sm:w-[400px] sm:h-[400px] object-fit mx-auto rounded-full"}`}
     />
+
 </div>
 }
