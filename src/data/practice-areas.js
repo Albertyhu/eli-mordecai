@@ -27,20 +27,20 @@ const PracticeAreas = [
     icon: TenantLawIcon,
     hasPage: true,
   },
-  {
-    type: "Transactional Law",
-    description:
-      "From business contracts and negotiations to mergers and acquisitions, my transactional law expertise ensures smooth and legally sound transactions for businesses and individuals.",
-    icon: BusinessLawIcon,
-    hasPage: true,
-  },
-  {
-    type: "Criminal Defense Law",
-    description:
-      "If you're facing criminal charges, I will vigorously defend your rights and work towards achieving the best possible results for your case.",
-    icon: CriminalLawIcon,
-    hasPage: true,
-  },
+  // {
+  //   type: "Transactional Law",
+  //   description:
+  //     "From business contracts and negotiations to mergers and acquisitions, my transactional law expertise ensures smooth and legally sound transactions for businesses and individuals.",
+  //   icon: BusinessLawIcon,
+  //   hasPage: true,
+  // },
+  // {
+  //   type: "Criminal Defense Law",
+  //   description:
+  //     "If you're facing criminal charges, I will vigorously defend your rights and work towards achieving the best possible results for your case.",
+  //   icon: CriminalLawIcon,
+  //   hasPage: true,
+  // },
 ];
 
 export default PracticeAreas;

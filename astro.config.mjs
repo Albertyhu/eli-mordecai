@@ -11,5 +11,9 @@ export default defineConfig({
   integrations: [tailwind(), react(), sitemap(), robotsTxt()],
   output: "server",
   adapter: netlify(),
-  site: "https://mordecai-law.com/"
+  site: "https://mordecai-law.com/",
+  redirects: {
+    "/practice-areas/criminal-defense-law": "/",
+    "/practice-areas/transactional-law": "/",
+  },
 });

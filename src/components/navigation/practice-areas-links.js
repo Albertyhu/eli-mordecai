@@ -1,14 +1,14 @@
 export const practice_areas = [
-  {
-    label: "Criminal Defense",
-    link: "/practice-areas/criminal-defense-law",
-    subDirectory: [],
-  },
-  {
-    label: "Transactional Law",
-    link: "/practice-areas/transactional-law",
-    subDirectory: [],
-  },
+  //{
+  //   label: "Criminal Defense",
+  //   link: "/practice-areas/criminal-defense-law",
+  //   subDirectory: [],
+  // },
+  // {
+  //   label: "Transactional Law",
+  //   link: "/practice-areas/transactional-law",
+  //   subDirectory: [],
+  // },
   {
     label: "Employment Law",
     link: "/practice-areas/employment-law",
