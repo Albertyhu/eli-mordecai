@@ -10,9 +10,9 @@ const TrustReasons = [
     icon: PersonalizedIcon,
   },
   {
-    label: "Access to Extensive Top Network",
+    label: "Broad Expertise",
     description:
-      "I bring together a network of top lawyers in every field of practice, each with decades of experience. We collaborate closely on every case, leveraging our collective expertise to deliver the best possible results for each client. With our combined knowledge and dedication, you can trust us to provide unmatched legal representation and strategic solutions tailored to your needs.",
+      "As a general practitioner, I have experience across various areas of law, ensuring comprehensive and versatile representation.",
     icon: NetworkIcon,
   },
   {
