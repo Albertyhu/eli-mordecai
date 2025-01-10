@@ -3,7 +3,7 @@ export const BusinessInfo = {
   owner: "Eli Mordecai",
   companyName: "Eli Mordecai - General Practice Attorney",
   street: "415 N Camden Dr, Suite 111",
-  city: "Beverly Hills",
+  city: "Los Angeles",
   state: "CA",
   zip: "90210",
   country: "USA",
