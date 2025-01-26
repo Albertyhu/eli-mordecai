@@ -3,6 +3,7 @@ const {
     type,
     description, 
     icon, 
+    hasPage,
 } = Astro.props; 
 const url = `/practice-areas/${type.toLowerCase().replace(/\s+/g, '-')}`
 ---
@@ -14,7 +15,7 @@ const url = `/practice-areas/${type.toLowerCase().replace(/\s+/g, '-')}`
             >
                 <a href={url} class="practice-area-title1 text-white hover:text-primaryC pb-[5px] font-primaryF text-[26px] min-[992]:text-[28px] font-700 inline-block min-[1280]:text-[35px]">{type}</a>
             </div>
-            <p class = "h-[235px] md:h-[300px] min-[991px]:h-[250px] max-h-[250px]">{description}</p>
+            <p class = "h-[235px] md:h-[515px] lg:h-[335px] min-[991px]:h-[250px] lg:max-h-[350px]">{description}</p>
         </div>
         <div class="grid [&>div]:mx-auto mb-0 mt-auto text-center sm:flex sm:flex-row sm:align-start">
             <div class="mx-auto w-[53px] min-[788px]:w-[53px] sm:mt-[20px]">
@@ -27,9 +28,10 @@ const url = `/practice-areas/${type.toLowerCase().replace(/\s+/g, '-')}`
                 height="53"
                 />
             </div>
-            <div class="">
+            {hasPage  && <div class="">
                 <a href={url} class="practice-button1 w-button1 bg-darkBlack capitalize text-[18px] font-medium mt-[20px] px-[30px] py-[13px] min-[1280]:text-[20px] min-[1280]:px-[42px] hover:bg-primaryC text-white leading-[inherit] cursor-pointer no-underline block px-[15px] py-[9px] rounded-none border-0 hover:text-secondaryC transition-all duration-1000">View More</a>
             </div>
+            }
         </div>
     </div>
 </div>
