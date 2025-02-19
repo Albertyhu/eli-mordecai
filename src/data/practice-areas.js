@@ -10,7 +10,8 @@ const PracticeAreas = [
   {
     type: "General Practice",
     description:
-      "At Mordecai Law, I also offer general legal services to individuals and businesses who need experienced and knowledgeable representation in various other matters. Whether you’re dealing with a family law issue, real estate matter, or another legal concern, I am here to provide guidance and representation. My general practice is designed to address a broad range of legal needs, ensuring that you have a trusted advocate, no matter the issue.",
+      "At Mordecai Law, I offer skilled and strategic legal representation for individuals and businesses in a variety of legal areas. Whether you're navigating a family law dispute, tackling a complex real estate issue, or facing another legal challenge, I provide trusted guidance and dedicated advocacy. My general practice is built to address diverse legal needs with clarity, confidence, and a results-driven approach, ensuring you have a reliable attorney in your corner.",
+    //"At Mordecai Law, I offer skilled and strategic legal representation for individuals and businesses in a variety of legal areas. Whether you're navigating a family law dispute, tackling a complex real estate issue, or facing another legal challenge, I provide trusted guidance and dedicated advocacy. My general practice is built to address diverse legal needs with clarity, confidence, and a results-driven approach, ensuring you have a reliable attorney in your corner.",
     icon: BalanceIcon,
     hasPage: false,
   },

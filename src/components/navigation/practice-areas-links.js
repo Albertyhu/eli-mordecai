@@ -10,6 +10,11 @@ export const practice_areas = [
   //   subDirectory: [],
   // },
   {
+    label: "General Practice",
+    link: "/",
+    subDirectory: [],
+  },
+  {
     label: "Employment Law",
     link: "/practice-areas/employment-law",
     subDirectory: [],
